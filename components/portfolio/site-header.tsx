@@ -18,14 +18,14 @@ export function SiteHeader() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ink/10 bg-paper/90 backdrop-blur-xl dark:border-paper/10 dark:bg-ink/90">
+    <header className="sticky top-0 z-50 border-b border-paper/10 bg-[#07131d]/92 text-paper backdrop-blur-xl">
       <div className="mx-auto flex h-18 max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12">
         <Link
           href="/"
           className="group flex items-center gap-3"
           aria-label={`${profile.name}, home`}
         >
-          <span className="grid size-9 place-items-center rounded-full border border-ink/20 font-mono text-[10px] tracking-[-0.08em] transition-colors group-hover:bg-ink group-hover:text-paper dark:border-paper/20 dark:group-hover:bg-paper dark:group-hover:text-ink">
+          <span className="grid size-9 place-items-center rounded-full border border-paper/20 font-mono text-[10px] tracking-[-0.08em] transition-colors group-hover:border-signal group-hover:bg-signal group-hover:text-white">
             SSW
           </span>
           <span className="hidden text-sm font-semibold tracking-[-0.02em] sm:block">
@@ -44,8 +44,8 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "relative py-2 text-[13px] text-steel transition-colors hover:text-ink dark:hover:text-paper",
-                  active && "text-ink dark:text-paper",
+                  "relative py-2 text-[13px] text-paper/50 transition-colors hover:text-paper",
+                  active && "text-paper",
                 )}
               >
                 {item.label}
@@ -60,14 +60,14 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <Link
             href="/recruiter"
-            className="hidden rounded-full border border-ink/15 px-4 py-2 font-mono text-[10px] tracking-[0.16em] transition-colors hover:border-signal hover:text-signal sm:block dark:border-paper/15"
+            className="hidden rounded-full border border-paper/15 px-4 py-2 font-mono text-[10px] tracking-[0.16em] transition-colors hover:border-signal hover:text-signal sm:block"
           >
             RECRUITER BRIEF
           </Link>
           <button
             type="button"
             onClick={toggleTheme}
-            className="grid size-9 place-items-center rounded-full border border-ink/10 transition-colors hover:border-signal hover:text-signal dark:border-paper/10"
+            className="grid size-9 place-items-center rounded-full border border-paper/10 transition-colors hover:border-signal hover:text-signal"
             aria-label="Toggle colour theme"
           >
             <Moon className="size-4 dark:hidden" />
@@ -76,7 +76,7 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={() => setOpen((value) => !value)}
-            className="grid size-9 place-items-center rounded-full border border-ink/10 lg:hidden dark:border-paper/10"
+            className="grid size-9 place-items-center rounded-full border border-paper/10 lg:hidden"
             aria-expanded={open}
             aria-label="Toggle navigation"
           >
@@ -87,7 +87,7 @@ export function SiteHeader() {
 
       {open && (
         <nav
-          className="border-t border-ink/10 bg-paper px-5 py-5 dark:border-paper/10 dark:bg-ink lg:hidden"
+          className="border-t border-paper/10 bg-[#07131d] px-5 py-5 lg:hidden"
           aria-label="Mobile navigation"
         >
           <div className="mx-auto grid max-w-[1440px] gap-1">
@@ -96,7 +96,7 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-ink/8 py-3 text-lg dark:border-paper/8"
+                className="border-b border-paper/8 py-3 text-lg"
               >
                 {item.label}
               </Link>
@@ -104,7 +104,7 @@ export function SiteHeader() {
             <Link
               href="/recruiter"
               onClick={() => setOpen(false)}
-              className="mt-4 rounded-full bg-ink px-4 py-3 text-center font-mono text-xs tracking-[0.15em] text-paper dark:bg-paper dark:text-ink"
+              className="mt-4 rounded-full bg-signal px-4 py-3 text-center font-mono text-xs tracking-[0.15em] text-white"
             >
               OPEN RECRUITER BRIEF
             </Link>

@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Award } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Award, Crosshair } from "lucide-react";
+import { Reveal } from "@/components/portfolio/reveal";
 import { profile } from "@/content/profile";
 import { assetPath } from "@/lib/asset-path";
 
@@ -26,10 +26,13 @@ export function CurrentChapter() {
   const chapter = profile.currentChapter;
 
   return (
-    <section className="border-b border-ink/10 dark:border-paper/10">
+    <section
+      id="current-chapter"
+      className="border-b border-ink/10 dark:border-paper/10"
+    >
       <div className="mx-auto max-w-[1440px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch">
-          <div className="flex flex-col">
+          <Reveal className="flex flex-col">
             <div>
               <p className="eyebrow">{chapter.eyebrow}</p>
               <h2 className="mt-5 max-w-4xl font-serif text-6xl leading-[0.9] tracking-[-0.055em] sm:text-7xl lg:text-8xl">
@@ -71,31 +74,46 @@ export function CurrentChapter() {
                 <Award className="size-4 text-amber" />
               </a>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="relative min-h-[620px] overflow-hidden rounded-[2rem] bg-ocean">
-            <Image
-              src={assetPath("/images/sarfaraz-singh-wahad-portrait.png")}
-              alt="Portrait of Sarfaraz Singh Wahad"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 38vw"
-              className="object-cover object-top"
-            />
-            <div className="absolute inset-x-4 bottom-4 rounded-2xl bg-ink/92 p-5 text-paper backdrop-blur sm:inset-x-5 sm:bottom-5 sm:p-6">
-              <div className="mb-5 flex items-center justify-between">
-                <p className="font-mono text-[9px] tracking-[0.16em] text-paper/55">
-                  BUILT IN SPAIN · 2025—26
+          <Reveal
+            delay={0.12}
+            className="relative min-h-[620px] overflow-hidden rounded-[2rem] bg-[#07131d] text-paper"
+          >
+            <div className="tech-grid absolute inset-0 opacity-70" />
+            <div className="absolute left-1/2 top-[42%] size-64 -translate-x-1/2 -translate-y-1/2 rounded-full border border-signal/20">
+              <div className="absolute inset-8 rounded-full border border-paper/10" />
+              <div className="absolute inset-16 rounded-full border border-signal/30" />
+              <div className="absolute inset-0 animate-[spin_18s_linear_infinite] rounded-full border-t border-signal" />
+            </div>
+            <div className="relative flex h-full min-h-[620px] flex-col p-6 sm:p-8">
+              <div className="flex items-center justify-between">
+                <p className="font-mono text-[9px] tracking-[0.16em] text-paper/45">
+                  MADRID VENTURE MAP · 2025—26
                 </p>
-                <span className="size-2 rounded-full bg-signal" />
+                <Crosshair className="size-4 animate-[spin_10s_linear_infinite] text-signal" />
               </div>
-              <div className="grid gap-3">
+
+              <div className="my-auto text-center">
+                <p className="font-mono text-[9px] tracking-[0.2em] text-signal">
+                  40.4168° N · 3.7038° W
+                </p>
+                <p className="mt-4 font-serif text-6xl tracking-[-0.05em]">
+                  Madrid
+                </p>
+                <p className="mx-auto mt-3 max-w-xs text-sm leading-6 text-paper/45">
+                  A live laboratory for infrastructure AI, community products,
+                  and founder-led go-to-market.
+                </p>
+              </div>
+
+              <div className="grid gap-2">
                 {ventures.map((venture) => (
                   <Link
                     key={venture.name}
                     href={venture.href}
                     target={venture.href.startsWith("http") ? "_blank" : undefined}
-                    className="group flex items-center justify-between gap-4 border-t border-paper/10 pt-3"
+                    className="group flex items-center justify-between gap-4 rounded-xl border border-paper/10 bg-paper/[0.04] p-4 backdrop-blur transition-colors hover:border-signal/50 hover:bg-signal/10"
                   >
                     <span>
                       <span className="block text-sm font-semibold">
@@ -110,7 +128,7 @@ export function CurrentChapter() {
                 ))}
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

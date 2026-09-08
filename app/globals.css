@@ -162,8 +162,75 @@
     mask-image: linear-gradient(to bottom, black 30%, transparent 95%);
   }
 
+  .tech-grid {
+    background-image:
+      linear-gradient(rgba(91, 219, 208, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(91, 219, 208, 0.07) 1px, transparent 1px),
+      linear-gradient(rgba(91, 219, 208, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(91, 219, 208, 0.025) 1px, transparent 1px);
+    background-position:
+      center,
+      center,
+      center,
+      center;
+    background-size:
+      80px 80px,
+      80px 80px,
+      16px 16px,
+      16px 16px;
+    mask-image: radial-gradient(circle at 52% 45%, black 15%, transparent 82%);
+  }
+
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.scanline {
+  animation: scan-page 7s ease-in-out infinite;
+  box-shadow: 0 0 30px 5px rgb(31 157 150 / 22%);
+}
+
+.portrait-frame::after {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  background: linear-gradient(
+    105deg,
+    transparent 35%,
+    rgb(255 255 255 / 18%) 48%,
+    transparent 61%
+  );
+  content: "";
+  transform: translateX(-130%);
+  animation: portrait-sweep 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes scan-page {
+  0%,
+  100% {
+    top: 3%;
+    opacity: 0;
+  }
+  12%,
+  82% {
+    opacity: 0.75;
+  }
+  92% {
+    top: 97%;
+    opacity: 0;
+  }
+}
+
+@keyframes portrait-sweep {
+  0%,
+  55% {
+    transform: translateX(-130%);
+  }
+  78%,
+  100% {
+    transform: translateX(130%);
   }
 }
 

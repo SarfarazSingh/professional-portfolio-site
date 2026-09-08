@@ -2,15 +2,21 @@
 
 import { useState } from "react";
 import { ArrowDownRight } from "lucide-react";
+import { motion, useReducedMotion } from "motion/react";
 import { phases } from "@/content/experience";
 import { cn } from "@/lib/utils";
 
 export function CareerTopology() {
   const [active, setActive] = useState<(typeof phases)[number]["id"]>("build");
+  const reduceMotion = useReducedMotion();
   const selected = phases.find((phase) => phase.id === active) ?? phases[0];
 
   return (
-    <section
+    <motion.section
+      initial={reduceMotion ? false : { opacity: 0, y: 40 }}
+      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className="mx-auto max-w-[1440px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28"
       aria-labelledby="trajectory-title"
     >
@@ -98,6 +104,6 @@ export function CareerTopology() {
           <ArrowDownRight className="size-5 text-signal" />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

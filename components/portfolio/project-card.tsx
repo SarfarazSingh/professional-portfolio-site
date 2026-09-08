@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { Reveal } from "@/components/portfolio/reveal";
 import type { Project } from "@/content/projects";
 import { cn } from "@/lib/utils";
 
@@ -18,13 +19,14 @@ export function ProjectCard({
   large?: boolean;
 }) {
   return (
-    <Link
-      href={`/work/${project.slug}`}
-      className={cn(
-        "group relative flex min-h-[390px] flex-col overflow-hidden rounded-[1.75rem] border border-ink/10 bg-card p-6 transition-transform duration-300 hover:-translate-y-1 dark:border-paper/10 sm:p-8",
-        large && "lg:min-h-[560px]",
-      )}
-    >
+    <Reveal className="h-full">
+      <Link
+        href={`/work/${project.slug}`}
+        className={cn(
+          "group relative flex min-h-[390px] flex-col overflow-hidden rounded-[1.75rem] border border-ink/10 bg-card p-6 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-signal/10 dark:border-paper/10 sm:p-8",
+          large && "lg:min-h-[560px]",
+        )}
+      >
       <div
         className={cn(
           "absolute inset-x-0 top-0 h-1 transition-[height] duration-500 group-hover:h-2",
@@ -64,6 +66,7 @@ export function ProjectCard({
           {project.lens.map((lens) => lens.toUpperCase()).join(" + ")}
         </span>
       </div>
-    </Link>
+      </Link>
+    </Reveal>
   );
 }

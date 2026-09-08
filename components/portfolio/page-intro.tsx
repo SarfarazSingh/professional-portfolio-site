@@ -1,3 +1,5 @@
+import { Reveal } from "@/components/portfolio/reveal";
+
 export function PageIntro({
   eyebrow,
   title,
@@ -13,7 +15,7 @@ export function PageIntro({
     <section className="relative overflow-hidden border-b border-ink/10 dark:border-paper/10">
       <div className="absolute inset-0 blueprint-grid opacity-50 dark:opacity-25" aria-hidden="true" />
       <div className="relative mx-auto max-w-[1440px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
-        <div className="grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
+        <Reveal className="grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
           <div>
             <p className="eyebrow">{eyebrow}</p>
             <h1 className="mt-7 max-w-5xl text-balance font-serif text-6xl leading-[0.9] tracking-[-0.055em] sm:text-7xl lg:text-8xl">
@@ -28,7 +30,7 @@ export function PageIntro({
               </p>
             )}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
