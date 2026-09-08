@@ -2,7 +2,6 @@ import type { Lens } from "./profile";
 
 export type Project = {
   slug: string;
-  index: string;
   title: string;
   kicker: string;
   summary: string;
@@ -10,7 +9,6 @@ export type Project = {
   year: string;
   lens: Lens[];
   featured: boolean;
-  accent: "teal" | "ocean" | "amber" | "steel";
   challenge: string;
   role: string;
   actions: string[];
@@ -24,16 +22,14 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "tracksense",
-    index: "01",
     title: "TrackSense AI",
-    kicker: "PREDICTIVE INFRASTRUCTURE INTELLIGENCE",
+    kicker: "Predictive infrastructure intelligence",
     summary:
       "An edge-first decision layer that helps railway operators move from reactive maintenance to predictive safety.",
     category: "Industrial AI",
     year: "2026",
     lens: ["engineering", "ai"],
     featured: true,
-    accent: "teal",
     challenge:
       "Rail infrastructure is inspected through fragmented, periodic workflows. Signals arrive late, risks are hard to rank, and maintenance teams need decisions—not another dashboard.",
     role:
@@ -64,16 +60,14 @@ export const projects: Project[] = [
   },
   {
     slug: "enterprise-ai-transformation",
-    index: "02",
     title: "Enterprise AI at scale",
-    kicker: "PWC · GENAI & AUTOMATION",
+    kicker: "PwC · GenAI and automation",
     summary:
       "Three transformation programmes that moved conversational AI from technology initiative to operating impact.",
     category: "Enterprise AI",
     year: "2023–25",
     lens: ["ai", "engineering"],
     featured: true,
-    accent: "ocean",
     challenge:
       "Large service organisations needed to improve customer operations while working through legacy architecture, release risk, scale, and cross-functional dependencies.",
     role:
@@ -103,16 +97,14 @@ export const projects: Project[] = [
   },
   {
     slug: "submarine-systems",
-    index: "03",
     title: "Systems under pressure",
-    kicker: "INDIAN NAVY · SUBMARINE SERVICE",
+    kicker: "Indian Navy · Submarine Service",
     summary:
       "A decade of technical leadership shaped around readiness, human judgement, and systems that cannot simply fail fast.",
     category: "Mission-critical",
     year: "2015–23",
     lens: ["engineering", "ai"],
     featured: true,
-    accent: "amber",
     challenge:
       "Submarine operations demand continuous readiness across people, equipment, procedures, and data—with little tolerance for ambiguity at the point of decision.",
     role:
@@ -142,16 +134,14 @@ export const projects: Project[] = [
   },
   {
     slug: "up-on-ai",
-    index: "04",
     title: "UP-ON.AI",
-    kicker: "AGENTIC COMPANY BUILDER",
+    kicker: "Agentic company builder",
     summary:
       "A venture-building product that brings research, strategy, positioning, and specialist expertise into one adaptive journey.",
     category: "Agentic products",
     year: "2026",
     lens: ["ai"],
     featured: true,
-    accent: "steel",
     challenge:
       "Founders often stitch together agencies, advisers, and disconnected tools before they have clarity on the problem, customer, or path to market.",
     role:

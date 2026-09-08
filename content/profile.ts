@@ -12,7 +12,7 @@ export const profile = {
   summary:
     "I lead technology from ambiguity to operational reality—across AI products, enterprise transformation, and safety-critical systems.",
   currentChapter: {
-    eyebrow: "NOW · MADRID / IE BUSINESS SCHOOL",
+    eyebrow: "Now · Madrid / IE Business School",
     title: "Building the next chapter in Spain.",
     description:
       "At IE, I have combined an International MBA with venture building, cross-programme leadership, and applied AI—turning the campus and Madrid into a live laboratory for products, communities, and responsible innovation.",
@@ -29,7 +29,7 @@ export const profile = {
     "Madrid-based and open to senior roles across Europe, the Middle East, and India, subject to role-specific work authorisation.",
   lenses: {
     ai: {
-      eyebrow: "AI & DIGITAL TRANSFORMATION",
+      eyebrow: "AI & digital transformation",
       title: "AI that moves beyond the pilot.",
       description:
         "Product strategy, enterprise delivery, adoption, governance, and measurable value—built for organisations where reliability matters.",
@@ -41,7 +41,7 @@ export const profile = {
       ],
     },
     engineering: {
-      eyebrow: "ENGINEERING & MISSION-CRITICAL SYSTEMS",
+      eyebrow: "Engineering & mission-critical systems",
       title: "Systems that perform when failure matters.",
       description:
         "Technical programmes, systems integration, operational readiness, and risk controls shaped by a decade in submarine operations.",

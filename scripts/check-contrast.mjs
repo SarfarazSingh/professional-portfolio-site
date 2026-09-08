@@ -1,5 +1,7 @@
 const tokens = {
   ground: "#090a0b",
+  surface: "#111315",
+  "surface-raised": "#171a1d",
   text: "#f4f1e8",
   "text-muted": "#bcb9b0",
   signal: "#ff8a00",
@@ -9,6 +11,13 @@ const pairs = [
   { foreground: "text", background: "ground", minimum: 7 },
   { foreground: "text-muted", background: "ground", minimum: 7 },
   { foreground: "signal", background: "ground", minimum: 7 },
+  { foreground: "text", background: "surface", minimum: 7 },
+  { foreground: "text-muted", background: "surface", minimum: 7 },
+  { foreground: "signal", background: "surface", minimum: 7 },
+  { foreground: "text", background: "surface-raised", minimum: 7 },
+  { foreground: "text-muted", background: "surface-raised", minimum: 7 },
+  { foreground: "signal", background: "surface-raised", minimum: 7 },
+  { foreground: "ground", background: "signal", minimum: 7 },
 ];
 
 function luminance(hex) {

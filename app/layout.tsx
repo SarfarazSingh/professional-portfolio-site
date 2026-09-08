@@ -1,35 +1,37 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
-import { CursorAura } from "@/components/portfolio/cursor-aura";
+import localFont from "next/font/local";
+import { InstrumentGrid } from "@/components/portfolio/instrument-grid";
 import { SiteFooter } from "@/components/portfolio/site-footer";
 import { SiteHeader } from "@/components/portfolio/site-header";
 import { profile } from "@/content/profile";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const archivoExpanded = localFont({
+  src: "../node_modules/@fontsource-variable/archivo/files/archivo-latin-standard-normal.woff2",
+  variable: "--font-display",
+  display: "swap",
+  preload: true,
+  weight: "100 900",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const sourceSans = localFont({
+  src: "../node_modules/@fontsource-variable/source-sans-3/files/source-sans-3-latin-wght-normal.woff2",
+  variable: "--font-text",
+  display: "swap",
+  preload: true,
+  weight: "200 900",
 });
 
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  subsets: ["latin"],
+const departureMono = localFont({
+  src: "../node_modules/@proj-airi/font-departure-mono/dist/files/DepartureMono-Regular.woff2",
+  variable: "--font-readout",
+  display: "swap",
+  preload: false,
   weight: "400",
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:43127";
-const themeScript = `
-  try {
-    const stored = localStorage.getItem("theme");
-    const dark = stored === "dark" || (!stored && matchMedia("(prefers-color-scheme: dark)").matches);
-    document.documentElement.classList.toggle("dark", dark);
-  } catch {}
-`;
+const revealScript = `document.documentElement.classList.add("js");`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -83,24 +85,26 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
+      className={`${archivoExpanded.variable} ${sourceSans.variable} ${departureMono.variable} h-full antialiased`}
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script dangerouslySetInnerHTML={{ __html: revealScript }} />
       </head>
       <body className="flex min-h-full flex-col">
         <a
           href="#main-content"
-          className="sr-only z-[100] bg-paper px-4 py-3 text-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+          className="sr-only z-[100] bg-signal px-4 py-3 text-ground focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
         >
           Skip to content
         </a>
-        <CursorAura />
+        <InstrumentGrid />
         <SiteHeader />
-        <main id="main-content" className="flex-1">
+        <main id="main-content" className="relative z-10 flex-1">
           {children}
         </main>
-        <SiteFooter />
+        <div className="relative z-10">
+          <SiteFooter />
+        </div>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

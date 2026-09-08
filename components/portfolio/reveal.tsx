@@ -1,31 +1,53 @@
 "use client";
 
-import { motion, useReducedMotion } from "motion/react";
+import { useEffect, useRef } from "react";
+import { cn } from "@/lib/utils";
 
 export function Reveal({
   children,
   className,
-  delay = 0,
-  y = 30,
 }: {
   children: React.ReactNode;
   className?: string;
-  delay?: number;
-  y?: number;
 }) {
-  const reduceMotion = useReducedMotion();
+  const elementRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const element = elementRef.current;
+    if (!element) return;
+
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (reducedMotion || !("IntersectionObserver" in window)) {
+      element.dataset.revealState = "visible";
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        element.dataset.revealState = "visible";
+        observer.disconnect();
+      },
+      {
+        rootMargin: "-10% 0px",
+        threshold: 0.15,
+      },
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <motion.div
-      className={className}
-      initial={reduceMotion ? false : { opacity: 0, y, filter: "blur(6px)" }}
-      whileInView={
-        reduceMotion ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }
-      }
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
+    <div
+      ref={elementRef}
+      className={cn("reveal", className)}
+      data-reveal-state="idle"
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

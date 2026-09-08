@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { designColors } from "@/lib/design-tokens";
 
 export const dynamic = "force-static";
 export const alt = "Sarfaraz Singh Wahad — Complex technology. Made operational.";
@@ -13,8 +14,8 @@ export default function OpenGraphImage() {
           display: "flex",
           width: "100%",
           height: "100%",
-          background: "#111820",
-          color: "#f5f4ef",
+          background: designColors.ground,
+          color: designColors.text,
           padding: "64px",
           fontFamily: "sans-serif",
           flexDirection: "column",
@@ -27,7 +28,7 @@ export default function OpenGraphImage() {
             justifyContent: "space-between",
             fontSize: 18,
             letterSpacing: "0.16em",
-            color: "#8fa0aa",
+            color: designColors.textMuted,
           }}
         >
           <span>SARFARAZ SINGH WAHAD</span>
@@ -49,7 +50,7 @@ export default function OpenGraphImage() {
               fontSize: 104,
               lineHeight: 0.92,
               letterSpacing: "-0.055em",
-              color: "#1f9d96",
+              color: designColors.signal,
             }}
           >
             Made operational.
@@ -59,14 +60,14 @@ export default function OpenGraphImage() {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            borderTop: "1px solid rgba(245,244,239,.2)",
+            borderTop: `1px solid ${designColors.lineStrong}`,
             paddingTop: 24,
             fontSize: 20,
-            color: "#8fa0aa",
+            color: designColors.textMuted,
           }}
         >
-          <span>AI & DIGITAL TRANSFORMATION</span>
-          <span>ENGINEERING & MISSION-CRITICAL SYSTEMS</span>
+          <span>AI & digital transformation</span>
+          <span>Engineering & mission-critical systems</span>
         </div>
       </div>
     ),

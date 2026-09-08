@@ -27,14 +27,14 @@ export function WorkGrid() {
             type="button"
             onClick={() => setFilter(item.value)}
             className={cn(
-              "rounded-full border px-4 py-2 font-mono text-[10px] tracking-[0.12em] transition-colors",
+              "min-h-11 rounded-full border px-4 text-sm font-semibold",
               filter === item.value
-                ? "border-ink bg-ink text-paper dark:border-paper dark:bg-paper dark:text-ink"
-                : "border-ink/10 text-steel hover:border-signal hover:text-signal dark:border-paper/10",
+                ? "border-signal bg-signal text-ground"
+                : "border-line-strong text-copy-muted hover:border-signal hover:text-copy",
             )}
             aria-pressed={filter === item.value}
           >
-            {item.label.toUpperCase()}
+            {item.label}
           </button>
         ))}
       </div>

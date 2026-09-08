@@ -15,19 +15,16 @@ export const metadata: Metadata = {
 const principles = [
   {
     icon: Waves,
-    number: "01",
     title: "See the whole system",
     text: "Technology, people, incentives, controls, and operating context are one design problem.",
   },
   {
     icon: Workflow,
-    number: "02",
     title: "Make decisions explicit",
     text: "A useful system clarifies what happens next, who has authority, and how uncertainty is handled.",
   },
   {
     icon: Wrench,
-    number: "03",
     title: "Build for operations",
     text: "The real test begins after the prototype: adoption, observability, failure handling, and value.",
   },
@@ -37,22 +34,22 @@ export default function AboutPage() {
   return (
     <>
       <PageIntro
-        eyebrow="ABOUT · OPERATING PHILOSOPHY"
+        eyebrow="About · Operating philosophy"
         title="Built beneath the surface."
         description="My career has moved from submarines to consulting to AI ventures. The common thread is systems leadership: making complex technology understandable, governable, and operational."
-        aside="FORMER INDIAN NAVY SUBMARINE OFFICER · PWC MANAGER · AI PRODUCT BUILDER · AIGP"
+        aside="Former Indian Navy submarine officer · PwC Manager · AI product builder · AIGP"
       />
 
-      <section className="mx-auto grid max-w-[1440px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-28">
+      <section className="mx-auto grid max-w-[1600px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-28">
         <div>
-          <p className="eyebrow">THE THROUGH-LINE</p>
+          <p className="section-label">The through-line</p>
         </div>
         <div className="max-w-3xl">
-          <p className="font-serif text-4xl leading-[1.08] tracking-[-0.035em] sm:text-5xl">
+          <p className="font-serif text-[var(--type-h3)] leading-[1.08] tracking-[-0.035em]">
             I learned technology leadership in an environment where the system,
             the operator, and the consequence could never be separated.
           </p>
-          <div className="mt-10 grid gap-6 text-base leading-7 text-steel sm:grid-cols-2">
+          <div className="mt-10 grid gap-6 leading-7 text-steel sm:grid-cols-2">
             <p>
               In the Indian Navy, I led technical operations, safety assurance,
               modernisation, and training across conventional and nuclear
@@ -69,25 +66,22 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-ink/10 dark:border-paper/10">
-        <div className="mx-auto grid max-w-[1440px] md:grid-cols-3">
+      <section className="border-y border-line bg-surface">
+        <div className="mx-auto grid max-w-[1600px] md:grid-cols-3">
           {principles.map((principle) => {
             const Icon = principle.icon;
             return (
               <article
-                key={principle.number}
-                className="border-b border-ink/10 p-6 last:border-b-0 dark:border-paper/10 sm:p-8 md:border-b-0 md:border-r md:last:border-r-0 lg:p-12"
+                key={principle.title}
+                className="border-b border-line p-6 last:border-b-0 sm:p-8 md:border-b-0 md:border-r md:last:border-r-0 lg:p-12"
               >
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-[10px] tracking-[0.15em] text-steel">
-                    {principle.number}
-                  </span>
+                <div className="flex justify-end">
                   <Icon className="size-5 text-signal" />
                 </div>
-                <h2 className="mt-20 font-serif text-4xl tracking-[-0.04em]">
+                <h2 className="mt-20 text-[var(--type-h3)] tracking-[-0.04em]">
                   {principle.title}
                 </h2>
-                <p className="mt-5 text-sm leading-6 text-steel">
+                <p className="mt-5 leading-7 text-copy-muted">
                   {principle.text}
                 </p>
               </article>
@@ -96,27 +90,28 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-ocean text-paper">
-        <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:px-12 lg:py-24">
-          <div className="relative min-h-[420px] overflow-hidden rounded-[1.75rem]">
+      <section className="border-y border-line bg-surface">
+        <div className="mx-auto grid max-w-[1600px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:px-12 lg:py-24">
+          <div className="border border-line p-2">
             <Image
               src={assetPath("/images/submarine-service-collage.jpg")}
               alt="Sarfaraz Singh Wahad during submarine service, training, and technical operations"
-              fill
+              width={1400}
+              height={1000}
               sizes="(max-width: 1024px) 100vw, 42vw"
-              className="object-cover"
+              className="h-full min-h-[420px] w-full object-cover"
             />
           </div>
           <div className="lg:pl-8">
-            <p className="font-mono text-[10px] tracking-[0.16em] text-paper/55">
-              EDUCATION · FROM ENGINEERING TO ENTERPRISE LEADERSHIP
+            <p className="section-label">
+              Education · From engineering to enterprise leadership
             </p>
-            <h2 className="mt-6 font-serif text-5xl leading-[0.95] tracking-[-0.045em] sm:text-6xl">
+            <h2 className="mt-6 text-[var(--type-h2)] leading-[0.9] tracking-[-0.045em]">
               Experience built the questions.
               <br />
-              <span className="text-paper/55">IE sharpened the answers.</span>
+              IE sharpened the answers.
             </h2>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-paper/65">
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-copy-muted">
               At IE Business School in Madrid, I brought together engineering,
               operations, strategy, entrepreneurship, and responsible AI. The
               International MBA became an active platform: I led communities,
@@ -132,17 +127,17 @@ export default function AboutPage() {
               ].map(([institution, detail]) => (
                 <div
                   key={institution}
-                  className="rounded-xl border border-paper/15 p-4"
+                  className="border border-line p-4"
                 >
-                  <p className="text-sm font-semibold">{institution}</p>
-                  <p className="mt-2 text-xs leading-5 text-paper/50">{detail}</p>
+                  <p className="font-semibold">{institution}</p>
+                  <p className="mt-2 text-sm leading-6 text-copy-muted">{detail}</p>
                 </div>
               ))}
             </div>
             <a
               href={assetPath("/credentials/ie-blue-torch-award.pdf")}
               target="_blank"
-              className="mt-8 inline-flex items-center gap-3 rounded-full bg-paper px-5 py-3 text-sm font-medium text-ink"
+              className="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-5 text-sm font-semibold text-ground"
             >
               Verify Blue Torch credential <Award className="size-4 text-amber" />
             </a>
@@ -150,15 +145,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-[1440px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-28">
+      <section className="mx-auto grid max-w-[1600px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-28">
         <div>
-          <p className="eyebrow">BEYOND THE ROLE</p>
+          <p className="section-label">Beyond the role</p>
         </div>
         <div>
-          <h2 className="max-w-3xl font-serif text-5xl leading-[0.98] tracking-[-0.045em]">
+          <h2 className="max-w-3xl text-[var(--type-h2)] leading-[0.9] tracking-[-0.045em]">
             Endurance, rhythm,
             <br />
-            <span className="text-steel">and public service.</span>
+            and public service.
           </h2>
           <div className="mt-10 grid gap-5 sm:grid-cols-3">
             {[
@@ -166,22 +161,22 @@ export default function AboutPage() {
               ["50+", "Live concerts performed as a bassist across India"],
               ["1,500+", "People reached through relief, health, and upskilling programmes"],
             ].map(([value, label]) => (
-              <div key={value} className="rounded-2xl border border-ink/10 p-5 dark:border-paper/10">
+              <div key={value} className="border border-line p-5">
                 <p className="font-serif text-4xl tracking-[-0.04em]">{value}</p>
-                <p className="mt-3 text-xs leading-5 text-steel">{label}</p>
+                <p className="mt-3 text-sm leading-6 text-copy-muted">{label}</p>
               </div>
             ))}
           </div>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
               href="/experience"
-              className="group inline-flex items-center gap-3 rounded-full bg-ink px-6 py-3 text-sm text-paper dark:bg-paper dark:text-ink"
+              className="group inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-6 text-sm font-semibold text-ground"
             >
-              Explore experience <ArrowRight className="size-4 group-hover:translate-x-1" />
+              Explore experience <ArrowRight className="size-4" />
             </Link>
             <a
               href={`mailto:${profile.email}`}
-              className="inline-flex items-center rounded-full border border-ink/15 px-6 py-3 text-sm dark:border-paper/15"
+              className="inline-flex min-h-12 items-center rounded-full border border-line-strong px-6 text-sm font-semibold"
             >
               Start a conversation
             </a>

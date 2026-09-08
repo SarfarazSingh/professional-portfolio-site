@@ -26,52 +26,52 @@ export function ExperienceTimeline() {
             type="button"
             onClick={() => setFilter(item.value)}
             className={cn(
-              "rounded-full border px-4 py-2 font-mono text-[10px] tracking-[0.12em]",
+              "min-h-11 rounded-full border px-4 text-sm font-semibold",
               filter === item.value
-                ? "border-ink bg-ink text-paper dark:border-paper dark:bg-paper dark:text-ink"
-                : "border-ink/10 text-steel dark:border-paper/10",
+                ? "border-signal bg-signal text-ground"
+                : "border-line-strong text-copy-muted",
             )}
             aria-pressed={filter === item.value}
           >
-            {item.label.toUpperCase()}
+            {item.label}
           </button>
         ))}
       </div>
 
       <div className="relative">
-        <div className="absolute bottom-0 left-[5px] top-0 w-px bg-ink/10 dark:bg-paper/10 sm:left-[140px]" />
+        <div className="absolute bottom-0 left-[5px] top-0 w-px bg-line sm:left-[140px]" />
         <div className="grid gap-14">
           {items.map((item) => (
             <article
               key={`${item.organisation}-${item.period}`}
               className="relative grid gap-5 pl-8 sm:grid-cols-[110px_1fr] sm:gap-10 sm:pl-0"
             >
-              <span className="absolute left-0 top-1.5 size-[11px] rounded-full border-2 border-paper bg-signal ring-1 ring-ink/15 dark:border-[#0d141b] dark:ring-paper/15 sm:left-[135px]" />
-              <p className="font-mono text-[9px] tracking-[0.13em] text-steel">
+              <span className="absolute left-0 top-1.5 size-[11px] border-2 border-ground bg-signal sm:left-[135px]" />
+              <p className="instrument-readout">
                 {item.period}
               </p>
-              <div className="border-b border-ink/10 pb-14 dark:border-paper/10">
+              <div className="border-b border-line pb-14">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
-                    <p className="eyebrow">{item.organisation}</p>
-                    <h2 className="mt-3 font-serif text-4xl leading-none tracking-[-0.04em]">
+                    <p className="section-label">{item.organisation}</p>
+                    <h2 className="mt-3 text-[var(--type-h3)] leading-none tracking-[-0.04em]">
                       {item.role}
                     </h2>
                   </div>
-                  <span className="rounded-full border border-ink/10 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.12em] text-steel dark:border-paper/10">
+                  <span className="instrument-readout rounded-[2px] border border-line px-3 py-1.5">
                     {item.phase}
                   </span>
                 </div>
-                <p className="mt-6 max-w-3xl text-base leading-7 text-steel">
+                <p className="mt-6 max-w-3xl text-lg leading-8 text-copy-muted">
                   {item.scope}
                 </p>
                 <ul className="mt-7 grid gap-3">
                   {item.outcomes.map((outcome) => (
                     <li
                       key={outcome}
-                      className="grid max-w-3xl grid-cols-[14px_1fr] gap-3 text-sm leading-6"
+                      className="grid max-w-3xl grid-cols-[14px_1fr] gap-3 leading-7"
                     >
-                      <span className="mt-2 size-1 rounded-full bg-signal" />
+                      <span className="mt-2.5 size-1 bg-signal" />
                       {outcome}
                     </li>
                   ))}

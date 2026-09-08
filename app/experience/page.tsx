@@ -15,24 +15,24 @@ export default function ExperiencePage() {
   return (
     <>
       <PageIntro
-        eyebrow="EXPERIENCE · 2015—NOW"
+        eyebrow="Experience · 2015—now"
         title="Operate. Transform. Build."
         description="Progressive leadership across safety-critical operations, enterprise transformation, and zero-to-one AI products."
-        aside="FILTER THE SAME VERIFIED CHRONOLOGY BY RECRUITER LENS"
+        aside="Filter the same verified chronology by recruiter lens"
       />
-      <section className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section className="mx-auto max-w-[1600px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
         <ExperienceTimeline />
       </section>
 
-      <section className="border-t border-ink/10 bg-card dark:border-paper/10">
-        <div className="mx-auto grid max-w-[1440px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-24">
+      <section className="border-t border-line bg-surface">
+        <div className="mx-auto grid max-w-[1600px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-24">
           <div>
-            <p className="eyebrow">CREDENTIALS</p>
+            <p className="section-label">Credentials</p>
           </div>
           <div>
-            <div className="grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 dark:border-paper/10 dark:bg-paper/10 sm:grid-cols-2">
+            <div className="grid border-l border-t border-line sm:grid-cols-2">
               {profile.credentials.map((credential) => (
-                <div key={credential} className="bg-card p-5 text-sm">
+                <div key={credential} className="border-b border-r border-line bg-surface p-5">
                   {credential}
                 </div>
               ))}
@@ -41,14 +41,14 @@ export default function ExperiencePage() {
               <a
                 href={assetPath("/cv/sarfaraz-wahad-ai-digital.pdf")}
                 download
-                className="inline-flex items-center gap-3 rounded-full bg-ink px-5 py-3 text-sm text-paper dark:bg-paper dark:text-ink"
+                className="inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-5 text-sm font-semibold text-ground"
               >
                 AI & digital CV <Download className="size-4" />
               </a>
               <a
                 href={assetPath("/cv/sarfaraz-wahad-engineering.pdf")}
                 download
-                className="inline-flex items-center gap-3 rounded-full border border-ink/15 px-5 py-3 text-sm dark:border-paper/15"
+                className="inline-flex min-h-12 items-center gap-3 rounded-full border border-line-strong px-5 text-sm font-semibold"
               >
                 Engineering CV <Download className="size-4" />
               </a>

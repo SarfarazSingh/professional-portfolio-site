@@ -13,30 +13,30 @@ export default function RecruiterPage() {
   return (
     <>
       <PageIntro
-        eyebrow="RECRUITER BRIEF · TWO-MINUTE MODE"
+        eyebrow="Recruiter brief · Two-minute mode"
         title="Start with the mandate."
         description="Choose what you are hiring for. The brief will foreground the most relevant capabilities, evidence, fit boundaries, and CV—without changing the underlying facts."
-        aside="FOUR MANDATES · ONE VERIFIED CAREER RECORD"
+        aside="Four mandates · One verified career record"
       />
-      <section className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <section className="mx-auto max-w-[1600px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
         <RecruiterBrief />
       </section>
-      <section className="border-t border-ink/10 dark:border-paper/10">
-        <div className="mx-auto grid max-w-[1440px] gap-8 px-5 py-16 sm:px-8 md:grid-cols-3 lg:px-12">
+      <section className="border-t border-line">
+        <div className="mx-auto grid max-w-[1600px] gap-8 px-5 py-16 sm:px-8 md:grid-cols-3 lg:px-12">
           <div>
-            <p className="eyebrow">LOCATION</p>
-            <p className="mt-3 text-sm">{profile.location}</p>
+            <p className="section-label">Location</p>
+            <p className="mt-3">{profile.location}</p>
           </div>
           <div>
-            <p className="eyebrow">MOBILITY</p>
-            <p className="mt-3 text-sm leading-6 text-steel">
+            <p className="section-label">Mobility</p>
+            <p className="mt-3 leading-7 text-copy-muted">
               Europe, Middle East, and India; subject to role-specific work
               authorisation.
             </p>
           </div>
           <div>
-            <p className="eyebrow">LANGUAGES</p>
-            <p className="mt-3 text-sm leading-6 text-steel">
+            <p className="section-label">Languages</p>
+            <p className="mt-3 leading-7 text-copy-muted">
               {profile.languages.join(" · ")}
             </p>
           </div>

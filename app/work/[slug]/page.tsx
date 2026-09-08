@@ -33,36 +33,29 @@ export default async function CaseStudyPage({
 
   return (
     <article>
-      <header className="relative overflow-hidden border-b border-ink/10 bg-ink text-paper dark:border-paper/10">
-        <div className="absolute inset-0 opacity-30" aria-hidden="true">
-          <div className="absolute -right-32 top-1/2 size-[520px] -translate-y-1/2 rounded-full border border-paper/15" />
-          <div className="absolute -right-12 top-1/2 size-[360px] -translate-y-1/2 rounded-full border border-paper/15" />
-          <div className="absolute right-20 top-1/2 size-[170px] -translate-y-1/2 rounded-full border border-signal/50" />
-        </div>
-        <div className="relative mx-auto max-w-[1440px] px-5 py-14 sm:px-8 lg:px-12 lg:py-24">
+      <header className="relative border-b border-line bg-ground/96">
+        <div className="relative mx-auto max-w-[1600px] px-5 py-14 sm:px-8 lg:px-12 lg:py-24">
           <Link
             href="/work"
-            className="group inline-flex items-center gap-3 font-mono text-[10px] tracking-[0.15em] text-paper/55 hover:text-signal"
+            className="group inline-flex min-h-11 items-center gap-3 text-sm font-semibold text-copy-muted hover:text-signal"
           >
-            <ArrowLeft className="size-3.5 transition-transform group-hover:-translate-x-1" />
-            ALL CASES
+            <ArrowLeft className="size-3.5" />
+            All cases
           </Link>
           <div className="mt-20 grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
             <div>
-              <p className="font-mono text-[10px] tracking-[0.16em] text-signal">
-                CASE {project.index} · {project.kicker}
-              </p>
-              <h1 className="mt-7 max-w-5xl font-serif text-7xl leading-[0.86] tracking-[-0.06em] sm:text-8xl lg:text-9xl">
+              <p className="section-label text-signal">{project.kicker}</p>
+              <h1 className="mt-7 max-w-5xl text-[clamp(4rem,10vw,11rem)] leading-[0.82] tracking-[-0.055em]">
                 {project.title}
               </h1>
             </div>
             <div>
-              <p className="text-lg leading-8 text-paper/65">{project.summary}</p>
+              <p className="text-lg leading-8 text-copy-muted">{project.summary}</p>
               <div className="mt-7 flex flex-wrap gap-2">
                 {[project.year, project.category, ...project.lens].map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-paper/15 px-3 py-1.5 font-mono text-[9px] tracking-[0.12em] uppercase text-paper/65"
+                    className="rounded-[2px] border border-line-strong px-3 py-1.5 text-sm text-copy-muted"
                   >
                     {tag}
                   </span>
@@ -73,28 +66,28 @@ export default async function CaseStudyPage({
         </div>
       </header>
 
-      <section className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-28">
+      <section className="mx-auto grid max-w-[1600px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-28">
         <div>
-          <p className="eyebrow">01 · CHALLENGE</p>
+          <p className="section-label">Challenge</p>
         </div>
-        <p className="max-w-4xl font-serif text-4xl leading-[1.08] tracking-[-0.035em] sm:text-5xl">
+        <p className="max-w-4xl font-serif text-[var(--type-h3)] leading-[1.08] tracking-[-0.035em]">
           {project.challenge}
         </p>
       </section>
 
-      <section className="border-y border-ink/10 dark:border-paper/10">
-        <div className="mx-auto grid max-w-[1440px] lg:grid-cols-2">
-          <div className="border-b border-ink/10 p-5 dark:border-paper/10 sm:p-8 lg:border-b-0 lg:border-r lg:p-12">
-            <p className="eyebrow">02 · ROLE</p>
+      <section className="border-y border-line bg-surface">
+        <div className="mx-auto grid max-w-[1600px] lg:grid-cols-2">
+          <div className="border-b border-line p-5 sm:p-8 lg:border-b-0 lg:border-r lg:p-12">
+            <p className="section-label">Role</p>
             <p className="mt-8 max-w-xl text-xl leading-8">{project.role}</p>
           </div>
           <div className="p-5 sm:p-8 lg:p-12">
-            <p className="eyebrow">03 · SYSTEM</p>
+            <p className="section-label">System</p>
             <div className="mt-8 flex flex-wrap gap-2">
               {project.system.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-ink/10 px-4 py-2 text-sm dark:border-paper/10"
+                  className="rounded-[2px] border border-line px-4 py-2 text-sm"
                 >
                   {item}
                 </span>
@@ -104,28 +97,24 @@ export default async function CaseStudyPage({
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-28">
+      <section className="mx-auto grid max-w-[1600px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-28">
         <div>
-          <p className="eyebrow">04 · ACTIONS</p>
+          <p className="section-label">Actions</p>
         </div>
-        <ol className="divide-y divide-ink/10 border-y border-ink/10 dark:divide-paper/10 dark:border-paper/10">
-          {project.actions.map((action, index) => (
-            <li key={action} className="grid gap-3 py-5 sm:grid-cols-[45px_1fr]">
-              <span className="font-mono text-[10px] text-signal">
-                0{index + 1}
-              </span>
+        <ul className="divide-y divide-line border-y border-line">
+          {project.actions.map((action) => (
+            <li key={action} className="grid gap-3 py-5 sm:grid-cols-[20px_1fr]">
+              <span className="mt-3 size-1.5 bg-signal" aria-hidden="true" />
               <span className="text-lg leading-7">{action}</span>
             </li>
           ))}
-        </ol>
+        </ul>
       </section>
 
-      <section className="bg-ocean text-paper">
-        <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-24">
+      <section className="border-y border-line bg-surface">
+        <div className="mx-auto grid max-w-[1600px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-24">
           <div>
-            <p className="font-mono text-[10px] tracking-[0.16em] text-paper/55">
-              05 · OUTCOMES
-            </p>
+            <p className="section-label">Outcomes</p>
           </div>
           <ul className="grid gap-5">
             {project.outcome.map((outcome) => (
@@ -138,10 +127,10 @@ export default async function CaseStudyPage({
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:px-12 lg:py-28">
+      <section className="mx-auto grid max-w-[1600px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:px-12 lg:py-28">
         <div>
-          <p className="eyebrow">WHY IT MATTERS</p>
-          <p className="mt-6 max-w-xl font-serif text-4xl leading-[1.05] tracking-[-0.04em]">
+          <p className="section-label">Why it matters</p>
+          <p className="mt-6 max-w-xl font-serif text-[var(--type-h3)] leading-[1.05] tracking-[-0.04em]">
             {project.relevance}
           </p>
           {project.href && (
@@ -149,17 +138,17 @@ export default async function CaseStudyPage({
               href={project.href}
               target="_blank"
               rel="noreferrer"
-              className="group mt-8 inline-flex items-center gap-3 rounded-full bg-ink px-5 py-3 text-sm text-paper dark:bg-paper dark:text-ink"
+              className="group mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-5 text-sm font-semibold text-ground"
             >
               View public project
-              <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              <ArrowUpRight className="size-4" />
             </a>
           )}
         </div>
-        <aside className="self-start rounded-2xl border border-ink/10 bg-card p-6 dark:border-paper/10 sm:p-8">
+        <aside className="self-start border border-line bg-surface p-6 sm:p-8">
           <div className="flex items-center gap-3">
             <ShieldCheck className="size-5 text-signal" />
-            <p className="eyebrow">EVIDENCE NOTE</p>
+            <p className="section-label">Evidence note</p>
           </div>
           <p className="mt-5 text-sm leading-7 text-steel">{project.evidence}</p>
         </aside>

@@ -1,7 +1,7 @@
 # Portfolio Design System — Phase 0
 
-Status: **proposal awaiting typography approval**  
-Scope: design tokens and specimen route only. No production component adopts these tokens before approval.
+Status: **approved — hybrid system selected 8 September 2026**
+Scope: source of truth for every production route and component.
 
 ## Design thesis
 
@@ -11,34 +11,15 @@ The structural metaphor is a chart recorder. Content registers against a fixed l
 
 ## Typography
 
-All candidates are open-licensed and self-hosted. The approved system will be reduced to at most two weights per family, Latin-subset WOFF2, `font-display: swap`, with the text face preloaded. The production build must contain none of the current Geist, Instrument Serif, or Geist Mono files.
+The approved system combines one face from each Phase 0 direction:
 
-### Option A — Expanded Command
+- **Display — Archivo Expanded, 760:** the authority and engineering precision of Option A.
+- **Text — Source Sans 3, 400 / 600:** the human reading voice and excellent screen legibility of Option B.
+- **Mono — Departure Mono, 400:** the memorable low-resolution instrument character of Option C.
 
-- **Display:** Archivo Expanded, 760
-- **Text:** Archivo, 400 / 600
-- **Mono:** Commit Mono, 400
-- **Character:** engineered, severe, highly legible, with enough width-axis personality to feel like technical nomenclature rather than SaaS.
-- **Risk:** lowest-risk option; discipline must come from scale and spacing so it does not become generic corporate grotesk.
-- **Licence:** SIL Open Font License 1.1.
+All three are open-licensed and self-hosted. Production uses Latin-subset WOFF2, `font-display: swap`, preloads the text face, and loads no Geist or Instrument Serif files. Departure Mono is restricted to short readouts, coordinates, and instrument state; it is never used for paragraph copy.
 
-### Option B — Operational Grotesque
-
-- **Display:** Bricolage Grotesque, 720
-- **Text:** Source Sans 3, 400 / 600
-- **Mono:** Martian Mono, 400
-- **Character:** more human and authored. Bricolage’s width and optical-size axes add tension without sacrificing a senior, professional reading voice.
-- **Risk:** expressive details must be used at large sizes only; smaller display text can become visually busy.
-- **Licence:** SIL Open Font License 1.1.
-
-### Option C — Redacted Signal
-
-- **Display:** Redaction 10, 400
-- **Text:** Public Sans, 400 / 700
-- **Mono:** Departure Mono, 400
-- **Character:** deliberately uncomfortable. The display face looks like a partially resolved signal, while the body remains institutional and sober.
-- **Risk:** highest. Redaction is memorable but could imply secrecy or censorship; if approved, it is limited to the hero and major station titles. Departure Mono is limited to readouts, never paragraphs.
-- **Licence:** font files under SIL Open Font License 1.1.
+This is intentionally a hybrid, not permission to mix all nine specimen faces. The combination retains a severe display voice, keeps long-form reading sober, and introduces discomfort only at the readout layer.
 
 ### Fluid type scale
 
@@ -184,8 +165,6 @@ Only these four primitives are allowed.
 - No glass surfaces
 - No gradient fills or text
 
-## Phase 0 checkpoint
+## Phase 0 decision record
 
-The comparison route is `/dev/type`. It presents the same hero, lede, body paragraph, metrics, and instrument readout in all three systems at desktop and mobile widths.
-
-Approval must select exactly one option: **A, B, or C**. Phase 1 may begin only after that choice.
+The comparison route remains at `/dev/type` as an archived decision artefact. The approved production combination is **A display + B body + C mono**. Phase 1 may replace the current production tokens and components with this system.
