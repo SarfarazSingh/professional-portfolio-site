@@ -32,6 +32,44 @@ const departureMono = localFont({
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:43127";
 const revealScript = `document.documentElement.classList.add("js");`;
+const revealObserverScript = `
+  (() => {
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const supported = "IntersectionObserver" in window;
+    const seen = new WeakSet();
+    const observer = supported && !reduced
+      ? new IntersectionObserver((entries) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            entry.target.dataset.revealState = "visible";
+            observer.unobserve(entry.target);
+          }
+        }, { rootMargin: "-10% 0px", threshold: 0.15 })
+      : null;
+
+    const register = (root) => {
+      const elements = root.matches?.(".reveal[data-reveal-state='idle']")
+        ? [root]
+        : root.querySelectorAll?.(".reveal[data-reveal-state='idle']") ?? [];
+
+      for (const element of elements) {
+        if (seen.has(element)) continue;
+        seen.add(element);
+        if (observer) observer.observe(element);
+        else element.dataset.revealState = "visible";
+      }
+    };
+
+    register(document);
+    new MutationObserver((records) => {
+      for (const record of records) {
+        for (const node of record.addedNodes) {
+          if (node.nodeType === Node.ELEMENT_NODE) register(node);
+        }
+      }
+    }).observe(document.body, { childList: true, subtree: true });
+  })();
+`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -109,6 +147,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
+        <script dangerouslySetInnerHTML={{ __html: revealObserverScript }} />
       </body>
     </html>
   );
