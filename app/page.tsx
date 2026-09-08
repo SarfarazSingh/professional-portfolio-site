@@ -5,20 +5,11 @@ import { HomeHero } from "@/components/portfolio/home-hero";
 import { ProjectCard } from "@/components/portfolio/project-card";
 import { publication } from "@/content/insights";
 import { artefacts, projects } from "@/content/projects";
-import type { Lens } from "@/content/profile";
 
-export default async function Home({
-  searchParams,
-}: {
-  searchParams: Promise<{ lens?: string | string[] }>;
-}) {
-  const requestedLens = (await searchParams).lens;
-  const initialLens: Lens =
-    requestedLens === "engineering" ? "engineering" : "ai";
-
+export default function Home() {
   return (
     <>
-      <HomeHero initialLens={initialLens} />
+      <HomeHero />
       <CareerTopology />
 
       <section className="border-y border-ink/10 bg-ocean text-paper dark:border-paper/10">

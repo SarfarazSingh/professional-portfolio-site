@@ -47,30 +47,22 @@ Before a public deployment, set `NEXT_PUBLIC_SITE_URL` to the canonical producti
 
 The site includes semantic landmarks, keyboard-operable controls, visible focus states, reduced-motion handling, responsive layouts, print styles, and light/dark themes.
 
-## Permanent production (Vercel)
+## Permanent production (Vercel + GitHub Pages)
 
-You do not need a local copy if you already have the code on GitHub. Vercel should import that GitHub repo. GitHub Pages is a weaker fit for this Next.js app because it needs a static export and cannot run the Open Graph image route.
+Vercel is the primary production host. GitHub Pages is the static fallback and deploys automatically from `main` via `.github/workflows/github-pages.yml`.
 
-### Fastest path: GitHub → Vercel
+### Vercel
 
-1. Create an empty GitHub repository (for example `professional-portfolio-site`).
-2. Push this codebase to `main`.
-3. Open [vercel.com/new](https://vercel.com/new), import that GitHub repo, keep the Next.js defaults, and deploy **Production**.
-4. Set `NEXT_PUBLIC_SITE_URL` to the Vercel domain (or your custom domain) and redeploy.
+1. Push this repository to GitHub.
+2. Open [vercel.com/new](https://vercel.com/new), import the GitHub repo, keep the Next.js defaults, and deploy **Production**.
+3. Set `NEXT_PUBLIC_SITE_URL` to the Vercel domain (or your custom domain) and redeploy.
 
-After that, every push to `main` publishes production automatically.
+### GitHub Pages
 
-### If the code is still only on Origin
+After the GitHub repo exists:
 
-```bash
-curl -fsSL https://downloads.cursor.com/origin/install.sh | sh
-origin auth login
-origin repo clone sarfaraz-wahad/professional-portfolio-site
-cd professional-portfolio-site
-git remote add github git@github.com:<your-github-user>/professional-portfolio-site.git
-git push -u github main
-```
+1. Settings → Pages → Source: **GitHub Actions**.
+2. Push to `main` (or run the **Deploy to GitHub Pages** workflow).
+3. The site will be at `https://<github-user>.github.io/professional-portfolio-site/`.
 
-Then import that GitHub repo in Vercel as above.
-
-Do not use GitHub Pages unless you later convert the project to `output: "export"`. Keep Vercel as the production host.
+The Pages build uses `output: "export"` only when `GITHUB_PAGES=true`. Local and Vercel builds keep the normal Next.js server output.
