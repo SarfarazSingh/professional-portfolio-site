@@ -46,39 +46,31 @@ Before a public deployment, set `NEXT_PUBLIC_SITE_URL` to the canonical producti
 ## Accessibility
 
 The site includes semantic landmarks, keyboard-operable controls, visible focus states, reduced-motion handling, responsive layouts, print styles, and light/dark themes.
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Permanent production (Vercel)
 
-First, run the development server:
+You do not need a local copy if you already have the code on GitHub. Vercel should import that GitHub repo. GitHub Pages is a weaker fit for this Next.js app because it needs a static export and cannot run the Open Graph image route.
+
+### Fastest path: GitHub → Vercel
+
+1. Create an empty GitHub repository (for example `professional-portfolio-site`).
+2. Push this codebase to `main`.
+3. Open [vercel.com/new](https://vercel.com/new), import that GitHub repo, keep the Next.js defaults, and deploy **Production**.
+4. Set `NEXT_PUBLIC_SITE_URL` to the Vercel domain (or your custom domain) and redeploy.
+
+After that, every push to `main` publishes production automatically.
+
+### If the code is still only on Origin
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+curl -fsSL https://downloads.cursor.com/origin/install.sh | sh
+origin auth login
+origin repo clone sarfaraz-wahad/professional-portfolio-site
+cd professional-portfolio-site
+git remote add github git@github.com:<your-github-user>/professional-portfolio-site.git
+git push -u github main
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then import that GitHub repo in Vercel as above.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Do not use GitHub Pages unless you later convert the project to `output: "export"`. Keep Vercel as the production host.
