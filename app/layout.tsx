@@ -22,6 +22,13 @@ const instrumentSerif = Instrument_Serif({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:43127";
+const themeScript = `
+  try {
+    const stored = localStorage.getItem("theme");
+    const dark = stored === "dark" || (!stored && matchMedia("(prefers-color-scheme: dark)").matches);
+    document.documentElement.classList.toggle("dark", dark);
+  } catch {}
+`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -77,6 +84,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="flex min-h-full flex-col">
         <a
           href="#main-content"

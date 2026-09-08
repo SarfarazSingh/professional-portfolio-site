@@ -3,27 +3,16 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, Moon, Sun, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { navigation, profile } from "@/content/profile";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [dark, setDark] = useState(false);
-
-  useEffect(() => {
-    const isDark =
-      localStorage.getItem("theme") === "dark" ||
-      (!localStorage.getItem("theme") &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
-    setDark(isDark);
-    document.documentElement.classList.toggle("dark", isDark);
-  }, []);
 
   function toggleTheme() {
-    const next = !dark;
-    setDark(next);
+    const next = !document.documentElement.classList.contains("dark");
     document.documentElement.classList.toggle("dark", next);
     localStorage.setItem("theme", next ? "dark" : "light");
   }
@@ -79,9 +68,10 @@ export function SiteHeader() {
             type="button"
             onClick={toggleTheme}
             className="grid size-9 place-items-center rounded-full border border-ink/10 transition-colors hover:border-signal hover:text-signal dark:border-paper/10"
-            aria-label={dark ? "Use light theme" : "Use dark theme"}
+            aria-label="Toggle colour theme"
           >
-            {dark ? <Sun className="size-4" /> : <Moon className="size-4" />}
+            <Moon className="size-4 dark:hidden" />
+            <Sun className="hidden size-4 dark:block" />
           </button>
           <button
             type="button"

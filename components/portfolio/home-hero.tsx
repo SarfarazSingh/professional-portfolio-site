@@ -2,17 +2,12 @@
 
 import Link from "next/link";
 import { ArrowDownRight, ArrowRight, Check } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { profile, type Lens } from "@/content/profile";
 import { cn } from "@/lib/utils";
 
-export function HomeHero() {
-  const [lens, setLens] = useState<Lens>("ai");
-
-  useEffect(() => {
-    const value = new URLSearchParams(window.location.search).get("lens");
-    if (value === "ai" || value === "engineering") setLens(value);
-  }, []);
+export function HomeHero({ initialLens = "ai" }: { initialLens?: Lens }) {
+  const [lens, setLens] = useState<Lens>(initialLens);
 
   function selectLens(next: Lens) {
     setLens(next);
