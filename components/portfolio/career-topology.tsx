@@ -1,15 +1,7 @@
-"use client";
-
-import { useState } from "react";
-import { ArrowDownRight } from "lucide-react";
 import { Reveal } from "@/components/portfolio/reveal";
 import { phases } from "@/content/experience";
-import { cn } from "@/lib/utils";
 
 export function CareerTopology() {
-  const [active, setActive] = useState<(typeof phases)[number]["id"]>("build");
-  const selected = phases.find((phase) => phase.id === active) ?? phases[0];
-
   return (
     <section
       className="station bg-ground/96"
@@ -36,66 +28,31 @@ export function CareerTopology() {
         <div className="border border-line bg-surface">
           <div className="instrument-readout flex items-center justify-between border-b border-line p-5 sm:px-8">
             <span>Operate → Transform → Build</span>
-            <span className="text-signal">Active</span>
+            <span className="text-signal">One method</span>
           </div>
 
           <div className="grid lg:grid-cols-3">
             {phases.map((phase) => (
-              <button
+              <article
                 key={phase.id}
-                type="button"
-                onClick={() => setActive(phase.id)}
-                className={cn(
-                  "group relative min-h-72 border-b border-line p-6 text-left last:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0",
-                  active === phase.id
-                    ? "bg-copy text-ground"
-                    : "bg-surface text-copy hover:bg-surface-raised",
-                )}
-                aria-pressed={active === phase.id}
+                className="relative min-h-72 border-b border-line bg-surface p-6 last:border-b-0 lg:border-b-0 lg:border-r lg:last:border-r-0"
               >
                 <div className="mb-16 flex items-center justify-between">
-                  <span
-                    className={cn(
-                      "instrument-readout grid size-11 place-items-center rounded-full border",
-                      active === phase.id
-                        ? "border-signal bg-signal text-ground"
-                        : "border-line-strong",
-                    )}
-                  >
+                  <span className="instrument-readout grid size-11 place-items-center rounded-full border border-signal text-signal">
                     {phase.number}
                   </span>
-                  <span
-                    className={cn(
-                      "instrument-readout",
-                      active === phase.id && "text-ground",
-                    )}
-                  >
+                  <span className="instrument-readout">
                     {phase.years}
                   </span>
                 </div>
                 <h3 className="text-[var(--type-h3)] leading-none tracking-[-0.035em]">
                   {phase.title}
                 </h3>
-                <p
-                  className={cn(
-                    "mt-4 max-w-xs leading-7",
-                    active === phase.id
-                      ? "text-ground"
-                      : "text-copy-muted",
-                  )}
-                >
+                <p className="mt-4 max-w-xs leading-7 text-copy-muted">
                   {phase.statement}
                 </p>
-              </button>
+              </article>
             ))}
-          </div>
-
-          <div className="grid gap-4 border-t border-line bg-ground p-5 sm:grid-cols-[auto_1fr_auto] sm:items-center sm:p-6">
-            <span className="instrument-readout text-signal">
-              Selected / {selected.title}
-            </span>
-            <p className="text-lg font-semibold">{selected.statement}</p>
-            <ArrowDownRight className="size-5 text-signal" />
           </div>
         </div>
       </Reveal>

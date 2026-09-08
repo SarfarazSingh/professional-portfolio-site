@@ -1,12 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowRight, MoveUpRight } from "lucide-react";
-import { useState } from "react";
-import { profile, type Lens } from "@/content/profile";
+import { profile } from "@/content/profile";
 import { assetPath } from "@/lib/asset-path";
-import { cn } from "@/lib/utils";
 
 const identities = [
   {
@@ -32,18 +28,6 @@ const identities = [
 ] as const;
 
 export function HomeHero() {
-  const [lens, setLens] = useState<Lens>("ai");
-  const [identity, setIdentity] = useState(0);
-  const content = profile.lenses[lens];
-  const activeIdentity = identities[identity];
-
-  function selectLens(next: Lens) {
-    setLens(next);
-    const url = new URL(window.location.href);
-    url.searchParams.set("lens", next);
-    window.history.replaceState({}, "", url);
-  }
-
   return (
     <section className="relative min-h-[calc(100svh-4.5rem)] border-b border-line bg-ground/96">
       <div className="mx-auto flex min-h-[calc(100svh-4.5rem)] max-w-[1600px] flex-col px-5 sm:px-8 lg:px-12">
@@ -70,39 +54,26 @@ export function HomeHero() {
 
             <div className="mt-12 grid gap-8 border-t border-line pt-6 xl:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)]">
               <div>
-                <div
-                  className="flex gap-1 overflow-x-auto pb-2"
-                  role="group"
-                  aria-label="Professional identities"
-                >
-                  {identities.map((item, index) => (
-                    <button
+                <div className="flex flex-wrap gap-x-4 gap-y-2 border-b border-line pb-4">
+                  {identities.map((item) => (
+                    <span
                       key={item.label}
-                      type="button"
-                      onClick={() => setIdentity(index)}
-                      className={cn(
-                        "min-h-11 shrink-0 border-b px-2 text-left text-sm font-semibold",
-                        identity === index
-                          ? "border-signal text-copy"
-                          : "border-line text-copy-muted hover:border-line-strong hover:text-copy",
-                      )}
-                      aria-pressed={identity === index}
+                      className="text-sm font-semibold text-copy"
+                      title={item.statement}
                     >
                       {item.label}
-                    </button>
+                    </span>
                   ))}
                 </div>
-                <p
-                  className="mt-4 min-h-12 max-w-lg leading-7 text-copy-muted"
-                  aria-live="polite"
-                >
-                  {activeIdentity.statement}
+                <p className="mt-4 max-w-lg leading-7 text-copy-muted">
+                  Judgement shaped where failure is not an option; products
+                  built to work beyond the pilot.
                 </p>
               </div>
 
               <div>
                 <p className="max-w-xl text-lg leading-7 text-copy-muted">
-                  {content.description}
+                  {profile.summary}
                 </p>
                 <div className="mt-5 flex flex-wrap gap-3">
                   <Link
@@ -146,26 +117,15 @@ export function HomeHero() {
         </div>
 
         <div className="grid gap-4 border-t border-line py-4 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
-          <div
-            className="flex flex-wrap gap-2"
-            role="group"
-            aria-label="Choose portfolio lens"
-          >
-            {(Object.keys(profile.lenses) as Lens[]).map((key) => (
-              <button
+          <div className="flex flex-wrap gap-2" aria-label="Portfolio paths">
+            {(["ai", "engineering"] as const).map((key) => (
+              <Link
                 key={key}
-                type="button"
-                onClick={() => selectLens(key)}
-                className={cn(
-                  "min-h-11 rounded-full border px-4 text-sm font-semibold",
-                  lens === key
-                    ? "border-signal bg-signal text-ground"
-                    : "border-line-strong text-copy-muted hover:border-signal hover:text-copy",
-                )}
-                aria-pressed={lens === key}
+                href={`/work?lens=${key}`}
+                className="inline-flex min-h-11 items-center rounded-full border border-line-strong px-4 text-sm font-semibold text-copy-muted hover:border-signal hover:text-copy"
               >
                 {key === "ai" ? "AI & digital" : "Mission-critical systems"}
-              </button>
+              </Link>
             ))}
           </div>
           <a
@@ -175,7 +135,9 @@ export function HomeHero() {
             Explore the current chapter
             <ArrowDown className="size-4" />
           </a>
-          <p className="text-sm text-copy-muted lg:text-right">{content.title}</p>
+          <p className="text-sm text-copy-muted lg:text-right">
+            Two equal paths · one operating philosophy
+          </p>
         </div>
       </div>
     </section>
