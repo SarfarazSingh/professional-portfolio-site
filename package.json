@@ -6,10 +6,19 @@
     "dev": "next dev -p 43127",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:contrast": "node scripts/check-contrast.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/martian-mono": "^5.3.0",
+    "@fontsource-variable/public-sans": "^5.3.0",
+    "@fontsource-variable/source-sans-3": "^5.3.0",
+    "@fontsource/commit-mono": "^5.3.0",
+    "@fontsource/redaction-10": "^5.3.0",
+    "@proj-airi/font-departure-mono": "^0.12.0-beta.5",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.2.6",
     "lucide-react": "^1.43.0",
