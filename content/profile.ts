@@ -11,6 +11,20 @@ export const profile = {
   headline: "Complex technology. Made operational.",
   summary:
     "I lead technology from ambiguity to operational reality—across AI products, enterprise transformation, and safety-critical systems.",
+  currentChapter: {
+    eyebrow: "NOW · MADRID / IE BUSINESS SCHOOL",
+    title: "Building the next chapter in Spain.",
+    description:
+      "At IE, I have combined an International MBA with venture building, cross-programme leadership, and applied AI—turning the campus and Madrid into a live laboratory for products, communities, and responsible innovation.",
+    highlights: [
+      "President, IE Aerospace & Defence Club",
+      "President, IE Music Club",
+      "Vice President (Events), IE Entrepreneurship Club",
+      "IE Blue Torch Award for cross-programme leadership",
+      "Winner, IE Tech Venture Lab and IE Climate Tech Lab",
+      "IE representative, EU AI Policy Hackathon in Berlin",
+    ],
+  },
   availability:
     "Madrid-based and open to senior roles across Europe, the Middle East, and India, subject to role-specific work authorisation.",
   lenses: {
@@ -48,7 +62,8 @@ export const profile = {
   credentials: [
     "AIGP — AI Governance Professional",
     "PMP — Project Management Professional",
-    "IE International MBA — expected 2026",
+    "IE International MBA — expected September 2026",
+    "IE Blue Torch Award — Cross-Program Experience",
     "B.E. Information Science",
   ],
   languages: ["English", "Hindi", "Punjabi", "Russian", "Spanish (A2)"],

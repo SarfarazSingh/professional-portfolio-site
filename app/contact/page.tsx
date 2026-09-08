@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowDownToLine, ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
 import { PageIntro } from "@/components/portfolio/page-intro";
 import { profile } from "@/content/profile";
+import { assetPath } from "@/lib/asset-path";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -84,14 +85,14 @@ export default function ContactPage() {
             <p className="eyebrow">CV DOWNLOADS</p>
             <div className="mt-5 grid gap-3">
               <a
-                href="/cv/sarfaraz-wahad-ai-digital.pdf"
+                href={assetPath("/cv/sarfaraz-wahad-ai-digital.pdf")}
                 download
                 className="flex items-center justify-between border-b border-ink/10 pb-3 text-sm dark:border-paper/10"
               >
                 AI & Digital <ArrowDownToLine className="size-4" />
               </a>
               <a
-                href="/cv/sarfaraz-wahad-engineering.pdf"
+                href={assetPath("/cv/sarfaraz-wahad-engineering.pdf")}
                 download
                 className="flex items-center justify-between border-b border-ink/10 pb-3 text-sm dark:border-paper/10"
               >

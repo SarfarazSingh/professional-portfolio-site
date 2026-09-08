@@ -26,7 +26,7 @@ export function HomeHero({ initialLens = "ai" }: { initialLens?: Lens }) {
           <span>MADRID · 40.4168° N, 3.7038° W</span>
           <span className="flex items-center gap-2">
             <span className="size-1.5 rounded-full bg-signal animate-pulse" />
-            OPEN TO THE RIGHT MANDATE
+            IE MBA · BLUE TORCH · BUILDING IN SPAIN
           </span>
         </div>
 
@@ -40,6 +40,11 @@ export function HomeHero({ initialLens = "ai" }: { initialLens?: Lens }) {
               <br />
               <span className="text-steel">Made operational.</span>
             </h1>
+            <p className="mt-8 max-w-2xl text-base leading-7 text-steel sm:text-lg">
+              Currently at IE Business School in Madrid—leading communities,
+              building ventures, and turning applied AI into products for real
+              operators and users.
+            </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link
                 href="/work"

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Waves, Workflow, Wrench } from "lucide-react";
+import { ArrowRight, Award, Waves, Workflow, Wrench } from "lucide-react";
 import { PageIntro } from "@/components/portfolio/page-intro";
 import { profile } from "@/content/profile";
+import { assetPath } from "@/lib/asset-path";
 
 export const metadata: Metadata = {
   title: "About",
@@ -91,6 +93,60 @@ export default function AboutPage() {
               </article>
             );
           })}
+        </div>
+      </section>
+
+      <section className="bg-ocean text-paper">
+        <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:px-12 lg:py-24">
+          <div className="relative min-h-[420px] overflow-hidden rounded-[1.75rem]">
+            <Image
+              src={assetPath("/images/submarine-service-collage.jpg")}
+              alt="Sarfaraz Singh Wahad during submarine service, training, and technical operations"
+              fill
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="lg:pl-8">
+            <p className="font-mono text-[10px] tracking-[0.16em] text-paper/55">
+              EDUCATION · FROM ENGINEERING TO ENTERPRISE LEADERSHIP
+            </p>
+            <h2 className="mt-6 font-serif text-5xl leading-[0.95] tracking-[-0.045em] sm:text-6xl">
+              Experience built the questions.
+              <br />
+              <span className="text-paper/55">IE sharpened the answers.</span>
+            </h2>
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-paper/65">
+              At IE Business School in Madrid, I brought together engineering,
+              operations, strategy, entrepreneurship, and responsible AI. The
+              International MBA became an active platform: I led communities,
+              built ventures, represented IE internationally, and connected
+              ideas to real users across Spain.
+            </p>
+            <div className="mt-9 grid gap-3 sm:grid-cols-2">
+              {[
+                ["IE Business School", "International MBA · Technology Impact Scholarship · 2026"],
+                ["IIM Shillong", "Business Management Programme: Operations · First Class Honours"],
+                ["VTU Bengaluru", "B.E. Information Science · First Class"],
+                ["IE Blue Torch", "Cross-programme experience and leadership · June 2026"],
+              ].map(([institution, detail]) => (
+                <div
+                  key={institution}
+                  className="rounded-xl border border-paper/15 p-4"
+                >
+                  <p className="text-sm font-semibold">{institution}</p>
+                  <p className="mt-2 text-xs leading-5 text-paper/50">{detail}</p>
+                </div>
+              ))}
+            </div>
+            <a
+              href={assetPath("/credentials/ie-blue-torch-award.pdf")}
+              target="_blank"
+              className="mt-8 inline-flex items-center gap-3 rounded-full bg-paper px-5 py-3 text-sm font-medium text-ink"
+            >
+              Verify Blue Torch credential <Award className="size-4 text-amber" />
+            </a>
+          </div>
         </div>
       </section>
 

@@ -12,6 +12,21 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
+    period: "2025 — 2026",
+    organisation: "IE Business School · Madrid",
+    role: "International MBA · Technology Impact Scholar",
+    scope:
+      "Combined graduate business education with venture building, cross-programme leadership, and applied AI work across the IE and Madrid ecosystems.",
+    outcomes: [
+      "Led the IE Aerospace & Defence Club and IE Music Club as President, while serving as Vice President (Events) of the IE Entrepreneurship Club.",
+      "Received the IE Blue Torch Award for cross-programme contribution and leadership.",
+      "Built TrackSense AI, Weave, and Loco Dhaasu as live product, community, and go-to-market experiments in Spain.",
+      "Won the IE Tech Venture Lab and IE Climate Tech Lab, and represented IE at the EU AI Policy Hackathon in Berlin.",
+    ],
+    lenses: ["ai", "engineering"],
+    phase: "build",
+  },
+  {
     period: "2026 — PRESENT",
     organisation: "Gamucha Ventures",
     role: "AI Lead",

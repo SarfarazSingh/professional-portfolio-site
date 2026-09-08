@@ -3,6 +3,7 @@ import { Download } from "lucide-react";
 import { ExperienceTimeline } from "@/components/portfolio/experience-timeline";
 import { PageIntro } from "@/components/portfolio/page-intro";
 import { profile } from "@/content/profile";
+import { assetPath } from "@/lib/asset-path";
 
 export const metadata: Metadata = {
   title: "Experience",
@@ -38,14 +39,14 @@ export default function ExperiencePage() {
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="/cv/sarfaraz-wahad-ai-digital.pdf"
+                href={assetPath("/cv/sarfaraz-wahad-ai-digital.pdf")}
                 download
                 className="inline-flex items-center gap-3 rounded-full bg-ink px-5 py-3 text-sm text-paper dark:bg-paper dark:text-ink"
               >
                 AI & digital CV <Download className="size-4" />
               </a>
               <a
-                href="/cv/sarfaraz-wahad-engineering.pdf"
+                href={assetPath("/cv/sarfaraz-wahad-engineering.pdf")}
                 download
                 className="inline-flex items-center gap-3 rounded-full border border-ink/15 px-5 py-3 text-sm dark:border-paper/15"
               >

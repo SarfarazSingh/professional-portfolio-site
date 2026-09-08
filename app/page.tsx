@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { CareerTopology } from "@/components/portfolio/career-topology";
+import { CurrentChapter } from "@/components/portfolio/current-chapter";
 import { HomeHero } from "@/components/portfolio/home-hero";
 import { ProjectCard } from "@/components/portfolio/project-card";
 import { publication } from "@/content/insights";
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <>
       <HomeHero />
+      <CurrentChapter />
       <CareerTopology />
 
       <section className="border-y border-ink/10 bg-ocean text-paper dark:border-paper/10">

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowDownToLine, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { profile } from "@/content/profile";
+import { assetPath } from "@/lib/asset-path";
 import { cn } from "@/lib/utils";
 
 const mandates = {
@@ -146,7 +147,7 @@ export function RecruiterBrief() {
 
             <div className="mt-10 flex flex-wrap gap-3">
               <a
-                href={item.cv}
+                href={assetPath(item.cv)}
                 download
                 className="inline-flex h-12 items-center gap-3 rounded-full bg-paper px-6 text-sm font-medium text-ink transition-colors hover:bg-signal hover:text-white"
               >
