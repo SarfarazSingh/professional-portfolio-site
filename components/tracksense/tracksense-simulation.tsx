@@ -101,8 +101,7 @@ function confidenceAt(time: number) {
 }
 
 function stageAt(time: number, decision: Decision | null) {
-  if (time < 2.5) return "Baseline observation";
-  if (time < 5.5) return "Signal divergence emerging";
+  if (time < 5.5) return "Baseline observation";
   if (time < 7.5) return "Local edge inference";
   if (time < CHECKPOINT) return "Evidence threshold crossed";
   if (!decision) return "Human checkpoint";
@@ -252,11 +251,9 @@ function drawSimulation(
       const center = telemetryTop + channelHeight * (channel + 0.5);
       const samples = compact ? 22 : 38;
       context.strokeStyle =
-        traceActive && anomalyProgress(time) > 0.08
-          ? colors.signal
-          : colors.muted;
+        traceActive && time >= 5.5 ? colors.signal : colors.muted;
       context.globalAlpha =
-        traceActive && anomalyProgress(time) > 0.08 ? 1 : 0.58;
+        traceActive && time >= 5.5 ? 1 : 0.58;
       context.lineWidth = traceActive ? 1.8 : 1;
       context.beginPath();
 
