@@ -5,6 +5,7 @@ import { InstrumentGrid } from "@/components/portfolio/instrument-grid";
 import { SiteFooter } from "@/components/portfolio/site-footer";
 import { SiteHeader } from "@/components/portfolio/site-header";
 import { profile } from "@/content/profile";
+import { voiceAgentScript } from "@/lib/voice-agent-runtime";
 import "./globals.css";
 
 const archivoExpanded = localFont({
@@ -213,6 +214,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
         <script dangerouslySetInnerHTML={{ __html: interactionScript }} />
+        <script dangerouslySetInnerHTML={{ __html: voiceAgentScript }} />
         <script dangerouslySetInnerHTML={{ __html: revealObserverScript }} />
       </body>
     </html>
