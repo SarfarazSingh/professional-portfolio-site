@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { profile } from "@/content/profile";
+import { assetPath } from "@/lib/asset-path";
 
 export function SiteFooter() {
   return (
@@ -32,12 +32,12 @@ export function SiteFooter() {
           >
             LinkedIn <ArrowUpRight className="size-4" />
           </a>
-          <Link
-            href="/recruiter"
+          <a
+            href={assetPath("/recruiter")}
             className="group flex min-h-11 items-center justify-between gap-10 border-b border-line py-2"
           >
             Recruiter brief <ArrowUpRight className="size-4" />
-          </Link>
+          </a>
         </div>
         <div className="instrument-readout flex flex-wrap gap-x-6 gap-y-2 border-t border-line pt-6 md:col-span-2">
           <span>© {new Date().getFullYear()} SARFARAZ SINGH WAHAD</span>

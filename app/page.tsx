@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { CareerTopology } from "@/components/portfolio/career-topology";
 import { CurrentChapter } from "@/components/portfolio/current-chapter";
@@ -7,6 +6,7 @@ import { ProjectCard } from "@/components/portfolio/project-card";
 import { TrackSenseSection } from "@/components/tracksense/tracksense-section";
 import { publication } from "@/content/insights";
 import { artefacts, projects } from "@/content/projects";
+import { assetPath } from "@/lib/asset-path";
 
 export default function Home() {
   return (
@@ -34,13 +34,13 @@ export default function Home() {
               Evidence, not adjectives.
             </h2>
           </div>
-          <Link
-            href="/work"
+          <a
+            href={assetPath("/work")}
             className="group flex items-center gap-3 text-sm font-semibold"
           >
             View all work
             <ArrowRight className="size-4" />
-          </Link>
+          </a>
         </div>
         <div className="grid gap-5 lg:grid-cols-2">
           {projects.slice(0, 2).map((project, index) => (
@@ -102,13 +102,13 @@ export default function Home() {
           <p className="mt-7 max-w-2xl text-lg leading-8 text-copy-muted">
             {publication.description}
           </p>
-          <Link
-            href="/insights"
+          <a
+            href={assetPath("/insights")}
             className="group mt-8 inline-flex items-center gap-3 text-sm font-semibold"
           >
             Read selected insights
             <ArrowRight className="size-4" />
-          </Link>
+          </a>
         </div>
       </section>
     </>

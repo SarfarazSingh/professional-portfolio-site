@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Award, Crosshair } from "lucide-react";
 import { Reveal } from "@/components/portfolio/reveal";
 import { profile } from "@/content/profile";
@@ -53,13 +52,13 @@ export function CurrentChapter() {
             </div>
 
             <div className="mt-10 flex flex-wrap gap-3">
-              <Link
-                href="/experience"
+              <a
+                href={assetPath("/experience")}
                 className="inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-6 text-sm font-semibold text-ground"
               >
                 Explore the IE chapter
                 <ArrowRight className="size-4" />
-              </Link>
+              </a>
               <a
                 href={assetPath("/credentials/ie-blue-torch-award.pdf")}
                 target="_blank"
@@ -94,9 +93,13 @@ export function CurrentChapter() {
 
             <div>
               {ventures.map((venture) => (
-                <Link
+                <a
                   key={venture.name}
-                  href={venture.href}
+                  href={
+                    venture.href.startsWith("http")
+                      ? venture.href
+                      : assetPath(venture.href)
+                  }
                   target={venture.href.startsWith("http") ? "_blank" : undefined}
                   className="group flex min-h-24 items-center justify-between gap-4 border-b border-line p-5 last:border-b-0 hover:bg-surface-raised"
                 >
@@ -107,7 +110,7 @@ export function CurrentChapter() {
                     </span>
                   </span>
                   <ArrowUpRight className="size-4 shrink-0 text-copy-muted group-hover:text-signal" />
-                </Link>
+                </a>
               ))}
             </div>
           </aside>

@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/portfolio/reveal";
 import type { Project } from "@/content/projects";
+import { assetPath } from "@/lib/asset-path";
 import { cn } from "@/lib/utils";
 
 export function ProjectCard({
@@ -13,8 +13,8 @@ export function ProjectCard({
 }) {
   return (
     <Reveal className="h-full">
-      <Link
-        href={`/work/${project.slug}`}
+      <a
+        href={assetPath(`/work/${project.slug}`)}
         className={cn(
           "group relative flex min-h-[390px] flex-col border border-line bg-surface p-6 hover:bg-surface-raised sm:p-8",
           large && "lg:min-h-[560px]",
@@ -53,7 +53,7 @@ export function ProjectCard({
           {project.lens.join(" + ")}
         </span>
       </div>
-      </Link>
+      </a>
     </Reveal>
   );
 }

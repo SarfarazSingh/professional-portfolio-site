@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowDown, ArrowRight, MoveUpRight } from "lucide-react";
 import { profile } from "@/content/profile";
 import { assetPath } from "@/lib/asset-path";
@@ -76,20 +75,20 @@ export function HomeHero() {
                   {profile.summary}
                 </p>
                 <div className="mt-5 flex flex-wrap gap-3">
-                  <Link
-                    href="/work"
+                  <a
+                    href={assetPath("/work")}
                     className="inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-6 text-sm font-semibold text-ground"
                   >
                     Enter the portfolio
                     <ArrowRight className="size-4" />
-                  </Link>
-                  <Link
-                    href="/recruiter"
+                  </a>
+                  <a
+                    href={assetPath("/recruiter")}
                     className="inline-flex min-h-12 items-center gap-3 rounded-full border border-line-strong px-6 text-sm font-semibold text-copy hover:border-signal hover:text-signal"
                   >
                     Recruiter brief
                     <MoveUpRight className="size-4" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -119,13 +118,13 @@ export function HomeHero() {
         <div className="grid gap-4 border-t border-line py-4 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
           <div className="flex flex-wrap gap-2" aria-label="Portfolio paths">
             {(["ai", "engineering"] as const).map((key) => (
-              <Link
+              <a
                 key={key}
-                href={`/work?lens=${key}`}
+                href={assetPath(`/work?lens=${key}`)}
                 className="inline-flex min-h-11 items-center rounded-full border border-line-strong px-4 text-sm font-semibold text-copy-muted hover:border-signal hover:text-copy"
               >
                 {key === "ai" ? "AI & digital" : "Mission-critical systems"}
-              </Link>
+              </a>
             ))}
           </div>
           <a
