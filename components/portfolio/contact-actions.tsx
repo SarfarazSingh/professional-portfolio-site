@@ -1,6 +1,6 @@
 import {
   ArrowUpRight,
-  Linkedin,
+  BriefcaseBusiness,
   Mail,
   MessageCircle,
   X,
@@ -56,7 +56,7 @@ export function ContactActionsDialog() {
       label: "LinkedIn",
       detail: "Open professional profile",
       href: profile.linkedin,
-      icon: Linkedin,
+      icon: BriefcaseBusiness,
     },
   ] as const;
 
