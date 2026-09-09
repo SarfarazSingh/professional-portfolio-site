@@ -16,7 +16,7 @@ export function ProjectCard({
       <a
         href={assetPath(`/work/${project.slug}`)}
         className={cn(
-          "interactive-lift group relative flex min-h-[420px] flex-col border border-line bg-surface p-6 hover:bg-surface-raised sm:p-8",
+          "interactive-lift group relative flex h-full min-h-[420px] flex-col border border-line bg-surface p-6 hover:bg-surface-raised sm:p-8",
           large && "lg:min-h-[500px]",
         )}
       >
