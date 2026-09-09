@@ -35,9 +35,7 @@ const canvasChunks = chunks
       bytes: gzipSync(contents).length,
     };
   })
-  .filter(({ contents }) =>
-    contents.includes("The model thinks something might be wrong"),
-  );
+  .filter(({ contents }) => contents.includes("Dispatch inspection"));
 
 if (canvasChunks.length !== 1) {
   console.error(
