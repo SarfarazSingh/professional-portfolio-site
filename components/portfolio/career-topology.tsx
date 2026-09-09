@@ -9,8 +9,8 @@ const chapters = [
     title: "Indian Navy",
     years: "2015–23",
     organisation: "Submarine Service",
-    role: "I served in technical operations and nuclear safety",
-    evidence: "$10M training platform · 5,000+ submariners · 50% faster response",
+    role: "I served in technical operations, radiation safety, and nuclear assurance",
+    evidence: "AERB-certified RSO · $10M training platform · 5,000+ submariners",
     href: "/work/submarine-systems",
   },
   {

@@ -56,7 +56,7 @@ const hiringAreas = {
     short: "Responsible AI",
     title: "I build guardrails into the work from the start.",
     summary:
-      "My AIGP training gives me the formal framework. My years in submarines taught me the deeper habit: know the limits, plan for failure, keep a person accountable, and speak up early.",
+      "My AIGP certification gives me the formal framework. I also served as an AERB-certified Radiation Safety Officer on a nuclear submarine, where governance meant knowing the limits, planning for failure, keeping a person accountable, and speaking up early.",
     capabilities: [
       "Understanding AI risk",
       "Meaningful human oversight",
@@ -66,8 +66,9 @@ const hiringAreas = {
       "Clear incident and escalation paths",
     ],
     cases: [
+      { title: "PDIP", href: "/work/pdip" },
       { title: "TrackSense AI", href: "/work/tracksense" },
-      { title: "Systems under pressure", href: "/work/submarine-systems" },
+      { title: "My years in the Submarine Service", href: "/work/submarine-systems" },
     ],
     roles: "Responsible AI Programme Manager · AI Governance Manager · AI Assurance Lead",
     caveat:
@@ -88,7 +89,7 @@ const hiringAreas = {
       "Data-led operations",
     ],
     cases: [
-      { title: "Systems under pressure", href: "/work/submarine-systems" },
+      { title: "My years in the Submarine Service", href: "/work/submarine-systems" },
       { title: "TrackSense AI", href: "/work/tracksense" },
     ],
     roles:

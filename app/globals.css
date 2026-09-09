@@ -256,6 +256,10 @@
   animation-delay: 390ms;
 }
 
+[data-hero-entry="6"] {
+  animation-delay: 470ms;
+}
+
 .hero-title-line:nth-child(1) {
   animation-delay: 110ms;
 }

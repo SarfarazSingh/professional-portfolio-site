@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
+import { LinkedInHighlights } from "@/components/portfolio/linkedin-highlights";
 import { PageIntro } from "@/components/portfolio/page-intro";
 import { insights, publication } from "@/content/insights";
 
@@ -15,7 +16,7 @@ export default function InsightsPage() {
       <PageIntro
         eyebrow="Writing · Selected essays"
         title="What I notice, question, and learn."
-        description="I write about engineering, history, music, endurance, and the way technical decisions affect ordinary people."
+        description="I write about AI governance, nuclear risk, engineering, history, music, endurance, and the way technical decisions affect ordinary people."
         aside="Depth, Deterrence & Disruption · My Substack"
       />
 
@@ -49,6 +50,8 @@ export default function InsightsPage() {
           ))}
         </div>
       </section>
+
+      <LinkedInHighlights />
 
       <section className="border-t border-line bg-surface">
         <div className="mx-auto grid max-w-[1600px] gap-8 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-24">

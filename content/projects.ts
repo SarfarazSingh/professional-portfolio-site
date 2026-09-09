@@ -59,6 +59,45 @@ export const projects: Project[] = [
     href: "https://tracksense.in/",
   },
   {
+    slug: "pdip",
+    title: "PDIP",
+    kicker: "AI governance & disinformation",
+    summary:
+      "I built a working prototype that turns suspected AI-generated or coordinated political content into a documented compliance review.",
+    category: "Responsible AI prototype",
+    year: "2026",
+    lens: ["ai"],
+    featured: true,
+    challenge:
+      "Teams reviewing suspected disinformation need to move quickly without turning an AI score into a verdict. They also need to show which rule applies, what evidence was used, and who remains accountable.",
+    role:
+      "I designed and built the Parliamentary Disinformation Intelligence Platform as a policy and interface prototype following my work at the CIVICA EU AI Policy Hackathon.",
+    actions: [
+      "I designed an intake flow for suspected synthetic or coordinated text, transcripts, and media links.",
+      "I connected each review to relevant provisions of the EU AI Act, Digital Services Act, GDPR, and EU political-advertising rules.",
+      "I made source evidence, escalation, human review, and an audit trail visible in the interface.",
+      "I added red-team scenarios so the review flow can be tested without presenting generated outputs as real incidents.",
+    ],
+    system: [
+      "Disinformation intake",
+      "Regulatory mapping",
+      "Evidence record",
+      "Human review",
+      "Escalation queue",
+      "Audit trail",
+    ],
+    outcome: [
+      "A public, working prototype that demonstrates the complete review journey.",
+      "A plain link between model output, source evidence, regulation, and human accountability.",
+      "Reusable test scenarios covering elections, manipulated media, and public-interest claims.",
+    ],
+    relevance:
+      "I include PDIP because it shows the governance work itself—not just a certification. It makes the rules, uncertainty, and human responsibility visible in a product people can try.",
+    evidence:
+      "The public demo verifies the interface and regulatory references. It is a portfolio prototype, not a deployed parliamentary or government system. Its scores are simulated and do not constitute legal advice.",
+    href: "https://frontend-six-bay-39.vercel.app",
+  },
+  {
     slug: "enterprise-ai-transformation",
     title: "Enterprise AI at PwC",
     kicker: "PwC · GenAI and automation",
@@ -108,8 +147,9 @@ export const projects: Project[] = [
     challenge:
       "A submarine is ready only when its people, equipment, procedures, and information are ready together. There is very little room for guesswork when a decision has to be made.",
     role:
-      "I served in progressively responsible roles across technical operations, nuclear safety, international programmes, and training on conventional and nuclear submarines.",
+      "I served in progressively responsible roles across technical operations, nuclear safety, international programmes, and training on conventional and nuclear submarines, including three years as Senior Operations and Radiation Safety Officer.",
     actions: [
+      "I qualified as a Licensed Radiation Safety Officer through India’s Atomic Energy Regulatory Board.",
       "I led multidisciplinary teams responsible for safety-critical equipment and procedures.",
       "My team turned more than 120 monitored parameters into a tool that supported faster emergency decisions.",
       "I led a VR training programme from requirements through rollout to more than 5,000 submariners.",
@@ -117,6 +157,7 @@ export const projects: Project[] = [
     ],
     system: [
       "Operational readiness",
+      "Radiation safety",
       "Nuclear-risk assurance",
       "Incident response",
       "Training systems",
@@ -130,7 +171,7 @@ export const projects: Project[] = [
     relevance:
       "What I learned about checking evidence, knowing limits, escalating early, and keeping a person accountable now shapes how I work with AI.",
     evidence:
-      "I have deliberately left out sensitive operational details. The $5B+ figure is the reported value of the asset involved; it was never a budget I personally owned.",
+      "I have deliberately left out sensitive operational details. My Licensed Radiation Safety Officer role is listed in the supplied professional record; the supporting AERB certificate is not published on this site. The $5B+ figure is the reported value of the asset involved; it was never a budget I personally owned.",
   },
   {
     slug: "up-on-ai",

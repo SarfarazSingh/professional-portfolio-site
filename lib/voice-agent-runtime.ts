@@ -50,7 +50,7 @@ export const voiceAgentScript = `
         if (failed) return;
         setState("idle", "Ready");
         instruction.textContent =
-          "Click the orb, allow the microphone, and ask whether my background fits your role.";
+          "Click the orb, allow the microphone, and ask about my AI work, governance record, or submarine service.";
       };
 
       const failConversation = (error) => {

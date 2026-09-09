@@ -1,7 +1,9 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { CareerTopology } from "@/components/portfolio/career-topology";
 import { CurrentChapter } from "@/components/portfolio/current-chapter";
+import { GovernanceSpotlight } from "@/components/portfolio/governance-spotlight";
 import { HomeHero } from "@/components/portfolio/home-hero";
+import { LinkedInHighlights } from "@/components/portfolio/linkedin-highlights";
 import { ProjectCard } from "@/components/portfolio/project-card";
 import { VoiceAgentSection } from "@/components/portfolio/voice-agent-section";
 import { TrackSenseSection } from "@/components/tracksense/tracksense-section";
@@ -13,6 +15,7 @@ export default function Home() {
   return (
     <>
       <HomeHero />
+      <GovernanceSpotlight />
       <VoiceAgentSection />
       <TrackSenseSection />
       <CurrentChapter />
@@ -86,6 +89,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <LinkedInHighlights />
 
       <section className="station mx-auto grid max-w-[1600px] gap-8 bg-ground/96 px-5 py-20 sm:px-8 md:grid-cols-[0.8fr_1.2fr] lg:px-12 lg:py-28">
         <div>

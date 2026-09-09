@@ -12,7 +12,7 @@ export const profile = {
   trackSense: "https://tracksense.in/",
   headline: "I take on difficult work and stay with it until it works.",
   summary:
-    "I spent eight years in the Indian Navy’s Submarine Service. It taught me to stay calm, take responsibility, and never cut corners. I now bring that discipline to enterprise AI, products, and teams.",
+    "I spent eight years in the Indian Navy’s Submarine Service. It taught me to stay calm, take responsibility, and never cut corners. I now bring that discipline to enterprise AI, governance, products, and teams.",
   currentChapter: {
     eyebrow: "Now · Madrid / IE Business School",
     title: "Learning, leading, and building in Madrid.",
@@ -24,7 +24,7 @@ export const profile = {
       "I am Vice President for Events of the IE Entrepreneurship Club.",
       "I was honoured to receive the IE Blue Torch Award.",
       "My teams won the IE Tech Venture Lab and IE Climate Tech Lab.",
-      "I represented IE at the EU AI Policy Hackathon in Berlin.",
+      "I represented IE at AI-governance hackathons in Berlin and Warsaw.",
     ],
   },
   availability:
@@ -62,7 +62,8 @@ export const profile = {
     { value: "50%", label: "faster emergency response after we introduced analytics" },
   ],
   credentials: [
-    "AIGP — AI Governance Professional",
+    "AIGP — Artificial Intelligence Governance Professional",
+    "AERB-certified Licensed Radiation Safety Officer",
     "PMP — Project Management Professional",
     "IE International MBA — expected September 2026",
     "IE Blue Torch Award — Cross-Program Experience",

@@ -1,16 +1,19 @@
 # Sarfaraz Singh Wahad — Portfolio
 
-An evidence-led, dual-track professional portfolio for AI and digital transformation roles as well as engineering and mission-critical systems leadership.
+A first-person professional portfolio covering AI transformation, AI governance,
+product building, and engineering in safety-critical environments.
 
 ## Experience
 
-The portfolio is organised around one career trajectory:
+The portfolio follows three chapters:
 
-- **Operate** — technical operations and nuclear-safety leadership in the Indian Navy Submarine Service
-- **Transform** — enterprise GenAI, automation, and architecture programmes at PwC
-- **Build** — AI products and ventures including TrackSense AI and UP-ON.AI
+- **Indian Navy** — submarine operations, radiation safety, nuclear assurance, and training
+- **PwC** — enterprise GenAI, automation, and architecture programmes
+- **Madrid** — the IE MBA, AI-policy hackathons, and ventures including TrackSense AI, PDIP, and UP-ON.AI
 
-Recruiters can select either career lens on the homepage or use the dedicated `/recruiter` briefing route to match evidence and CVs to a hiring mandate.
+The homepage gives AIGP, AERB Radiation Safety Officer, Berlin, and Warsaw
+governance work prominent placement. The `/recruiter` route groups the relevant
+work and CVs by hiring area.
 
 The homepage also includes an opt-in ElevenLabs voice guide. It uses the
 allowlisted public agent ID in the browser; the ElevenLabs API key is used only

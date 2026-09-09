@@ -2,7 +2,8 @@ import { ImageResponse } from "next/og";
 import { designColors } from "@/lib/design-tokens";
 
 export const dynamic = "force-static";
-export const alt = "Sarfaraz Singh Wahad — Indian Navy veteran and builder";
+export const alt =
+  "Sarfaraz Singh Wahad — AI transformation and governance leader";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -43,7 +44,7 @@ export default function OpenGraphImage() {
               maxWidth: 1000,
             }}
           >
-            Indian Navy veteran.
+            AI transformation.
           </div>
           <div
             style={{
@@ -53,7 +54,7 @@ export default function OpenGraphImage() {
               color: designColors.signal,
             }}
           >
-            Building in Madrid.
+            Governance grounded in service.
           </div>
         </div>
         <div
@@ -66,8 +67,8 @@ export default function OpenGraphImage() {
             color: designColors.textMuted,
           }}
         >
-          <span>SUBMARINE SERVICE · PWC</span>
-          <span>TRACKSENSE · IE BUSINESS SCHOOL</span>
+          <span>AIGP · BERLIN · WARSAW</span>
+          <span>AERB RSO · SUBMARINE SERVICE</span>
         </div>
       </div>
     ),

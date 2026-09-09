@@ -6,6 +6,7 @@ import {
   MoveUpRight,
 } from "lucide-react";
 import { ContactTrigger } from "@/components/portfolio/contact-actions";
+import { governanceSignals } from "@/content/governance";
 import { profile } from "@/content/profile";
 import { assetPath } from "@/lib/asset-path";
 
@@ -15,8 +16,8 @@ const identities = [
     statement: "I am proud to have served for eight years in the Submarine Service.",
   },
   {
-    label: "PwC manager",
-    statement: "I helped large teams put GenAI and automation into daily operations.",
+    label: "AI transformation leader",
+    statement: "At PwC, I helped large teams put GenAI and automation into daily operations.",
   },
   {
     label: "Founder",
@@ -105,8 +106,36 @@ export function HomeHero() {
             </div>
 
             <div
-              className="hero-entry mt-8 flex flex-wrap gap-3"
+              className="hero-entry mt-6 grid border-l border-t border-line sm:grid-cols-2"
               data-hero-entry="5"
+              aria-label="AI governance and regulated-systems credentials"
+            >
+              {governanceSignals.map((signal) => (
+                <a
+                  className="interactive-lift min-h-20 border-b border-r border-line p-3 hover:bg-surface"
+                  href={
+                    signal.href.startsWith("/")
+                      ? assetPath(signal.href)
+                      : signal.href
+                  }
+                  key={signal.label}
+                  rel="noreferrer"
+                  target="_blank"
+                  title={signal.source}
+                >
+                  <span className="instrument-readout block text-signal">
+                    {signal.label}
+                  </span>
+                  <span className="mt-2 block text-sm font-semibold leading-5">
+                    {signal.title}
+                  </span>
+                </a>
+              ))}
+            </div>
+
+            <div
+              className="hero-entry mt-6 flex flex-wrap gap-3"
+              data-hero-entry="6"
             >
               <a
                 href={assetPath("/work")}
@@ -154,7 +183,7 @@ export function HomeHero() {
                 />
                 <figcaption className="grid gap-1 border-t border-line px-2 py-3 sm:grid-cols-[1fr_auto]">
                   <span className="text-sm font-semibold">
-                    Submariner · PwC manager · Founder
+                    Submariner · AI transformation leader · Founder
                   </span>
                   <span className="instrument-readout">Portrait / 2026</span>
                 </figcaption>

@@ -139,14 +139,19 @@ const revealObserverScript = `
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Sarfaraz Singh Wahad — Submariner, builder, AI lead",
+    default: "Sarfaraz Singh Wahad — AI transformation and governance leader",
     template: "%s — Sarfaraz Singh Wahad",
   },
   description:
-    "I served for eight years in the Indian Navy’s Submarine Service. Today I work on enterprise AI, technical programmes, and products I am building in Madrid.",
+    "AIGP-certified AI transformation and governance leader, former Indian Navy submariner, and AERB-certified Radiation Safety Officer building responsible AI products in Madrid.",
   keywords: [
     "AI transformation",
-    "AI product leader",
+    "AI governance",
+    "AIGP",
+    "AI product leadership",
+    "EU AI Act",
+    "disinformation platform",
+    "radiation safety officer",
     "mission-critical systems",
     "responsible AI",
     "technical programme manager",
@@ -158,14 +163,14 @@ export const metadata: Metadata = {
     type: "website",
     title: "Sarfaraz Singh Wahad — My work and experience",
     description:
-      "From the Indian Navy’s Submarine Service to PwC and the ventures I am building in Madrid.",
+      "AI transformation, governance, submarine service, and responsible products built in Madrid.",
     siteName: profile.name,
   },
   twitter: {
     card: "summary_large_image",
     title: "Sarfaraz Singh Wahad — My work and experience",
     description:
-      "From the Indian Navy’s Submarine Service to PwC and the ventures I am building in Madrid.",
+      "AI transformation, governance, submarine service, and responsible products built in Madrid.",
   },
   robots: { index: true, follow: true },
 };
@@ -175,7 +180,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     "@context": "https://schema.org",
     "@type": "Person",
     name: profile.name,
-    jobTitle: "AI Lead and former submarine technical officer",
+    jobTitle: "AI Transformation and Governance Leader",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Madrid",

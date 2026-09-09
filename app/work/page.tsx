@@ -7,14 +7,14 @@ import { artefacts } from "@/content/projects";
 export const metadata: Metadata = {
   title: "Selected Work",
   description:
-    "Four case studies from my work in the Indian Navy, PwC, TrackSense, and UP-ON.AI.",
+    "Five case studies from my work in the Indian Navy, PwC, TrackSense, PDIP, and UP-ON.AI.",
 };
 
 export default function WorkPage() {
   return (
     <>
       <PageIntro
-        eyebrow="Selected work · Four case studies"
+        eyebrow="Selected work · Five case studies"
         title="What I did, and what changed."
         description="I have kept these cases simple: the problem, my part in the work, what we did as a team, and the result. Where a figure is private or still a target, I say so."
         aside="Filter by focus · Each case includes a note on its sources"

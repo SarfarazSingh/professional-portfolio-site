@@ -21,7 +21,7 @@ export const experience: ExperienceItem[] = [
       "I serve as President of the IE Aerospace & Defence Club and IE Music Club, and as Vice President for Events of the IE Entrepreneurship Club.",
       "I was honoured to receive the IE Blue Torch Award for contributing across programmes and communities.",
       "I used my time in Spain to build TrackSense AI, Weave, and Loco Dhaasu with classmates and collaborators.",
-      "My teams won the IE Tech Venture Lab and IE Climate Tech Lab, and I represented IE at the EU AI Policy Hackathon in Berlin.",
+      "My teams won the IE Tech Venture Lab and IE Climate Tech Lab, and I represented IE at AI-governance hackathons in Berlin and Warsaw.",
     ],
     lenses: ["ai", "engineering"],
     phase: "build",
@@ -82,10 +82,11 @@ export const experience: ExperienceItem[] = [
   {
     period: "2015 — 2023",
     organisation: "Indian Navy — Submarine Service",
-    role: "Technical Operations & Nuclear Safety Leadership",
+    role: "Technical Operations, Radiation Safety & Nuclear Assurance",
     scope:
-      "I served for eight years in the Submarine Service. I remain deeply proud of that time and of the people who trusted me with difficult technical, safety, training, and international responsibilities.",
+      "I served for eight years in the Submarine Service, including three years as Senior Operations and Radiation Safety Officer on a nuclear submarine. I remain deeply proud of that time and of the people who trusted me with difficult technical, safety, training, and international responsibilities.",
     outcomes: [
+      "I qualified as a Licensed Radiation Safety Officer through India’s Atomic Energy Regulatory Board.",
       "I led delivery of a $10M VR training platform that supported more than 5,000 submariners.",
       "I led nuclear-risk assurance across 20+ facilities, with no safety incidents during the programme.",
       "My team turned more than 120 system parameters into an analytics tool that cut emergency-response time by 50%.",

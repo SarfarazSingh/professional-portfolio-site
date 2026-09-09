@@ -69,14 +69,16 @@ export function VoiceAgentSection() {
               className="mt-5 max-w-3xl [font-size:var(--type-h3)] leading-[0.98] tracking-[-0.04em]"
               id="voice-agent-title"
             >
-              Ask about my Navy service, my PwC work, or what I am building now.
+              Ask about my AI transformation work, governance record, or years
+              in submarines.
             </h2>
             <p
               className="mt-5 max-w-[58ch] leading-7 text-copy-muted"
               data-voice-agent-instruction
             >
               Click the orb, allow the microphone, and ask whether my background
-              fits the role you have in mind.
+              fits the role you have in mind. It can also explain my AIGP,
+              radiation-safety work, policy hackathons, and PDIP prototype.
             </p>
             <p
               className="instrument-readout mt-6 flex max-w-2xl items-start gap-2 border-t border-line pt-4 leading-5"

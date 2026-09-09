@@ -37,7 +37,7 @@ export default function AboutPage() {
         eyebrow="About · How I work"
         title="Service shaped how I work."
         description="I have moved from submarines to PwC to building AI products in Madrid. The work has changed, but the values have not: prepare properly, respect the team, own the outcome, and be honest about what you do not know."
-        aside="Indian Navy veteran · PwC manager · Founder · IE MBA"
+        aside="AIGP · AERB-certified Radiation Safety Officer · Indian Navy veteran · IE MBA"
       />
 
       <section className="mx-auto grid max-w-[1600px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-28">
@@ -54,8 +54,9 @@ export default function AboutPage() {
             <p>
               In the Indian Navy, I led technical operations, safety assurance,
               modernisation, and training across conventional and nuclear
-              submarines. I remain proud of that service and grateful to the
-              people who trained me, challenged me, and trusted me.
+              submarines, including three years as a Radiation Safety Officer.
+              I remain proud of that service and grateful to the people who
+              trained me, challenged me, and trusted me.
             </p>
             <p>
               At PwC and in my own ventures, I have tried to carry those lessons
@@ -116,7 +117,8 @@ export default function AboutPage() {
               I came to IE Business School to learn how other people see the
               world—founders, investors, operators, and classmates from many
               countries. Alongside the MBA, I led communities, built ventures,
-              represented IE abroad, and tried to contribute wherever I could.
+              represented IE at AI-governance hackathons in Berlin and Warsaw,
+              and tried to contribute wherever I could.
             </p>
             <div className="mt-9 grid gap-3 sm:grid-cols-2">
               {[
