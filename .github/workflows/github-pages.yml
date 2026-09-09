@@ -30,6 +30,7 @@ jobs:
       - run: npm ci
       - run: npm run check:contrast
       - run: npm run build
+      - run: npm run check:bundle
       - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
