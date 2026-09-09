@@ -91,7 +91,7 @@ The only permitted numbered sequence is the career trajectory: **Operate → Tra
 
 ## Motion system
 
-Only these five primitives are allowed.
+Only these six primitives are allowed.
 
 ### Reveal
 
@@ -138,7 +138,16 @@ Only these five primitives are allowed.
 - Returns to neutral when the pointer leaves the document
 - Disabled completely under `prefers-reduced-motion: reduce`
 
-`prefers-reduced-motion: reduce` disables Reveal, Magnetic, Scrub, and Pointer depth and renders every element at its final, fully opaque position on first paint. JavaScript-disabled output must remain complete and readable.
+### Voice-agent orbit
+
+- Two thin, segmented SVG rings rotate around one circular voice control
+- Sodium amber remains the only signal colour; there is no glow or gradient
+- Wave bars animate only while connecting or in an active conversation
+- The ElevenLabs widget runtime loads on intent and remains outside the critical bundle
+- Conversation state is announced in a polite live region
+- The control returns to a complete static form under reduced motion
+
+`prefers-reduced-motion: reduce` disables Reveal, Magnetic, Scrub, Pointer depth, and Voice-agent orbit and renders every element at its final, fully opaque position on first paint. JavaScript-disabled output must remain complete and readable.
 
 ### Product simulation runtime
 

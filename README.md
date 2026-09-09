@@ -12,6 +12,10 @@ The portfolio is organised around one career trajectory:
 
 Recruiters can select either career lens on the homepage or use the dedicated `/recruiter` briefing route to match evidence and CVs to a hiring mandate.
 
+The homepage also includes an opt-in ElevenLabs voice guide. It uses the
+allowlisted public agent ID in the browser; the ElevenLabs API key is used only
+to provision the agent and is never committed or sent to visitors.
+
 ## Run locally
 
 ```bash

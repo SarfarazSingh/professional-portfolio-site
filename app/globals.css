@@ -280,6 +280,154 @@
   }
 }
 
+.voice-agent-orb-wrap {
+  position: relative;
+  display: grid;
+  width: 132px;
+  height: 132px;
+  place-items: center;
+}
+
+.voice-agent-rings {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.voice-agent-ring {
+  transform-origin: center;
+  stroke: var(--signal);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.voice-agent-ring-outer {
+  stroke-dasharray: 4 10 18 7;
+  opacity: 0.8;
+  animation: voice-agent-orbit 14s linear infinite;
+}
+
+.voice-agent-ring-inner {
+  stroke-dasharray: 2 8;
+  opacity: 0.36;
+  animation: voice-agent-orbit-reverse 9s linear infinite;
+}
+
+.voice-agent-orb {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 88px;
+  height: 88px;
+  cursor: pointer;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--signal);
+  border-radius: 999px;
+  background: var(--surface-raised);
+  color: var(--signal);
+  transition:
+    background-color 240ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 240ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.voice-agent-orb:hover,
+.voice-agent-orb:focus-visible {
+  transform: scale(1.06);
+}
+
+.voice-agent-orb:disabled {
+  cursor: wait;
+}
+
+.voice-agent-wave {
+  position: absolute;
+  display: flex;
+  height: 28px;
+  align-items: center;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.voice-agent-wave span {
+  width: 3px;
+  height: 8px;
+  border-radius: 999px;
+  background: currentColor;
+  animation: voice-agent-bar 900ms ease-in-out infinite alternate;
+}
+
+.voice-agent-wave span:nth-child(2),
+.voice-agent-wave span:nth-child(4) {
+  height: 16px;
+  animation-delay: -300ms;
+}
+
+.voice-agent-wave span:nth-child(3) {
+  height: 24px;
+  animation-delay: -600ms;
+}
+
+.voice-agent-mic {
+  opacity: 1;
+  transition: opacity 180ms ease;
+}
+
+[data-voice-state="connecting"] .voice-agent-ring-outer {
+  animation-duration: 2.4s;
+}
+
+[data-voice-state="connecting"] .voice-agent-wave,
+[data-voice-state="active"] .voice-agent-wave {
+  opacity: 1;
+}
+
+[data-voice-state="connecting"] .voice-agent-mic,
+[data-voice-state="active"] .voice-agent-mic {
+  opacity: 0;
+}
+
+[data-voice-state="active"] .voice-agent-orb {
+  background: var(--signal);
+  color: var(--ground);
+}
+
+[data-voice-state="active"] .voice-agent-ring {
+  stroke-width: 2;
+}
+
+[data-voice-state="error"] .voice-agent-orb {
+  border-color: var(--text-muted);
+  color: var(--text-muted);
+}
+
+@keyframes voice-agent-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes voice-agent-orbit-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes voice-agent-bar {
+  from {
+    transform: scaleY(0.55);
+  }
+
+  to {
+    transform: scaleY(1.15);
+  }
+}
+
 .reveal {
   opacity: 1;
   transform: translateY(0);
@@ -383,9 +531,13 @@
 
   .instrument-grid-depth,
   .pointer-depth-card,
-  .interactive-lift {
+  .interactive-lift,
+  .voice-agent-orb,
+  .voice-agent-ring,
+  .voice-agent-wave span {
     transform: none !important;
     transition: none !important;
+    animation: none !important;
   }
 
   .js .reveal[data-reveal-state] {
