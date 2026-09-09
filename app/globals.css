@@ -232,6 +232,10 @@
   animation: hero-entry 680ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+.hero-title-line {
+  display: block;
+}
+
 [data-hero-entry="1"] {
   animation-delay: 70ms;
 }
