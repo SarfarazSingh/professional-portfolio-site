@@ -1,5 +1,6 @@
 import { createElement } from "react";
 import { Mic, Radio, ShieldCheck } from "lucide-react";
+import Script from "next/script";
 
 const agentId = "agent_8501m23hs5dje34bkks58kcar615";
 const widgetScriptUrl =
@@ -223,7 +224,9 @@ export function VoiceAgentSection() {
         "speaking-text": "Sarfaraz AI is speaking",
         style: { display: "none" },
       })}
-      <script dangerouslySetInnerHTML={{ __html: voiceAgentRuntime }} />
+      <Script id="portfolio-voice-agent-runtime" strategy="afterInteractive">
+        {voiceAgentRuntime}
+      </Script>
     </section>
   );
 }
