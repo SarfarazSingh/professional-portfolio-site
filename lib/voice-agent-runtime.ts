@@ -29,6 +29,7 @@ export const voiceAgentScript = `
       initialised.add(root);
       let conversation = null;
       let active = false;
+      let failed = false;
 
       const setState = (state, message) => {
         root.dataset.voiceState = state;
@@ -46,6 +47,7 @@ export const voiceAgentScript = `
         conversation = null;
         active = false;
         button.disabled = false;
+        if (failed) return;
         setState("idle", "Ready when you are");
         instruction.textContent =
           "Click the orb, allow microphone access, and ask about role fit.";
@@ -53,6 +55,7 @@ export const voiceAgentScript = `
 
       const failConversation = (error) => {
         console.error("Unable to use ElevenLabs voice conversation", error);
+        failed = true;
         conversation = null;
         active = false;
         button.disabled = false;
@@ -82,6 +85,7 @@ export const voiceAgentScript = `
         }
 
         button.disabled = true;
+        failed = false;
         setState("connecting", "Connecting securely");
         instruction.textContent =
           "Your browser will ask for microphone permission.";
@@ -101,6 +105,7 @@ export const voiceAgentScript = `
             agentId,
             connectionType: "webrtc",
             onConnect: () => {
+              failed = false;
               active = true;
               button.disabled = false;
               setState("active", "Conversation live");
