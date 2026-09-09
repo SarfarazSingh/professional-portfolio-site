@@ -14,6 +14,7 @@ export function Reveal({
       className={cn("reveal", className)}
       data-reveal-sequence={sequence || undefined}
       data-reveal-state="idle"
+      suppressHydrationWarning
     >
       {children}
     </div>
