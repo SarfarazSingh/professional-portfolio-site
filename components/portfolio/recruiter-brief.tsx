@@ -22,7 +22,7 @@ const hiringAreas = {
       "Speaking plainly with senior leaders",
     ],
     cases: [
-      { title: "Enterprise AI at scale", href: "/work/enterprise-ai-transformation" },
+      { title: "Enterprise AI at PwC", href: "/work/enterprise-ai-transformation" },
       { title: "UP-ON.AI", href: "/work/up-on-ai" },
     ],
     roles: "AI Transformation Lead · AI Delivery Lead · Data & AI Programme Manager",
