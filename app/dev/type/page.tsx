@@ -135,25 +135,24 @@ export default function TypeSpecimensPage() {
               technology is wrong.
             </p>
             <p className={styles.body}>
-              Eleven years operating mission-critical submarine systems taught
-              me that reliability is a human and technical discipline. I now
-              apply that operating instinct to AI products, enterprise
-              transformation, and edge-first infrastructure—turning uncertain
-              signals into decisions people can trust.
+              Eight years in the Indian Navy’s Submarine Service taught me that
+              reliability depends on people as much as machinery. I now carry
+              that care into AI products, technical programmes, and the teams I
+              am fortunate to lead.
             </p>
 
             <div className={styles.data}>
               <div>
-                <strong>11 yrs</strong>
-                <span>Mission-critical naval operations</span>
+                <strong>8 yrs</strong>
+                <span>Indian Navy Submarine Service</span>
               </div>
               <div>
-                <strong>3 modes</strong>
-                <span>Operate → Transform → Build</span>
+                <strong>3 chapters</strong>
+                <span>Indian Navy → PwC → Madrid</span>
               </div>
               <div>
                 <strong>24 ms</strong>
-                <span>Illustrative edge inference readout</span>
+                <span>Example local-processing reading</span>
               </div>
             </div>
 
