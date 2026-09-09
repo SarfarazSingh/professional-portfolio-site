@@ -77,6 +77,12 @@ const interactionScript = `
       if (!dialog.open) dialog.showModal();
     });
 
+    addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      const dialog = document.getElementById("contact-actions-dialog");
+      if (dialog instanceof HTMLDialogElement && dialog.open) dialog.close();
+    });
+
     const dialog = document.getElementById("contact-actions-dialog");
     dialog?.addEventListener("click", (event) => {
       if (event.target !== dialog || !(dialog instanceof HTMLDialogElement)) return;
