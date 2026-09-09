@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { ArrowDownToLine, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
-import { profile } from "@/content/profile";
+import { ContactTrigger } from "@/components/portfolio/contact-actions";
 import { assetPath } from "@/lib/asset-path";
 import { cn } from "@/lib/utils";
 
@@ -150,12 +150,9 @@ export function RecruiterBrief() {
               >
                 Download matched CV <ArrowDownToLine className="size-4" />
               </a>
-              <a
-                href={`mailto:${profile.email}?subject=${encodeURIComponent(`Conversation about ${item.short}`)}`}
-                className="inline-flex h-12 items-center gap-3 rounded-full border border-line-strong px-6 text-sm font-semibold hover:border-signal hover:text-signal"
-              >
+              <ContactTrigger className="interactive-lift inline-flex h-12 items-center gap-3 rounded-full border border-line-strong px-6 text-sm font-semibold hover:border-signal hover:text-signal">
                 Start a conversation <ArrowRight className="size-4" />
-              </a>
+              </ContactTrigger>
             </div>
           </div>
 

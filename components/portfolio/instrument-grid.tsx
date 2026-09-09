@@ -2,7 +2,7 @@ export function InstrumentGrid() {
   return (
     <svg
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 z-0 h-full w-full text-copy"
+      className="instrument-grid-depth pointer-events-none fixed z-0 text-copy"
       preserveAspectRatio="none"
     >
       <defs>

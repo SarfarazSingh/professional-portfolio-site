@@ -26,12 +26,12 @@ This is intentionally a hybrid, not permission to mix all nine specimen faces. T
 The minimum ratio between named steps is 1.333. Body copy never drops below 17px.
 
 ```css
---type-caption: clamp(0.75rem, 0.72rem + 0.12vw, 0.8125rem);
+--type-caption: clamp(0.8125rem, 0.79rem + 0.12vw, 0.875rem);
 --type-body: clamp(1.0625rem, 1rem + 0.28vw, 1.125rem);
 --type-lede: clamp(1.416rem, 1.25rem + 0.75vw, 1.75rem);
 --type-h3: clamp(1.888rem, 1.55rem + 1.5vw, 2.75rem);
 --type-h2: clamp(2.517rem, 1.9rem + 2.9vw, 4.75rem);
---type-h1: clamp(4.5rem, 12vw, 13.5rem);
+--type-h1: clamp(4rem, 8.75vw, 9.75rem);
 ```
 
 - Body line-height: `1.6`
@@ -91,7 +91,7 @@ The only permitted numbered sequence is the career trajectory: **Operate → Tra
 
 ## Motion system
 
-Only these four primitives are allowed.
+Only these five primitives are allowed.
 
 ### Reveal
 
@@ -128,7 +128,17 @@ Only these four primitives are allowed.
 - Shared elements: case-study title and poster frame only
 - Falls back to immediate navigation
 
-`prefers-reduced-motion: reduce` disables Reveal, Magnetic, and Scrub and renders every element at its final, fully opaque position on first paint. JavaScript-disabled output must remain complete and readable.
+### Pointer depth
+
+- Pointer-fine devices only
+- Fixed instrument grid moves by no more than `8px`
+- Hero portrait moves by no more than `6px` with a maximum `1.4deg` tilt
+- Values update through one `requestAnimationFrame`-batched event listener
+- No React state, animation dependency, layout read, glow, or content displacement
+- Returns to neutral when the pointer leaves the document
+- Disabled completely under `prefers-reduced-motion: reduce`
+
+`prefers-reduced-motion: reduce` disables Reveal, Magnetic, Scrub, and Pointer depth and renders every element at its final, fully opaque position on first paint. JavaScript-disabled output must remain complete and readable.
 
 ### Product simulation runtime
 

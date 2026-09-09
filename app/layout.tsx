@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { ContactActionsDialog } from "@/components/portfolio/contact-actions";
 import { InstrumentGrid } from "@/components/portfolio/instrument-grid";
 import { SiteFooter } from "@/components/portfolio/site-footer";
 import { SiteHeader } from "@/components/portfolio/site-header";
@@ -32,6 +33,63 @@ const departureMono = localFont({
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:43127";
 const revealScript = `document.documentElement.classList.add("js");`;
+const interactionScript = `
+  (() => {
+    const root = document.documentElement;
+    const pointerFine = matchMedia("(pointer: fine)");
+    const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+    let frame = 0;
+    let nextX = 0;
+    let nextY = 0;
+
+    const renderPointerDepth = () => {
+      root.style.setProperty("--pointer-grid-x", \`\${(-nextX * 8).toFixed(2)}px\`);
+      root.style.setProperty("--pointer-grid-y", \`\${(-nextY * 8).toFixed(2)}px\`);
+      root.style.setProperty("--pointer-card-x", \`\${(nextX * 6).toFixed(2)}px\`);
+      root.style.setProperty("--pointer-card-y", \`\${(nextY * 5).toFixed(2)}px\`);
+      root.style.setProperty("--pointer-tilt-x", \`\${(nextX * 1.4).toFixed(2)}deg\`);
+      root.style.setProperty("--pointer-tilt-y", \`\${(-nextY * 1.2).toFixed(2)}deg\`);
+      frame = 0;
+    };
+
+    const resetPointerDepth = () => {
+      nextX = 0;
+      nextY = 0;
+      if (!frame) frame = requestAnimationFrame(renderPointerDepth);
+    };
+
+    if (pointerFine.matches && !reducedMotion.matches) {
+      addEventListener("pointermove", (event) => {
+        nextX = (event.clientX / innerWidth - 0.5) * 2;
+        nextY = (event.clientY / innerHeight - 0.5) * 2;
+        if (!frame) frame = requestAnimationFrame(renderPointerDepth);
+      }, { passive: true });
+      document.documentElement.addEventListener("mouseleave", resetPointerDepth);
+    }
+
+    addEventListener("click", (event) => {
+      if (!(event.target instanceof Element)) return;
+      const trigger = event.target.closest("[data-contact-trigger]");
+      if (!trigger) return;
+      const dialog = document.getElementById("contact-actions-dialog");
+      if (!(dialog instanceof HTMLDialogElement) || !dialog.showModal) return;
+      event.preventDefault();
+      if (!dialog.open) dialog.showModal();
+    });
+
+    const dialog = document.getElementById("contact-actions-dialog");
+    dialog?.addEventListener("click", (event) => {
+      if (event.target !== dialog || !(dialog instanceof HTMLDialogElement)) return;
+      const bounds = dialog.getBoundingClientRect();
+      const outside =
+        event.clientX < bounds.left ||
+        event.clientX > bounds.right ||
+        event.clientY < bounds.top ||
+        event.clientY > bounds.bottom;
+      if (outside) dialog.close();
+    });
+  })();
+`;
 const revealObserverScript = `
   (() => {
     const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -140,6 +198,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main id="main-content" className="relative z-10 flex-1">
           {children}
         </main>
+        <ContactActionsDialog />
         <div className="relative z-10">
           <SiteFooter />
         </div>
@@ -147,6 +206,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
+        <script dangerouslySetInnerHTML={{ __html: interactionScript }} />
         <script dangerouslySetInnerHTML={{ __html: revealObserverScript }} />
       </body>
     </html>

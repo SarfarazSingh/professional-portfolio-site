@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowDownToLine, ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
+import {
+  ArrowDownToLine,
+  ArrowRight,
+  ArrowUpRight,
+  MapPin,
+  MessageCircle,
+} from "lucide-react";
 import { PageIntro } from "@/components/portfolio/page-intro";
 import { profile } from "@/content/profile";
 import { assetPath } from "@/lib/asset-path";
@@ -22,13 +28,30 @@ export default function ContactPage() {
       />
 
       <section className="mx-auto max-w-[1600px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="grid gap-5 lg:grid-cols-3">
           <a
-            href={`mailto:${profile.email}?subject=Portfolio conversation`}
-            className="group flex min-h-[340px] flex-col border border-line bg-surface p-6 sm:p-8"
+            href={`https://wa.me/${profile.phone.replace("+", "")}?text=${encodeURIComponent("Hi Sarfaraz, I found your portfolio and would like to discuss an opportunity.")}`}
+            target="_blank"
+            rel="noreferrer"
+            className="interactive-lift group flex min-h-[300px] flex-col border border-line bg-surface p-6 hover:bg-surface-raised sm:p-8"
           >
             <div className="flex items-center justify-between">
-              <p className="section-label">Primary channel</p>
+              <p className="section-label">Immediate channel</p>
+              <MessageCircle className="size-5 text-signal" />
+            </div>
+            <div className="mt-auto">
+              <p className="font-serif text-5xl tracking-[-0.045em]">
+                WhatsApp.
+              </p>
+              <p className="mt-4 text-copy-muted">{profile.phoneDisplay}</p>
+            </div>
+          </a>
+          <a
+            href={`mailto:${profile.email}?subject=Portfolio conversation`}
+            className="interactive-lift group flex min-h-[300px] flex-col border border-line bg-surface p-6 hover:bg-surface-raised sm:p-8"
+          >
+            <div className="flex items-center justify-between">
+              <p className="section-label">Direct email</p>
               <ArrowUpRight className="size-5 text-signal" />
             </div>
             <div className="mt-auto">
@@ -42,7 +65,7 @@ export default function ContactPage() {
             href={profile.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="group flex min-h-[340px] flex-col border border-line bg-surface p-6 sm:p-8"
+            className="interactive-lift group flex min-h-[300px] flex-col border border-line bg-surface p-6 hover:bg-surface-raised sm:p-8"
           >
             <div className="flex items-center justify-between">
               <p className="section-label">Professional profile</p>

@@ -5,6 +5,8 @@ export const profile = {
   shortName: "SSW",
   location: "Madrid, Spain",
   email: "sarfarazsingh@student.ie.edu",
+  phone: "+34663462250",
+  phoneDisplay: "+34 663 462 250",
   linkedin: "https://www.linkedin.com/in/sarfarazsinghwahad/",
   substack: "https://ourbrainpickings.substack.com/",
   trackSense: "https://tracksense.in/",

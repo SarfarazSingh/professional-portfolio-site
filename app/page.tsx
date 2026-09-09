@@ -42,9 +42,9 @@ export default function Home() {
             <ArrowRight className="size-4" />
           </a>
         </div>
-        <div className="grid gap-5 lg:grid-cols-2">
-          {projects.slice(0, 2).map((project, index) => (
-            <ProjectCard key={project.slug} project={project} large={index === 0} />
+        <div className="grid gap-5 lg:grid-cols-3">
+          {projects.slice(0, 3).map((project) => (
+            <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
       </section>

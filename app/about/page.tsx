@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Award, Waves, Workflow, Wrench } from "lucide-react";
+import { ContactTrigger } from "@/components/portfolio/contact-actions";
 import { PageIntro } from "@/components/portfolio/page-intro";
-import { profile } from "@/content/profile";
 import { assetPath } from "@/lib/asset-path";
 
 export const metadata: Metadata = {
@@ -49,7 +49,7 @@ export default function AboutPage() {
             I learned technology leadership in an environment where the system,
             the operator, and the consequence could never be separated.
           </p>
-          <div className="mt-10 grid gap-6 leading-7 text-steel sm:grid-cols-2">
+          <div className="mt-10 grid gap-6 leading-7 text-copy-muted sm:grid-cols-2">
             <p>
               In the Indian Navy, I led technical operations, safety assurance,
               modernisation, and training across conventional and nuclear
@@ -92,14 +92,14 @@ export default function AboutPage() {
 
       <section className="border-y border-line bg-surface">
         <div className="mx-auto grid max-w-[1600px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:px-12 lg:py-24">
-          <div className="border border-line p-2">
+          <div className="border border-line p-2 lg:self-center">
             <Image
               src={assetPath("/images/submarine-service-collage.jpg")}
               alt="Sarfaraz Singh Wahad during submarine service, training, and technical operations"
-              width={1400}
-              height={1000}
+              width={960}
+              height={508}
               sizes="(max-width: 1024px) 100vw, 42vw"
-              className="h-full min-h-[420px] w-full object-cover"
+              className="h-auto w-full object-contain"
             />
           </div>
           <div className="lg:pl-8">
@@ -170,16 +170,13 @@ export default function AboutPage() {
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
               href="/experience"
-              className="group inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-6 text-sm font-semibold text-ground"
+              className="interactive-lift group inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-6 text-sm font-semibold text-ground"
             >
               Explore experience <ArrowRight className="size-4" />
             </Link>
-            <a
-              href={`mailto:${profile.email}`}
-              className="inline-flex min-h-12 items-center rounded-full border border-line-strong px-6 text-sm font-semibold"
-            >
+            <ContactTrigger className="interactive-lift inline-flex min-h-12 items-center rounded-full border border-line-strong px-6 text-sm font-semibold hover:border-signal hover:text-signal">
               Start a conversation
-            </a>
+            </ContactTrigger>
           </div>
         </div>
       </section>
