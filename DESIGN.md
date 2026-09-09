@@ -31,7 +31,7 @@ The minimum ratio between named steps is 1.333. Body copy never drops below 17px
 --type-lede: clamp(1.416rem, 1.25rem + 0.75vw, 1.75rem);
 --type-h3: clamp(1.888rem, 1.55rem + 1.5vw, 2.75rem);
 --type-h2: clamp(2.517rem, 1.9rem + 2.9vw, 4.75rem);
---type-h1: clamp(3.25rem, 7.5vw, 8.75rem);
+--type-h1: clamp(2.75rem, 7.5vw, 8.75rem);
 ```
 
 - Body line-height: `1.6`
