@@ -23,22 +23,22 @@ export const projects: Project[] = [
   {
     slug: "tracksense",
     title: "TrackSense AI",
-    kicker: "Predictive infrastructure intelligence",
+    kicker: "Helping rail teams spot problems earlier",
     summary:
-      "An edge-first decision layer that helps railway operators move from reactive maintenance to predictive safety.",
+      "I am building TrackSense with my co-founders: edge sensors and local models that flag possible track problems while keeping the final decision with the operator.",
     category: "Industrial AI",
     year: "2026",
     lens: ["engineering", "ai"],
     featured: true,
     challenge:
-      "Rail infrastructure is inspected through fragmented, periodic workflows. Signals arrive late, risks are hard to rank, and maintenance teams need decisions—not another dashboard.",
+      "Rail inspections often happen in separate, periodic steps. By the time signals are brought together, maintenance teams may have lost valuable time.",
     role:
-      "As co-founder and Technical Lead, Sarfaraz helped translate an operational reliability problem into the product architecture, operator workflow, and venture story.",
+      "As co-founder and technical lead, I turn what operators need into the product architecture, workflow, and technical plan.",
     actions: [
-      "Framed the product around the operator loop: Observe → Understand → Act.",
-      "Designed a multimodal concept combining video, vibration, thermal, and acoustic signals.",
-      "Defined confidence-weighted risk prioritisation and human review as core product behaviour.",
-      "Connected product requirements to pilot metrics, commercial narrative, and deployment constraints.",
+      "I organised the product around three plain questions: what do we see, what might it mean, and what should the operator do next?",
+      "I designed a concept that brings video, vibration, thermal, and acoustic signals together.",
+      "I made confidence, uncertainty, and human review part of the product rather than an afterthought.",
+      "I connected the product requirements to a realistic pilot plan, costs, and deployment limits.",
     ],
     system: [
       "Edge-first sensing",
@@ -49,34 +49,34 @@ export const projects: Project[] = [
     ],
     outcome: [
       "Best Overall Project — IE School of Science & Technology Venture Bootcamp.",
-      "A working command-centre interface and staged pilot hypothesis.",
-      "A product narrative spanning rail, bridges, ports, and other linear infrastructure.",
+      "A working interface that lets operators review signals and make the call.",
+      "A staged pilot plan for testing the idea honestly before making performance claims.",
     ],
     relevance:
-      "TrackSense demonstrates the full bridge between field operations, AI product thinking, governance, and commercialisation.",
+      "I include TrackSense because it brings together my engineering background, AI product work, and belief that people must remain accountable for consequential decisions.",
     evidence:
-      "Public materials verify the team, recognition, product concept, and Sarfaraz’s Technical Lead role. Pilot and performance targets are presented as planned validation measures—not production results.",
+      "The public material shows our team, the award, the product idea, and my role. Pilot and performance figures are plans to test, not production results.",
     href: "https://tracksense.in/",
   },
   {
     slug: "enterprise-ai-transformation",
-    title: "Enterprise AI at scale",
+    title: "Enterprise AI at PwC",
     kicker: "PwC · GenAI and automation",
     summary:
-      "Three transformation programmes that moved conversational AI from technology initiative to operating impact.",
+      "Three programmes where I helped move AI and automation from a promising idea into everyday operations.",
     category: "Enterprise AI",
     year: "2023–25",
     lens: ["ai", "engineering"],
     featured: true,
     challenge:
-      "Large service organisations needed to improve customer operations while working through legacy architecture, release risk, scale, and cross-functional dependencies.",
+      "The organisations I worked with wanted better customer service, but they also had legacy systems, careful release processes, and many teams that had to move together.",
     role:
-      "As a Manager at PwC, Sarfaraz worked across business and technical stakeholders to shape solutions, coordinate delivery, and connect adoption to measurable operational outcomes.",
+      "As a manager at PwC, I worked between business, product, engineering, and operations teams. My job was to help people make sound decisions and carry them through delivery.",
     actions: [
-      "Helped deliver a GenAI conversational solution in a 2M+ user environment.",
-      "Designed an automated IVR and chatbot testing platform to remove release bottlenecks.",
-      "Redesigned a legacy utilities contact-centre architecture for higher capacity.",
-      "Aligned product, architecture, operations, and client stakeholders around delivery decisions.",
+      "I helped deliver a GenAI conversational programme in a 2M+ user environment.",
+      "I designed an automated approach to IVR and chatbot testing so teams could release with more confidence.",
+      "I worked on the redesign of a utilities contact-centre architecture to support more demand.",
+      "I kept product, architecture, operations, and client teams aligned when decisions became difficult.",
     ],
     system: [
       "Conversational AI",
@@ -91,29 +91,29 @@ export const projects: Project[] = [
       "40% increase in contact-centre capacity.",
     ],
     relevance:
-      "This work shows enterprise AI as organisational change: architecture, adoption, controls, and value—not a standalone model.",
+      "I include this work because enterprise AI succeeds or fails through people, adoption, controls, and delivery—not through the model alone.",
     evidence:
-      "Client identities and implementation details are omitted for confidentiality. Metrics are drawn from the supplied professional record and should be read as programme outcomes.",
+      "I do not name clients or share confidential implementation details. The figures come from my professional record and describe programme outcomes.",
   },
   {
     slug: "submarine-systems",
-    title: "Systems under pressure",
+    title: "My years in the Submarine Service",
     kicker: "Indian Navy · Submarine Service",
     summary:
-      "A decade of technical leadership shaped around readiness, human judgement, and systems that cannot simply fail fast.",
-    category: "Mission-critical",
+      "Eight years of service taught me that readiness is earned every day, responsibility cannot be delegated, and ‘fail fast’ is not a serious option when lives depend on the system.",
+    category: "Safety-critical engineering",
     year: "2015–23",
     lens: ["engineering", "ai"],
     featured: true,
     challenge:
-      "Submarine operations demand continuous readiness across people, equipment, procedures, and data—with little tolerance for ambiguity at the point of decision.",
+      "A submarine is ready only when its people, equipment, procedures, and information are ready together. There is very little room for guesswork when a decision has to be made.",
     role:
-      "Sarfaraz held progressive technical operations, nuclear safety, international programme, and training responsibilities across conventional and nuclear submarines.",
+      "I served in progressively responsible roles across technical operations, nuclear safety, international programmes, and training on conventional and nuclear submarines.",
     actions: [
-      "Led multidisciplinary teams around safety-critical assets and operating procedures.",
-      "Converted 120+ monitored parameters into a decision-support tool for emergency response.",
-      "Owned delivery of a VR training programme from requirements through live rollout.",
-      "Led assurance work across 20+ facilities and international asset-transfer coordination.",
+      "I led multidisciplinary teams responsible for safety-critical equipment and procedures.",
+      "My team turned more than 120 monitored parameters into a tool that supported faster emergency decisions.",
+      "I led a VR training programme from requirements through rollout to more than 5,000 submariners.",
+      "I led assurance work across more than 20 facilities and helped coordinate an international asset transfer.",
     ],
     system: [
       "Operational readiness",
@@ -128,29 +128,29 @@ export const projects: Project[] = [
       "$2M saved in international sensor-calibration contracts.",
     ],
     relevance:
-      "The operating principles transfer directly to responsible AI: validation, clear boundaries, observability, escalation, and human authority.",
+      "What I learned about checking evidence, knowing limits, escalating early, and keeping a person accountable now shapes how I work with AI.",
     evidence:
-      "Public descriptions intentionally exclude sensitive operational details. The $5B+ figure refers to reported asset value, not a budget personally owned.",
+      "I have deliberately left out sensitive operational details. The $5B+ figure is the reported value of the asset involved; it was never a budget I personally owned.",
   },
   {
     slug: "up-on-ai",
     title: "UP-ON.AI",
-    kicker: "Agentic company builder",
+    kicker: "A guided product for founders",
     summary:
-      "A venture-building product that brings research, strategy, positioning, and specialist expertise into one adaptive journey.",
-    category: "Agentic products",
+      "A product that helps founders work through research, strategy, positioning, and expert advice in one guided journey.",
+    category: "AI product",
     year: "2026",
     lens: ["ai"],
     featured: true,
     challenge:
-      "Founders often stitch together agencies, advisers, and disconnected tools before they have clarity on the problem, customer, or path to market.",
+      "Early founders often pay several advisers and use several tools before they are clear about the problem, the customer, or the next decision.",
     role:
-      "As AI Lead at Gamucha Ventures, Sarfaraz owned product framing and architecture across an early-stage company-building experience.",
+      "As AI lead at Gamucha Ventures, I shaped the product and architecture for this early-stage company-building experience.",
     actions: [
-      "Separated the experience into zero-to-one and growth pathways.",
-      "Mapped agentic research and strategy workflows around founder decisions.",
-      "Designed adaptive onboarding and retrieval-supported knowledge flows.",
-      "Connected product experience, service model, and investor narrative.",
+      "I separated the experience for people starting a company from those trying to grow one.",
+      "I mapped research and strategy workflows around the decisions founders actually face.",
+      "I designed onboarding that adapts to the founder and uses retrieved source material.",
+      "I connected the product experience to the service model and investor story.",
     ],
     system: [
       "Adaptive onboarding",
@@ -160,14 +160,14 @@ export const projects: Project[] = [
       "Strategy synthesis",
     ],
     outcome: [
-      "A polished, working company-builder web experience.",
-      "An integrated product vision spanning Company Builder, CEO-as-a-Service, and community.",
-      "A concrete architecture and delivery roadmap for an early-stage venture.",
+      "A working web product that people can try.",
+      "One clear product direction across the company builder, advisory service, and community.",
+      "A practical architecture and delivery plan for the venture’s next stage.",
     ],
     relevance:
-      "UP-ON.AI shows zero-to-one AI product leadership: turning a broad service proposition into an understandable system and shippable experience.",
+      "I include UP-ON.AI because it shows how I take a broad early idea, make choices, and turn it into something people can understand and use.",
     evidence:
-      "The public product and investor deck demonstrate the concept and experience. Roadmap and platform-scale claims remain forward-looking.",
+      "The public product and investor deck show the idea and experience. The roadmap and any claims about future scale remain forward-looking.",
     href: "https://up-on-ai.vercel.app",
   },
 ];
@@ -176,37 +176,37 @@ export const artefacts = [
   {
     title: "Agentic Systems Keynote",
     type: "Executive education",
-    description: "A clear, interactive explanation of agents, tools, memory, verification, and human checkpoints.",
+    description: "An interactive talk I built to explain agents, tools, memory, verification, and where people still need to decide.",
     href: "https://agentic-systems-keynote.vercel.app",
   },
   {
     title: "AnterVid",
     type: "Industrial AI concept",
-    description: "A systems story for continuous structural-health intelligence across critical assets.",
+    description: "A concept for continuously monitoring the condition of important structures.",
     href: "https://antervid-india.vercel.app",
   },
   {
     title: "YourIE",
     type: "Product prototype",
-    description: "A relationship-led alumni network with ranked introduction paths and deep discovery flows.",
+    description: "An alumni-network prototype designed around thoughtful introductions rather than another directory.",
     href: "https://yourie.vercel.app",
   },
   {
     title: "Weave",
-    type: "Live venture experiment",
-    description: "A lightweight matching and meetup product designed, launched, and operated in Madrid.",
+    type: "Community venture",
+    description: "A matching and meetup product I designed, launched, and ran in Madrid.",
     href: "https://weave-pitch-deck.vercel.app",
   },
   {
     title: "Guided Ambitions",
     type: "Commercial venture",
-    description: "A complete consulting proposition for MBA applicants and military-career transitions.",
+    description: "A practical advisory concept for MBA applicants and people leaving military service.",
     href: "https://guidedambitions-gamma.vercel.app",
   },
   {
     title: "Loco Dhaasu",
-    type: "Brand & go-to-market",
-    description: "A bold bilingual food concept built around campus demand, pricing, and community.",
+    type: "Food venture",
+    description: "A bilingual food concept my team tested around campus demand, pricing, and community.",
     href: "https://loco-dhaasu.vercel.app",
   },
 ] as const;

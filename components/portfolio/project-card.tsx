@@ -48,7 +48,7 @@ export function ProjectCard({
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5">
-          <span className="text-sm font-semibold">Read case study</span>
+          <span className="text-sm font-semibold">Read what I did</span>
           <span className="instrument-readout">
             {project.lens.join(" + ")}
           </span>

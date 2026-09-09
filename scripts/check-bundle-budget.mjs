@@ -35,7 +35,9 @@ const canvasChunks = chunks
       bytes: gzipSync(contents).length,
     };
   })
-  .filter(({ contents }) => contents.includes("Human authority checkpoint"));
+  .filter(({ contents }) =>
+    contents.includes("The model thinks something might be wrong"),
+  );
 
 if (canvasChunks.length !== 1) {
   console.error(

@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { designColors } from "@/lib/design-tokens";
 
 export const dynamic = "force-static";
-export const alt = "Sarfaraz Singh Wahad — Complex technology. Made operational.";
+export const alt = "Sarfaraz Singh Wahad — Indian Navy veteran and builder";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -43,7 +43,7 @@ export default function OpenGraphImage() {
               maxWidth: 1000,
             }}
           >
-            Complex technology.
+            Indian Navy veteran.
           </div>
           <div
             style={{
@@ -53,7 +53,7 @@ export default function OpenGraphImage() {
               color: designColors.signal,
             }}
           >
-            Made operational.
+            Building in Madrid.
           </div>
         </div>
         <div
@@ -66,8 +66,8 @@ export default function OpenGraphImage() {
             color: designColors.textMuted,
           }}
         >
-          <span>AI & digital transformation</span>
-          <span>Engineering & mission-critical systems</span>
+          <span>SUBMARINE SERVICE · PWC</span>
+          <span>TRACKSENSE · IE BUSINESS SCHOOL</span>
         </div>
       </div>
     ),

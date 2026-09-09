@@ -139,11 +139,11 @@ const revealObserverScript = `
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Sarfaraz Singh Wahad — Technology & AI Leader",
+    default: "Sarfaraz Singh Wahad — Submariner, builder, AI lead",
     template: "%s — Sarfaraz Singh Wahad",
   },
   description:
-    "AI, digital transformation, and mission-critical systems leadership. From submarine operations to enterprise AI and critical-infrastructure products.",
+    "I served for eight years in the Indian Navy’s Submarine Service. Today I work on enterprise AI, technical programmes, and products I am building in Madrid.",
   keywords: [
     "AI transformation",
     "AI product leader",
@@ -156,16 +156,16 @@ export const metadata: Metadata = {
   creator: profile.name,
   openGraph: {
     type: "website",
-    title: "Complex technology. Made operational.",
+    title: "Sarfaraz Singh Wahad — My work and experience",
     description:
-      "AI-enabled transformation and mission-critical systems leadership.",
+      "From the Indian Navy’s Submarine Service to PwC and the ventures I am building in Madrid.",
     siteName: profile.name,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Complex technology. Made operational.",
+    title: "Sarfaraz Singh Wahad — My work and experience",
     description:
-      "AI-enabled transformation and mission-critical systems leadership.",
+      "From the Indian Navy’s Submarine Service to PwC and the ventures I am building in Madrid.",
   },
   robots: { index: true, follow: true },
 };
@@ -175,7 +175,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     "@context": "https://schema.org",
     "@type": "Person",
     name: profile.name,
-    jobTitle: "AI Product and Technology Leader",
+    jobTitle: "AI Lead and former submarine technical officer",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Madrid",

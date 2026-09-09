@@ -38,7 +38,7 @@ export function VoiceAgentSection() {
             </svg>
             <button
               aria-describedby="voice-agent-disclosure"
-              aria-label="Start conversation with Sarfaraz's digital voice guide"
+              aria-label="Start my voice guide"
               aria-pressed="false"
               className="voice-agent-orb"
               data-voice-agent-launch
@@ -57,11 +57,11 @@ export function VoiceAgentSection() {
 
           <div>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-              <p className="section-label">Sarfaraz · Digital voice guide</p>
+              <p className="section-label">Ask my voice guide</p>
               <span className="instrument-readout flex items-center gap-2 text-signal">
                 <Radio className="size-3.5" />
                 <span aria-live="polite" data-voice-agent-status>
-                  Ready when you are
+                  Ready
                 </span>
               </span>
             </div>
@@ -69,22 +69,22 @@ export function VoiceAgentSection() {
               className="mt-5 max-w-3xl [font-size:var(--type-h3)] leading-[0.98] tracking-[-0.04em]"
               id="voice-agent-title"
             >
-              Ask whether the experience fits your mandate.
+              Ask about my Navy service, my PwC work, or what I am building now.
             </h2>
             <p
               className="mt-5 max-w-[58ch] leading-7 text-copy-muted"
               data-voice-agent-instruction
             >
-              Click the orb, allow microphone access, and ask about role fit.
+              Click the orb, allow the microphone, and ask whether my background
+              fits the role you have in mind.
             </p>
             <p
               className="instrument-readout mt-6 flex max-w-2xl items-start gap-2 border-t border-line pt-4 leading-5"
               id="voice-agent-disclosure"
             >
               <ShieldCheck className="mt-0.5 size-4 shrink-0 text-signal" />
-              AI voice experience powered by ElevenLabs. It identifies itself
-              as a digital guide—not the live human. Microphone access begins
-              only after you click.
+              This is an AI voice guide powered by ElevenLabs, not me speaking
+              live. It uses your microphone only after you click.
             </p>
           </div>
         </div>

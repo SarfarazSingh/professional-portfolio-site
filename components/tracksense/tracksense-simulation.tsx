@@ -34,7 +34,7 @@ const decisions: Array<{
     outcome:
       "The inspection cost is accepted. The emerging defect is confirmed before service risk escalates.",
     tradeoff: "Planned inspection window and crew time.",
-    resolution: "Risk contained with human confirmation.",
+    resolution: "The inspection confirms the fault early.",
   },
   {
     id: "monitor",
@@ -43,7 +43,7 @@ const decisions: Array<{
       "Immediate disruption is avoided. The anomaly strengthens, forcing an urgent inspection later.",
     tradeoff:
       "Lower immediate cost, but higher exposure and less scheduling flexibility.",
-    resolution: "Escalated inspection after delayed confirmation.",
+    resolution: "The stronger signal forces a later, more urgent inspection.",
   },
   {
     id: "false-positive",
@@ -52,7 +52,7 @@ const decisions: Array<{
       "No inspection is raised. Persistent evidence moves the asset into a higher-risk state.",
     tradeoff:
       "Avoided inspection cost transfers into unplanned intervention risk.",
-    resolution: "The system reopens the alert as evidence accumulates.",
+    resolution: "The alert returns as the signal continues to grow.",
   },
 ];
 
@@ -101,12 +101,12 @@ function confidenceAt(time: number) {
 }
 
 function stageAt(time: number, decision: Decision | null) {
-  if (time < 5.5) return "Baseline observation";
-  if (time < 7.5) return "Local edge inference";
-  if (time < CHECKPOINT) return "Evidence threshold crossed";
-  if (!decision) return "Human checkpoint";
-  if (time < 12.8) return "Decision consequence";
-  return "Resolution";
+  if (time < 5.5) return "Watching normal readings";
+  if (time < 7.5) return "Checking the change locally";
+  if (time < CHECKPOINT) return "Possible issue found";
+  if (!decision) return "Your call";
+  if (time < 12.8) return "What follows";
+  return "Result";
 }
 
 function formatTime(time: number) {
@@ -303,7 +303,7 @@ function drawSimulation(
   context.fillText(
     time < 5.5
       ? "EDGE NODE / WATCHING LOCALLY"
-      : `EDGE NODE E-04 / SYNTHETIC INFERENCE ${(confidence * 100).toFixed(1)}%`,
+      : `LOCAL SENSOR E-04 / MODEL CONFIDENCE ${(confidence * 100).toFixed(1)}%`,
     margin + 16,
     statusY + 27,
   );
@@ -312,10 +312,10 @@ function drawSimulation(
   context.font = `${compact ? 13 : 17}px ${colors.body}`;
   const summary =
     time < 5.5
-      ? "Telemetry remains inside the operator summary boundary."
+      ? "Normal readings — nothing has been flagged."
       : time < 7.5
-        ? "Inference is running at the sensor node—not in a remote cloud."
-        : "Bearing-pattern anomaly · human review remains authoritative.";
+        ? "The sensor checks the change locally rather than sending it to the cloud."
+        : "Possible bearing fault · the operator still decides what to do.";
   context.fillText(
     compact ? summary.slice(0, 48) : summary,
     margin + 16,
@@ -566,7 +566,7 @@ export default function TrackSenseSimulation() {
       <div className="instrument-readout flex flex-wrap items-center justify-between gap-3 border-b border-line px-4 py-3">
         <span>{stage}</span>
         <span>
-          Synthetic clock / {formatTime(displayTime)} · render / {fps} fps
+          Demo time / {formatTime(displayTime)} · display / {fps} fps
         </span>
       </div>
 
@@ -575,31 +575,31 @@ export default function TrackSenseSimulation() {
         className="block h-[620px] w-full sm:h-[680px]"
         tabIndex={0}
         onKeyDown={handleCanvasKey}
-        aria-label="Interactive TrackSense rail telemetry simulation. Press Space to play or pause and use Left and Right Arrow keys to scrub."
+        aria-label="Interactive TrackSense rail-monitoring demo. Press Space to play or pause and use Left and Right Arrow keys to move through the timeline."
         aria-describedby="tracksense-simulation-summary"
       >
-        Five edge sensors monitor synthetic vibration, acoustic, and thermal
-        data. Node E-04 develops an anomaly and requests human review.
+        Five sensors monitor generated vibration, sound, and heat data. Sensor
+        E-04 begins to behave differently and asks an operator to review it.
       </canvas>
 
       <p id="tracksense-simulation-summary" className="sr-only">
-        {stage}. This demonstration uses deterministic synthetic data and makes
-        no production performance claim.
+        {stage}. I built this demonstration with generated data. It does not
+        claim production performance.
       </p>
       <p className="sr-only" aria-live="polite">
         {waitingForDecision
-          ? "Human decision required."
+          ? "Your decision is required."
           : selectedDecision?.resolution ?? stage}
       </p>
 
       {waitingForDecision && (
         <fieldset className="border-t-2 border-signal bg-surface p-5 sm:p-7">
           <legend className="px-2 font-semibold text-signal">
-            Human authority checkpoint
+            Your call
           </legend>
           <p className="mt-2 max-w-3xl leading-7 text-copy-muted">
-            Confidence crossed the synthetic review threshold. The model
-            proposes an anomaly; you decide what happens operationally.
+            The model thinks something might be wrong. You are the operator:
+            choose what happens next.
           </p>
           <div className="mt-5 grid gap-3 lg:grid-cols-3">
             {decisions.map((item) => (
@@ -619,7 +619,7 @@ export default function TrackSenseSimulation() {
       {selectedDecision && displayTime >= CHECKPOINT && (
         <div className="grid border-t border-line bg-surface lg:grid-cols-[0.8fr_1.2fr]">
           <div className="border-b border-line p-5 lg:border-b-0 lg:border-r">
-            <p className="section-label">Your decision</p>
+            <p className="section-label">You chose</p>
             <p className="mt-2 font-semibold text-signal">
               {selectedDecision.label}
             </p>
@@ -627,7 +627,7 @@ export default function TrackSenseSimulation() {
           <div className="p-5">
             <p className="leading-7">{selectedDecision.outcome}</p>
             <p className="mt-2 leading-7 text-copy-muted">
-              Cost trade-off: {selectedDecision.tradeoff}
+              What you give up: {selectedDecision.tradeoff}
             </p>
           </div>
         </div>
@@ -689,9 +689,9 @@ export default function TrackSenseSimulation() {
       </div>
 
       <p className="border-t border-line px-5 py-4 leading-7 text-copy-muted">
-        Deterministic synthetic data for interface demonstration only. Latency,
-        confidence, classification, and consequences are simulated—not field
-        results or production claims.
+        I built this interface with generated sample data. The timing,
+        confidence, diagnosis, and outcomes are simulated—not field results or
+        production claims.
       </p>
     </div>
   );

@@ -38,8 +38,8 @@ export const voiceAgentScript = `
         button.setAttribute(
           "aria-label",
           state === "active"
-            ? "End conversation with Sarfaraz's digital voice guide"
-            : "Start conversation with Sarfaraz's digital voice guide",
+            ? "End my voice guide"
+            : "Start my voice guide",
         );
       };
 
@@ -48,9 +48,9 @@ export const voiceAgentScript = `
         active = false;
         button.disabled = false;
         if (failed) return;
-        setState("idle", "Ready when you are");
+        setState("idle", "Ready");
         instruction.textContent =
-          "Click the orb, allow microphone access, and ask about role fit.";
+          "Click the orb, allow the microphone, and ask whether my background fits your role.";
       };
 
       const failConversation = (error) => {
@@ -59,14 +59,14 @@ export const voiceAgentScript = `
         conversation = null;
         active = false;
         button.disabled = false;
-        setState("error", "Microphone or voice connection blocked");
+        setState("error", "I could not start the voice guide");
         instruction.textContent =
-          "Check microphone permission, then click the orb to try again.";
+          "Please check your microphone permission, then click again.";
       };
 
       const prepare = () => {
         loadSdk(runtimeSource).catch(() => {
-          setState("error", "Voice service unavailable");
+          setState("error", "The voice guide is unavailable");
         });
       };
 
@@ -75,7 +75,7 @@ export const voiceAgentScript = `
       button.addEventListener("click", async () => {
         if (active && conversation) {
           button.disabled = true;
-          setState("connecting", "Ending conversation");
+          setState("connecting", "Ending…");
           try {
             await conversation.endSession();
           } finally {
@@ -86,7 +86,7 @@ export const voiceAgentScript = `
 
         button.disabled = true;
         failed = false;
-        setState("connecting", "Connecting securely");
+        setState("connecting", "Connecting…");
         instruction.textContent =
           "Your browser will ask for microphone permission.";
 
@@ -108,7 +108,7 @@ export const voiceAgentScript = `
               failed = false;
               active = true;
               button.disabled = false;
-              setState("active", "Conversation live");
+              setState("active", "Listening");
               instruction.textContent =
                 "Speak naturally. Click the orb again when you want to end.";
             },
@@ -118,7 +118,7 @@ export const voiceAgentScript = `
 
           active = true;
           button.disabled = false;
-          setState("active", "Conversation live");
+          setState("active", "Listening");
           instruction.textContent =
             "Speak naturally. Click the orb again when you want to end.";
         } catch (error) {

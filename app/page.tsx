@@ -20,7 +20,7 @@ export default function Home() {
 
       <section className="station bg-surface">
         <div className="mx-auto grid max-w-[1600px] gap-8 px-5 py-16 sm:px-8 md:grid-cols-[0.8fr_1.2fr] lg:px-12 lg:py-20">
-          <p className="section-label">Operating principle</p>
+          <p className="section-label">A rule I work by</p>
           <blockquote className="font-serif [font-size:var(--type-h3)] leading-[1.05] tracking-[-0.035em]">
             “I do not assume systems are infallible. I design for the moment
             technology is wrong.”
@@ -33,7 +33,7 @@ export default function Home() {
           <div>
             <p className="section-label">Selected work</p>
             <h2 className="mt-4 [font-size:var(--type-h2)] leading-[0.88] tracking-[-0.045em]">
-              Evidence, not adjectives.
+              Work I can point to.
             </h2>
           </div>
           <a
@@ -54,14 +54,13 @@ export default function Home() {
       <section className="station bg-ground/96">
         <div className="mx-auto grid max-w-[1600px] border-x border-line lg:grid-cols-[0.72fr_1.28fr]">
           <div className="border-b border-line px-5 py-16 sm:px-8 lg:border-b-0 lg:border-r lg:px-12 lg:py-24">
-            <p className="section-label">Prototypes and ventures</p>
+            <p className="section-label">Other things I have built</p>
             <h2 className="mt-5 max-w-md [font-size:var(--type-h2)] leading-[0.9] tracking-[-0.04em]">
-              Range, without losing the thread.
+              Different ideas. The same work ethic.
             </h2>
             <p className="mt-6 max-w-md text-lg leading-8 text-copy-muted">
-              Product strategy, AI architecture, community, executive
-              storytelling, and go-to-market—each artefact is labelled for what
-              it is.
+              Some became ventures, some are prototypes, and some helped me
+              explain a difficult idea. I have labelled each one honestly.
             </p>
           </div>
           <div className="divide-y divide-line">
@@ -90,16 +89,15 @@ export default function Home() {
 
       <section className="station mx-auto grid max-w-[1600px] gap-8 bg-ground/96 px-5 py-20 sm:px-8 md:grid-cols-[0.8fr_1.2fr] lg:px-12 lg:py-28">
         <div>
-          <p className="section-label">Writing and ideas</p>
+          <p className="section-label">What I write about</p>
           <p className="instrument-readout mt-3">
             {publication.title}
           </p>
         </div>
         <div>
           <h2 className="max-w-3xl [font-size:var(--type-h2)] leading-[0.9] tracking-[-0.045em]">
-            Systems are technical.
-            <br />
-            Consequences are human.
+            I write about systems—and the people who live with their
+            consequences.
           </h2>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-copy-muted">
             {publication.description}
@@ -108,7 +106,7 @@ export default function Home() {
             href={assetPath("/insights")}
             className="group mt-8 inline-flex items-center gap-3 text-sm font-semibold"
           >
-            Read selected insights
+            Read my writing
             <ArrowRight className="size-4" />
           </a>
         </div>

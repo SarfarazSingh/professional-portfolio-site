@@ -9,24 +9,24 @@ import { assetPath } from "@/lib/asset-path";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "The operating philosophy behind Sarfaraz Singh Wahad’s work in AI, transformation, and mission-critical systems.",
+    "How my years in the Indian Navy, PwC, and IE shaped the way I work.",
 };
 
 const principles = [
   {
     icon: Waves,
-    title: "See the whole system",
-    text: "Technology, people, incentives, controls, and operating context are one design problem.",
+    title: "I look at the whole picture",
+    text: "Technology does not work on its own. I look at the people, rules, incentives, and conditions around it.",
   },
   {
     icon: Workflow,
-    title: "Make decisions explicit",
-    text: "A useful system clarifies what happens next, who has authority, and how uncertainty is handled.",
+    title: "I make responsibility clear",
+    text: "People should know what happens next, who makes the call, and what to do when the answer is uncertain.",
   },
   {
     icon: Wrench,
-    title: "Build for operations",
-    text: "The real test begins after the prototype: adoption, observability, failure handling, and value.",
+    title: "I build for the day after launch",
+    text: "A prototype is only the beginning. I care about whether people use it, trust it, and know what to do when it goes wrong.",
   },
 ];
 
@@ -34,33 +34,34 @@ export default function AboutPage() {
   return (
     <>
       <PageIntro
-        eyebrow="About · Operating philosophy"
-        title="Built beneath the surface."
-        description="My career has moved from submarines to consulting to AI ventures. The common thread is systems leadership: making complex technology understandable, governable, and operational."
-        aside="Former Indian Navy submarine officer · PwC Manager · AI product builder · AIGP"
+        eyebrow="About · How I work"
+        title="Service shaped how I work."
+        description="I have moved from submarines to PwC to building AI products in Madrid. The work has changed, but the values have not: prepare properly, respect the team, own the outcome, and be honest about what you do not know."
+        aside="Indian Navy veteran · PwC manager · Founder · IE MBA"
       />
 
       <section className="mx-auto grid max-w-[1600px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-28">
         <div>
-          <p className="section-label">The through-line</p>
+          <p className="section-label">What connects the work</p>
         </div>
         <div className="max-w-3xl">
           <p className="font-serif [font-size:var(--type-h3)] leading-[1.08] tracking-[-0.035em]">
-            I learned technology leadership in an environment where the system,
-            the operator, and the consequence could never be separated.
+            The Submarine Service taught me that leadership begins with
+            responsibility—for the system, for the team, and for the
+            consequences of your decision.
           </p>
           <div className="mt-10 grid gap-6 leading-7 text-copy-muted sm:grid-cols-2">
             <p>
               In the Indian Navy, I led technical operations, safety assurance,
               modernisation, and training across conventional and nuclear
-              submarines. It taught me to respect operating boundaries,
-              verification, escalation, and human authority.
+              submarines. I remain proud of that service and grateful to the
+              people who trained me, challenged me, and trusted me.
             </p>
             <p>
-              At PwC and through new ventures, I applied the same discipline to
-              enterprise AI, product delivery, critical infrastructure, and
-              commercialisation. The goal is never AI for its own sake. It is a
-              better operating capability.
+              At PwC and in my own ventures, I have tried to carry those lessons
+              forward. I do not build AI for a presentation. I want to solve a
+              real problem, help the people doing the work, and leave behind
+              something they can rely on.
             </p>
           </div>
         </div>
@@ -104,19 +105,18 @@ export default function AboutPage() {
           </div>
           <div className="lg:pl-8">
             <p className="section-label">
-              Education · From engineering to enterprise leadership
+              Education · Engineering, management, and business
             </p>
             <h2 className="mt-6 [font-size:var(--type-h2)] leading-[0.9] tracking-[-0.045em]">
-              Experience built the questions.
+              The Navy taught me responsibility.
               <br />
-              IE sharpened the answers.
+              IE broadened my view.
             </h2>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-copy-muted">
-              At IE Business School in Madrid, I brought together engineering,
-              operations, strategy, entrepreneurship, and responsible AI. The
-              International MBA became an active platform: I led communities,
-              built ventures, represented IE internationally, and connected
-              ideas to real users across Spain.
+              I came to IE Business School to learn how other people see the
+              world—founders, investors, operators, and classmates from many
+              countries. Alongside the MBA, I led communities, built ventures,
+              represented IE abroad, and tried to contribute wherever I could.
             </p>
             <div className="mt-9 grid gap-3 sm:grid-cols-2">
               {[
@@ -139,7 +139,7 @@ export default function AboutPage() {
               target="_blank"
               className="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-5 text-sm font-semibold text-ground"
             >
-              Verify Blue Torch credential <Award className="size-4 text-amber" />
+              View my Blue Torch Award <Award className="size-4 text-amber" />
             </a>
           </div>
         </div>
@@ -147,19 +147,17 @@ export default function AboutPage() {
 
       <section className="mx-auto grid max-w-[1600px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-28">
         <div>
-          <p className="section-label">Beyond the role</p>
+          <p className="section-label">Outside work</p>
         </div>
         <div>
           <h2 className="max-w-3xl [font-size:var(--type-h2)] leading-[0.9] tracking-[-0.045em]">
-            Endurance, rhythm,
-            <br />
-            and public service.
+            Cycling, music, and service keep me grounded.
           </h2>
           <div className="mt-10 grid gap-5 sm:grid-cols-3">
             {[
-              ["600 KM", "Longest brevet in a completed Super Randonneur series"],
-              ["50+", "Live concerts performed as a bassist across India"],
-              ["1,500+", "People reached through relief, health, and upskilling programmes"],
+              ["600 KM", "My longest brevet in a completed Super Randonneur series"],
+              ["50+", "Concerts I have played as a bassist across India"],
+              ["1,500+", "People our relief, health, and upskilling programmes reached"],
             ].map(([value, label]) => (
               <div key={value} className="border border-line p-5">
                 <p className="font-serif text-4xl tracking-[-0.04em]">{value}</p>
@@ -172,10 +170,10 @@ export default function AboutPage() {
               href="/experience"
               className="interactive-lift group inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-6 text-sm font-semibold text-ground"
             >
-              Explore experience <ArrowRight className="size-4" />
+              See my experience <ArrowRight className="size-4" />
             </Link>
             <ContactTrigger className="interactive-lift inline-flex min-h-12 items-center rounded-full border border-line-strong px-6 text-sm font-semibold hover:border-signal hover:text-signal">
-              Start a conversation
+              Get in touch
             </ContactTrigger>
           </div>
         </div>

@@ -6,29 +6,29 @@ import { assetPath } from "@/lib/asset-path";
 const chapters = [
   {
     number: "01",
-    title: "Operate",
+    title: "Indian Navy",
     years: "2015–23",
-    organisation: "Indian Navy · Submarine Service",
-    role: "Technical operations & nuclear safety",
-    evidence: "$10M VR platform · 5,000+ users · 50% faster response",
+    organisation: "Submarine Service",
+    role: "I served in technical operations and nuclear safety",
+    evidence: "$10M training platform · 5,000+ submariners · 50% faster response",
     href: "/work/submarine-systems",
   },
   {
     number: "02",
-    title: "Transform",
+    title: "PwC",
     years: "2023–25",
-    organisation: "PwC · Generative AI",
-    role: "Enterprise architecture & programme delivery",
-    evidence: "2M+ users · 30% service efficiency · 50% faster releases",
+    organisation: "Generative AI & Data Analytics",
+    role: "I helped deliver AI and automation programmes",
+    evidence: "2M+ user environment · 30% efficiency · 50% shorter release cycles",
     href: "/work/enterprise-ai-transformation",
   },
   {
     number: "03",
-    title: "Build",
+    title: "TrackSense",
     years: "2026–now",
-    organisation: "TrackSense AI",
-    role: "Co-founder & Technical Lead",
-    evidence: "Edge AI · sensor fusion · human-authorised decisions",
+    organisation: "Co-founder & Technical Lead",
+    role: "I am building tools to help rail teams act earlier",
+    evidence: "Edge AI · sensor data · the operator makes the final call",
     href: "/work/tracksense",
   },
 ] as const;
@@ -48,18 +48,18 @@ export function CareerTopology() {
           data-reveal-item
         >
           <div>
-            <p className="section-label">Career trajectory</p>
+            <p className="section-label">My path so far</p>
             <h2
               id="trajectory-title"
               className="mt-4 text-balance [font-size:var(--type-h2)] leading-[0.88] tracking-[-0.045em]"
             >
-              One operating system.
+              The work changed. The values stayed.
             </h2>
           </div>
           <p className="max-w-2xl self-end text-lg leading-8 text-copy-muted">
-            The environments changed. The method did not: understand the
-            system, establish control, align people, and make technology useful
-            at the point of decision.
+            I try to understand the whole problem, listen to the people closest
+            to it, make responsibility clear, and follow the work through. I
+            learned that in the Navy and have carried it into every role since.
           </p>
         </div>
 
@@ -84,10 +84,10 @@ export function CareerTopology() {
             </div>
             <figcaption className="grid gap-3 border-t border-line p-5 sm:grid-cols-2 sm:p-6">
               <p className="font-semibold">
-                Systems leadership began where readiness was continuous.
+                This is where I learned what responsibility means.
               </p>
               <p className="text-sm leading-6 text-copy-muted">
-                Technical operations, safety assurance, modernisation, and
+                Eight years of technical operations, safety, modernisation, and
                 training across conventional and nuclear submarine programmes.
               </p>
             </figcaption>

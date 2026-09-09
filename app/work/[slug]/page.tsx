@@ -46,7 +46,7 @@ export default async function CaseStudyPage({
             className="group inline-flex min-h-11 items-center gap-3 text-sm font-semibold text-copy-muted hover:text-signal"
           >
             <ArrowLeft className="size-3.5" />
-            All cases
+            All my work
           </Link>
           <div
             className={`grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-end ${
@@ -86,7 +86,7 @@ export default async function CaseStudyPage({
 
       <section className="mx-auto grid max-w-[1600px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-28">
         <div>
-          <p className="section-label">Challenge</p>
+          <p className="section-label">The problem</p>
         </div>
         <p className="max-w-4xl font-serif [font-size:var(--type-h3)] leading-[1.08] tracking-[-0.035em]">
           {project.challenge}
@@ -96,11 +96,11 @@ export default async function CaseStudyPage({
       <section className="border-y border-line bg-surface">
         <div className="mx-auto grid max-w-[1600px] lg:grid-cols-2">
           <div className="border-b border-line p-5 sm:p-8 lg:border-b-0 lg:border-r lg:p-12">
-            <p className="section-label">Role</p>
+            <p className="section-label">My part in the work</p>
             <p className="mt-8 max-w-xl text-xl leading-8">{project.role}</p>
           </div>
           <div className="p-5 sm:p-8 lg:p-12">
-            <p className="section-label">System</p>
+            <p className="section-label">What was involved</p>
             <div className="mt-8 flex flex-wrap gap-2">
               {project.system.map((item) => (
                 <span
@@ -117,7 +117,7 @@ export default async function CaseStudyPage({
 
       <section className="mx-auto grid max-w-[1600px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-28">
         <div>
-          <p className="section-label">Actions</p>
+          <p className="section-label">What I did</p>
         </div>
         <ul className="divide-y divide-line border-y border-line">
           {project.actions.map((action) => (
@@ -132,7 +132,7 @@ export default async function CaseStudyPage({
       <section className="border-y border-line bg-surface">
         <div className="mx-auto grid max-w-[1600px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-24">
           <div>
-            <p className="section-label">Outcomes</p>
+            <p className="section-label">What changed</p>
           </div>
           <ul className="grid gap-5">
             {project.outcome.map((outcome) => (
@@ -147,7 +147,7 @@ export default async function CaseStudyPage({
 
       <section className="mx-auto grid max-w-[1600px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:px-12 lg:py-28">
         <div>
-          <p className="section-label">Why it matters</p>
+          <p className="section-label">Why I include this work</p>
           <p className="mt-6 max-w-xl font-serif [font-size:var(--type-h3)] leading-[1.05] tracking-[-0.04em]">
             {project.relevance}
           </p>
@@ -158,7 +158,7 @@ export default async function CaseStudyPage({
               rel="noreferrer"
               className="group mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-5 text-sm font-semibold text-ground"
             >
-              View public project
+              See the live project
               <ArrowUpRight className="size-4" />
             </a>
           )}
@@ -166,7 +166,7 @@ export default async function CaseStudyPage({
         <aside className="self-start border border-line bg-surface p-6 sm:p-8">
           <div className="flex items-center gap-3">
             <ShieldCheck className="size-5 text-signal" />
-            <p className="section-label">Evidence note</p>
+            <p className="section-label">A note on the evidence</p>
           </div>
           <p className="mt-5 text-sm leading-7 text-steel">{project.evidence}</p>
         </aside>

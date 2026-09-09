@@ -7,8 +7,8 @@ export function TrackSensePoster() {
       data-tracksense-poster
     >
       <div className="instrument-readout flex flex-wrap items-center justify-between gap-3 border-b border-line px-4 py-3">
-        <span>Static decision-layer summary</span>
-        <span className="text-signal">Reduced motion / pre-load state</span>
+        <span>Static demo summary</span>
+        <span className="text-signal">Shown before the interactive demo loads</span>
       </div>
 
       <svg
@@ -18,12 +18,12 @@ export function TrackSensePoster() {
         aria-labelledby="tracksense-poster-title tracksense-poster-description"
       >
         <title id="tracksense-poster-title">
-          TrackSense edge decision-layer simulation poster
+          TrackSense rail-monitoring demo
         </title>
         <desc id="tracksense-poster-description">
-          Five edge sensors monitor a rail section. An anomaly appears in raw
-          vibration, acoustic, and thermal telemetry before a local edge model
-          raises a confidence-weighted alert for human review.
+          Five sensors watch a section of track. Vibration, sound, and heat begin
+          to change at one location. A local model flags the change for an
+          operator to review.
         </desc>
 
         <g fill="none" stroke="currentColor" strokeOpacity="0.12">
@@ -136,10 +136,10 @@ export function TrackSensePoster() {
             fontFamily="var(--font-readout)"
             fontSize="13"
           >
-            EDGE NODE / LOCAL INFERENCE
+            LOCAL SENSOR / MODEL RUNNING
           </text>
           <text x="24" y="63" fill="currentColor" fontSize="20">
-            Evidence threshold crossed → human authority retained
+            Threshold crossed → operator review needed
           </text>
           <text
             x="1035"
@@ -155,8 +155,8 @@ export function TrackSensePoster() {
       </svg>
 
       <p className="border-t border-line px-5 py-4 leading-7 text-copy-muted">
-        Synthetic, seeded demonstration—not field telemetry or a production
-        performance claim. The interactive version mounts only when visible.
+        I made this with generated sample data to explain the idea. It is not
+        field data and it does not claim production performance.
       </p>
     </div>
   );

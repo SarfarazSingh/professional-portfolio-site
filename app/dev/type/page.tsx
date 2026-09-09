@@ -127,7 +127,7 @@ export default function TypeSpecimensPage() {
           <div className={styles.content}>
             <p className={styles.kicker}>{specimen.name}</p>
             <h2 className={styles.display}>
-              Complex technology. Made operational.
+              I take on difficult work and stay with it until it works.
             </h2>
 
             <p className={styles.lede}>

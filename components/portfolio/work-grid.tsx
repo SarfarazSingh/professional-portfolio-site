@@ -6,9 +6,9 @@ import { projects } from "@/content/projects";
 import { cn } from "@/lib/utils";
 
 const filters = [
-  { value: "all", label: "All evidence" },
-  { value: "ai", label: "AI & digital" },
-  { value: "engineering", label: "Mission-critical" },
+  { value: "all", label: "All my work" },
+  { value: "ai", label: "AI & product work" },
+  { value: "engineering", label: "Engineering & Navy" },
 ] as const;
 
 export function WorkGrid() {

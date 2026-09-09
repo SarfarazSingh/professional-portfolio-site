@@ -7,17 +7,17 @@ import { artefacts } from "@/content/projects";
 export const metadata: Metadata = {
   title: "Selected Work",
   description:
-    "Case studies across AI products, enterprise transformation, critical infrastructure, and mission-critical systems.",
+    "Four case studies from my work in the Indian Navy, PwC, TrackSense, and UP-ON.AI.",
 };
 
 export default function WorkPage() {
   return (
     <>
       <PageIntro
-        eyebrow="Selected work · Evidence library"
-        title="Proof across the system."
-        description="Four flagship cases show how I frame problems, align stakeholders, design operating systems, and move technology towards measurable use."
-        aside="Filter by recruiter lens · Every outcome includes an evidence note"
+        eyebrow="Selected work · Four case studies"
+        title="What I did, and what changed."
+        description="I have kept these cases simple: the problem, my part in the work, what we did as a team, and the result. Where a figure is private or still a target, I say so."
+        aside="Filter by focus · Each case includes a note on its sources"
       />
       <section className="mx-auto max-w-[1600px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
         <WorkGrid />
@@ -27,9 +27,9 @@ export default function WorkPage() {
         <div className="mx-auto max-w-[1600px] px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
           <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
             <div>
-              <p className="section-label">Product artefacts</p>
+              <p className="section-label">Other projects and prototypes</p>
               <h2 className="mt-4 [font-size:var(--type-h3)] tracking-[-0.04em]">
-                Working range.
+                Things I have built, tested, or explained.
               </h2>
             </div>
             <div className="divide-y divide-line border-y border-line">

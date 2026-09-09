@@ -4,19 +4,19 @@ import { RecruiterBrief } from "@/components/portfolio/recruiter-brief";
 import { profile } from "@/content/profile";
 
 export const metadata: Metadata = {
-  title: "Recruiter Brief",
+  title: "For Recruiters",
   description:
-    "A role-specific, evidence-led briefing for recruiters and hiring leaders.",
+    "A quick, honest view of the roles I am considering and the work behind my experience.",
 };
 
 export default function RecruiterPage() {
   return (
     <>
       <PageIntro
-        eyebrow="Recruiter brief · Two-minute mode"
-        title="Start with the mandate."
-        description="Choose what you are hiring for. The brief will foreground the most relevant capabilities, evidence, fit boundaries, and CV—without changing the underlying facts."
-        aside="Four mandates · One verified career record"
+        eyebrow="For recruiters · A quick, honest read"
+        title="Where my experience may be useful."
+        description="I have grouped my work into four areas so you can get to the relevant part quickly. Each one shows what I have done, the CV that fits, and where I may not be the right person."
+        aside="Four hiring areas · One career, told as it happened"
       />
       <section className="mx-auto max-w-[1600px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
         <RecruiterBrief />
@@ -30,8 +30,8 @@ export default function RecruiterPage() {
           <div>
             <p className="section-label">Mobility</p>
             <p className="mt-3 leading-7 text-copy-muted">
-              Europe, Middle East, and India; subject to role-specific work
-              authorisation.
+              I am open to roles in Europe, the Middle East, and India,
+              depending on the role and visa requirements.
             </p>
           </div>
           <div>

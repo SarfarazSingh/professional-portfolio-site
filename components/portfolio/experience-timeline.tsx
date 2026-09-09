@@ -5,10 +5,16 @@ import { experience } from "@/content/experience";
 import { cn } from "@/lib/utils";
 
 const filters = [
-  { value: "all", label: "Full trajectory" },
-  { value: "ai", label: "AI & digital" },
-  { value: "engineering", label: "Mission-critical" },
+  { value: "all", label: "My full story" },
+  { value: "ai", label: "AI & product work" },
+  { value: "engineering", label: "Engineering & Navy" },
 ] as const;
+
+const phaseLabels = {
+  operate: "Indian Navy",
+  transform: "PwC",
+  build: "Building now",
+} as const;
 
 export function ExperienceTimeline() {
   const [filter, setFilter] = useState<(typeof filters)[number]["value"]>("all");
@@ -59,7 +65,7 @@ export function ExperienceTimeline() {
                     </h2>
                   </div>
                   <span className="instrument-readout rounded-[2px] border border-line px-3 py-1.5">
-                    {item.phase}
+                    {phaseLabels[item.phase]}
                   </span>
                 </div>
                 <p className="mt-6 max-w-3xl text-lg leading-8 text-copy-muted">

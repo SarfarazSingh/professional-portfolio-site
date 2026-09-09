@@ -13,10 +13,10 @@ export default function InsightsPage() {
   return (
     <>
       <PageIntro
-        eyebrow="Insights · Selected writing"
-        title="Think beyond the system."
-        description="I write to connect engineering with institutions, decisions with consequences, and technical progress with the people it affects."
-        aside="Depth, Deterrence & Disruption · Published on Substack"
+        eyebrow="Writing · Selected essays"
+        title="What I notice, question, and learn."
+        description="I write about engineering, history, music, endurance, and the way technical decisions affect ordinary people."
+        aside="Depth, Deterrence & Disruption · My Substack"
       />
 
       <section className="mx-auto max-w-[1600px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
@@ -52,7 +52,7 @@ export default function InsightsPage() {
 
       <section className="border-t border-line bg-surface">
         <div className="mx-auto grid max-w-[1600px] gap-8 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-24">
-          <p className="section-label">The publication</p>
+          <p className="section-label">About my Substack</p>
           <div>
             <h2 className="[font-size:var(--type-h2)] tracking-[-0.045em]">
               {publication.title}
@@ -66,7 +66,7 @@ export default function InsightsPage() {
               rel="noreferrer"
               className="mt-8 inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-5 text-sm font-semibold text-ground"
             >
-              Browse the full archive <ArrowUpRight className="size-4" />
+              Read the full archive <ArrowUpRight className="size-4" />
             </a>
           </div>
         </div>

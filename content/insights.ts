@@ -2,7 +2,7 @@ export const insights = [
   {
     title: "The Kingfisher’s Gift",
     summary:
-      "How an engineer’s curiosity about a bird’s beak transformed high-speed rail—and what it teaches us about observation.",
+      "I tell the story of how careful observation of a bird helped an engineer improve high-speed rail.",
     theme: "ENGINEERING & BIOMIMICRY",
     date: "2025",
     href: "https://ourbrainpickings.substack.com/p/the-kingfishers-gift-how-a-birds",
@@ -10,7 +10,7 @@ export const insights = [
   {
     title: "The Silent Backbone: Bass Guitar",
     summary:
-      "A reflection on rhythm, restraint, and the kind of leadership that makes everyone else sound better.",
+      "What playing bass taught me about restraint, rhythm, and helping the rest of the team sound better.",
     theme: "LEADERSHIP & MUSIC",
     date: "2025",
     href: "https://ourbrainpickings.substack.com/",
@@ -18,7 +18,7 @@ export const insights = [
   {
     title: "Ice Cream Kills",
     summary:
-      "A practical exploration of correlation, causation, and why confident conclusions can still be wrong.",
+      "Why a confident conclusion can still be wrong—and how I try to separate correlation from cause.",
     theme: "DECISION-MAKING",
     date: "2025",
     href: "https://ourbrainpickings.substack.com/",
@@ -26,7 +26,7 @@ export const insights = [
   {
     title: "Endurance is a Love Affair",
     summary:
-      "Running, riding, and the slow noticing required to keep moving through long, uncertain systems.",
+      "What long rides and runs have taught me about patience, attention, and carrying on when progress feels slow.",
     theme: "ENDURANCE & HUMAN PERFORMANCE",
     date: "2025",
     href: "https://ourbrainpickings.substack.com/",
@@ -36,7 +36,7 @@ export const insights = [
 export const publication = {
   title: "Depth, Deterrence & Disruption",
   description:
-    "Essays on technology, institutions, history, and human performance—written through the perspective of a submariner and systems builder.",
+    "I write about technology, history, endurance, music, and the people behind difficult decisions. The perspective is mine: an engineer, submariner, musician, and student who is still learning.",
   href: "https://ourbrainpickings.substack.com/",
   archive: "https://ourbrainpickings.substack.com/archive",
 } as const;

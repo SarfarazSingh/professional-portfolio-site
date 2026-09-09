@@ -7,19 +7,20 @@ export function TrackSenseSection() {
       <div className="mx-auto max-w-[1600px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mb-12 grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
-            <p className="section-label">TrackSense · Live decision layer</p>
+            <p className="section-label">TrackSense · Try the demo</p>
             <p className="instrument-readout mt-3 text-signal">
-              Edge-first / human-authorised
+              Processed locally · operator decides
             </p>
           </div>
           <div>
             <h2 className="max-w-5xl [font-size:var(--type-h2)] leading-[0.86] tracking-[-0.045em]">
-              See the anomaly before the alert.
+              Watch a small change become an alert.
             </h2>
             <p className="mt-6 max-w-[68ch] text-lg leading-8 text-copy-muted">
-              Synthetic vibration, acoustic, and thermal signals stream from
-              five rail-side nodes. The anomaly first appears in raw telemetry,
-              then triggers local inference, then stops for your decision.
+              This is a simple simulation, not live railway data. Five trackside
+              sensors show vibration, sound, and heat. One begins to behave
+              differently, the model flags it, and then the demo waits for you
+              to decide what happens next.
             </p>
           </div>
         </div>
@@ -35,8 +36,9 @@ export function TrackSenseSection() {
             technology is wrong.”
           </blockquote>
           <p className="self-end leading-7 text-copy-muted">
-            The checkpoint is the product thesis made operational: inference
-            informs the decision; human authority controls the consequence.
+            I built the pause into the demo on purpose. The model can point to a
+            problem, but the person responsible for the railway must still make
+            the call.
           </p>
         </div>
       </div>

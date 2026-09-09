@@ -8,7 +8,7 @@ import { assetPath } from "@/lib/asset-path";
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "Career trajectory from submarine operations through enterprise AI and venture building.",
+    "My experience from the Indian Navy’s Submarine Service to PwC and the ventures I am building in Madrid.",
 };
 
 export default function ExperiencePage() {
@@ -16,9 +16,9 @@ export default function ExperiencePage() {
     <>
       <PageIntro
         eyebrow="Experience · 2015—now"
-        title="Operate. Transform. Build."
-        description="Progressive leadership across safety-critical operations, enterprise transformation, and zero-to-one AI products."
-        aside="Filter the same verified chronology by recruiter lens"
+        title="My work, from 2015 to now."
+        description="I started in the Indian Navy’s Submarine Service, moved to PwC, and now divide my time between an MBA at IE and ventures I am building in Madrid."
+        aside="Use the filters to focus on AI work or engineering work"
       />
       <section className="mx-auto max-w-[1600px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
         <ExperienceTimeline />

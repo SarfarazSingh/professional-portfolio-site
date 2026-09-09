@@ -14,29 +14,29 @@ import { assetPath } from "@/lib/asset-path";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Sarfaraz Singh Wahad about AI transformation, product, governance, and mission-critical programme leadership.",
+    "Get in touch with me about a role, a project, or a conversation worth having.",
 };
 
 export default function ContactPage() {
   return (
     <>
       <PageIntro
-        eyebrow="Contact · Start a conversation"
-        title="The right mandate starts here."
-        description="If you are building AI-enabled transformation or leading complex technical systems, send the context. I will respond directly."
-        aside="Direct contact · No form, no routing layer"
+        eyebrow="Contact · Get in touch"
+        title="I would be glad to hear from you."
+        description="If you are hiring, building something difficult, or simply think we should speak, send me a short note. I read and reply to every message myself."
+        aside="You reach me directly · No form or inbox team"
       />
 
       <section className="mx-auto max-w-[1600px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="grid gap-5 lg:grid-cols-3">
           <a
-            href={`https://wa.me/${profile.phone.replace("+", "")}?text=${encodeURIComponent("Hi Sarfaraz, I found your portfolio and would like to discuss an opportunity.")}`}
+            href={`https://wa.me/${profile.phone.replace("+", "")}?text=${encodeURIComponent("Hi Sarfaraz — I saw your portfolio and wanted to get in touch about a role or project.")}`}
             target="_blank"
             rel="noreferrer"
             className="interactive-lift group flex min-h-[300px] flex-col border border-line bg-surface p-6 hover:bg-surface-raised sm:p-8"
           >
             <div className="flex items-center justify-between">
-              <p className="section-label">Immediate channel</p>
+              <p className="section-label">Message me</p>
               <MessageCircle className="size-5 text-signal" />
             </div>
             <div className="mt-auto">
@@ -51,7 +51,7 @@ export default function ContactPage() {
             className="interactive-lift group flex min-h-[300px] flex-col border border-line bg-surface p-6 hover:bg-surface-raised sm:p-8"
           >
             <div className="flex items-center justify-between">
-              <p className="section-label">Direct email</p>
+              <p className="section-label">Write to me</p>
               <ArrowUpRight className="size-5 text-signal" />
             </div>
             <div className="mt-auto">
@@ -68,13 +68,14 @@ export default function ContactPage() {
             className="interactive-lift group flex min-h-[300px] flex-col border border-line bg-surface p-6 hover:bg-surface-raised sm:p-8"
           >
             <div className="flex items-center justify-between">
-              <p className="section-label">Professional profile</p>
+              <p className="section-label">My professional profile</p>
               <ArrowUpRight className="size-5 text-steel group-hover:text-signal" />
             </div>
             <div className="mt-auto">
               <p className="font-serif text-5xl tracking-[-0.045em]">LinkedIn.</p>
               <p className="mt-4 text-copy-muted">
-                Connect for roles, partnerships, or a focused exchange.
+                Connect with me for a role, a partnership, or a straightforward
+                conversation.
               </p>
             </div>
           </a>
@@ -89,16 +90,17 @@ export default function ContactPage() {
             </p>
           </div>
           <div>
-            <p className="section-label">Before we speak</p>
+            <p className="section-label">If you are recruiting</p>
             <p className="mt-5 leading-7 text-copy-muted">
-              Use the recruiter brief to select a mandate and see the most
-              relevant evidence in under two minutes.
+              I have put together a short recruiter page with the roles I am
+              considering, the work behind them, and where I may not be the
+              right fit.
             </p>
             <Link
               href="/recruiter"
               className="group mt-5 inline-flex items-center gap-3 text-sm font-semibold"
             >
-              Open recruiter brief
+              See the recruiter page
               <ArrowRight className="size-4" />
             </Link>
           </div>

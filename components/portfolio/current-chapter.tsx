@@ -6,17 +6,17 @@ import { assetPath } from "@/lib/asset-path";
 const ventures = [
   {
     name: "TrackSense AI",
-    detail: "Predictive infrastructure intelligence",
+    detail: "Helping rail teams find problems earlier",
     href: "/work/tracksense",
   },
   {
     name: "Weave",
-    detail: "Curated community experiences in Madrid",
+    detail: "Small, thoughtfully matched meetups in Madrid",
     href: "https://weave-pitch-deck.vercel.app",
   },
   {
     name: "Loco Dhaasu",
-    detail: "Campus F&B venture and go-to-market experiment",
+    detail: "A bilingual food venture tested on campus",
     href: "https://loco-dhaasu.vercel.app",
   },
 ] as const;
@@ -56,7 +56,7 @@ export function CurrentChapter() {
                 href={assetPath("/experience")}
                 className="inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-6 text-sm font-semibold text-ground"
               >
-                Explore the IE chapter
+                See my full timeline
                 <ArrowRight className="size-4" />
               </a>
               <a
@@ -64,7 +64,7 @@ export function CurrentChapter() {
                 target="_blank"
                 className="inline-flex min-h-12 items-center gap-3 rounded-full border border-line-strong px-6 text-sm font-semibold hover:border-signal hover:text-signal"
               >
-                View Blue Torch credential
+                View my Blue Torch Award
                 <Award className="size-4" />
               </a>
             </div>
@@ -72,7 +72,7 @@ export function CurrentChapter() {
 
           <aside className="flex min-h-[560px] flex-col border border-line bg-surface">
             <div className="instrument-readout flex items-center justify-between border-b border-line p-5">
-              <span>Madrid venture station · 2025–26</span>
+              <span>What I am building · Madrid · 2025–26</span>
               <Crosshair className="size-4 text-signal" />
             </div>
 
@@ -85,8 +85,8 @@ export function CurrentChapter() {
                   Madrid
                 </p>
                 <p className="mx-auto mt-4 max-w-sm leading-7 text-copy-muted">
-                  A working environment for infrastructure AI, community
-                  products, and founder-led go-to-market.
+                  Madrid has given me room to test ideas, build with good
+                  people, and learn what survives contact with real users.
                 </p>
               </div>
             </div>

@@ -11,24 +11,24 @@ import { assetPath } from "@/lib/asset-path";
 
 const identities = [
   {
-    label: "Submariner",
-    statement: "Judgement shaped where failure is not an option.",
+    label: "Indian Navy submariner",
+    statement: "I am proud to have served for eight years in the Submarine Service.",
+  },
+  {
+    label: "PwC manager",
+    statement: "I helped large teams put GenAI and automation into daily operations.",
   },
   {
     label: "Founder",
-    statement: "Products taken from first principle to real users.",
-  },
-  {
-    label: "AI product leader",
-    statement: "AI moved beyond the pilot into operating value.",
-  },
-  {
-    label: "Systems builder",
-    statement: "People, technology, controls, and context designed as one.",
+    statement: "I build products from scratch and learn from the people who use them.",
   },
   {
     label: "IE MBA",
-    statement: "Venture building and cross-programme leadership in Madrid.",
+    statement: "I am a Technology Impact Scholar, club president, and Blue Torch recipient in Madrid.",
+  },
+  {
+    label: "Musician & cyclist",
+    statement: "Music and endurance sport keep me humble, patient, and part of a team.",
   },
 ] as const;
 
@@ -36,19 +36,19 @@ const careerSignals = [
   {
     period: "2015–23",
     organisation: "Indian Navy",
-    role: "Submarine systems",
+    role: "Submarine Service",
     href: "/work/submarine-systems",
   },
   {
     period: "2023–25",
     organisation: "PwC",
-    role: "Enterprise AI",
+    role: "AI & automation",
     href: "/work/enterprise-ai-transformation",
   },
   {
     period: "2026–now",
     organisation: "TrackSense",
-    role: "Industrial AI",
+    role: "Co-founder",
     href: "/work/tracksense",
   },
 ] as const;
@@ -64,7 +64,7 @@ export function HomeHero() {
           <span>Madrid · 40.4168 N / 3.7038 W</span>
           <span className="flex items-center gap-2">
             <span className="size-1.5 bg-signal" aria-hidden="true" />
-            Available for select senior mandates
+            Based in Madrid · open to the right senior role
           </span>
         </div>
 
@@ -77,9 +77,9 @@ export function HomeHero() {
               Sarfaraz Singh Wahad
             </p>
             <h1 className="mt-5 max-w-[10ch] [font-size:var(--type-h1)] leading-[0.8] tracking-[-0.052em]">
-              <span className="hero-title-line">Operator.</span>
-              <span className="hero-title-line">Transformer.</span>
-              <span className="hero-title-line">Builder.</span>
+              <span className="hero-title-line">I served.</span>
+              <span className="hero-title-line">I learned.</span>
+              <span className="hero-title-line">I build.</span>
             </h1>
 
             <p
@@ -112,18 +112,18 @@ export function HomeHero() {
                 href={assetPath("/work")}
                 className="interactive-lift inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-6 text-sm font-semibold text-ground"
               >
-                Enter the portfolio
+                See my work
                 <ArrowRight className="size-4" />
               </a>
               <a
                 href={assetPath("/recruiter")}
                 className="interactive-lift inline-flex min-h-12 items-center gap-3 rounded-full border border-line-strong px-6 text-sm font-semibold text-copy hover:border-signal hover:text-signal"
               >
-                Recruiter brief
+                For recruiters
                 <MoveUpRight className="size-4" />
               </a>
               <ContactTrigger className="interactive-lift inline-flex min-h-12 items-center gap-3 rounded-full border border-line-strong px-6 text-sm font-semibold text-copy hover:border-signal hover:text-signal">
-                Start a conversation
+                Get in touch
                 <MessageCircle className="size-4" />
               </ContactTrigger>
             </div>
@@ -140,8 +140,8 @@ export function HomeHero() {
               />
               <figure className="relative border border-line bg-surface p-2">
                 <div className="instrument-readout flex items-center justify-between border-b border-line px-2 py-3">
-                  <span>Operator profile</span>
-                  <span className="text-signal">Active / Madrid</span>
+                  <span>My profile</span>
+                  <span className="text-signal">Madrid</span>
                 </div>
                 <Image
                   src={assetPath("/images/sarfaraz-singh-wahad-portrait.png")}
@@ -154,7 +154,7 @@ export function HomeHero() {
                 />
                 <figcaption className="grid gap-1 border-t border-line px-2 py-3 sm:grid-cols-[1fr_auto]">
                   <span className="text-sm font-semibold">
-                    Submariner · AI leader · Founder
+                    Submariner · PwC manager · Founder
                   </span>
                   <span className="instrument-readout">Portrait / 2026</span>
                 </figcaption>
@@ -188,7 +188,7 @@ export function HomeHero() {
                   href={assetPath(`/work?lens=${key}`)}
                   className="interactive-lift inline-flex min-h-11 items-center rounded-full border border-line-strong px-4 text-sm font-semibold text-copy-muted hover:border-signal hover:text-copy"
                 >
-                  {key === "ai" ? "AI & digital" : "Mission-critical systems"}
+                  {key === "ai" ? "AI & product work" : "Engineering & Navy"}
                 </a>
               ))}
             </div>
@@ -196,7 +196,7 @@ export function HomeHero() {
               href="#tracksense-live"
               className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-copy-muted hover:text-signal"
             >
-              Explore the live work
+              Try the TrackSense demo
               <ArrowDown className="size-4" />
             </a>
           </div>

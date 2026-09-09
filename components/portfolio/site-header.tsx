@@ -36,7 +36,7 @@ export function SiteHeader() {
             href={assetPath("/recruiter")}
             className="hidden min-h-11 items-center rounded-full border border-line-strong px-4 text-sm font-semibold hover:border-signal hover:text-signal sm:inline-flex"
           >
-            Recruiter brief
+            For recruiters
           </a>
 
           <details className="group relative lg:hidden">
@@ -63,7 +63,7 @@ export function SiteHeader() {
                 href={assetPath("/recruiter")}
                 className="mt-4 rounded-full bg-signal px-4 py-3 text-center text-sm font-semibold text-ground"
               >
-                Open recruiter brief
+                For recruiters
               </a>
             </nav>
           </details>

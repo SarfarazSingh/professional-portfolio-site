@@ -11,15 +11,15 @@ import { cn } from "@/lib/utils";
 
 const dialogId = "contact-actions-dialog";
 const whatsappMessage = encodeURIComponent(
-  "Hi Sarfaraz, I found your portfolio and would like to discuss an opportunity.",
+  "Hi Sarfaraz — I saw your portfolio and wanted to get in touch about a role or project.",
 );
-const emailSubject = encodeURIComponent("Portfolio conversation");
+const emailSubject = encodeURIComponent("Getting in touch after seeing your portfolio");
 const emailBody = encodeURIComponent(
-  "Hi Sarfaraz,\n\nI found your portfolio and would like to discuss an opportunity.\n\n",
+  "Hi Sarfaraz,\n\nI saw your portfolio and wanted to get in touch about a role or project.\n\n",
 );
 
 export function ContactTrigger({
-  children = "Start a conversation",
+  children = "Get in touch",
   className,
 }: {
   children?: React.ReactNode;
@@ -54,7 +54,7 @@ export function ContactActionsDialog() {
     },
     {
       label: "LinkedIn",
-      detail: "Open professional profile",
+      detail: "See my profile",
       href: profile.linkedin,
       icon: BriefcaseBusiness,
     },
@@ -69,12 +69,12 @@ export function ContactActionsDialog() {
       <div className="border-b border-line p-5 sm:p-6">
         <div className="flex items-start justify-between gap-6">
           <div>
-            <p className="section-label">Direct contact</p>
+            <p className="section-label">Get in touch</p>
             <h2
               className="mt-3 [font-size:var(--type-h3)] leading-none tracking-[-0.035em]"
               id="contact-actions-title"
             >
-              Choose a channel.
+              How would you like to reach me?
             </h2>
           </div>
           <form method="dialog">
@@ -88,7 +88,8 @@ export function ContactActionsDialog() {
           </form>
         </div>
         <p className="mt-4 max-w-[38ch] leading-7 text-copy-muted">
-          Reach Sarfaraz directly—no form, automated routing, or mailing list.
+          You will reach me directly. There is no form, inbox team, or mailing
+          list.
         </p>
       </div>
 

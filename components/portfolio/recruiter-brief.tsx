@@ -7,19 +7,19 @@ import { ContactTrigger } from "@/components/portfolio/contact-actions";
 import { assetPath } from "@/lib/asset-path";
 import { cn } from "@/lib/utils";
 
-const mandates = {
+const hiringAreas = {
   transformation: {
-    short: "AI Transformation",
-    title: "Make AI useful across the enterprise.",
+    short: "Enterprise AI",
+    title: "I help large organisations put AI to work.",
     summary:
-      "Sarfaraz combines enterprise AI delivery, operating-model judgement, and executive communication to take programmes from use-case selection through adoption and value.",
+      "At PwC, I worked between business and technical teams to choose useful problems, make sound delivery decisions, and help people adopt what we built.",
     capabilities: [
-      "Use-case prioritisation",
-      "Business-case framing",
-      "Cross-functional delivery",
-      "Adoption and value metrics",
-      "Responsible AI controls",
-      "Executive communication",
+      "Choosing problems worth solving",
+      "Making a clear business case",
+      "Leading work across teams",
+      "Measuring use and results",
+      "Building in responsible controls",
+      "Speaking plainly with senior leaders",
     ],
     cases: [
       { title: "Enterprise AI at scale", href: "/work/enterprise-ai-transformation" },
@@ -27,21 +27,21 @@ const mandates = {
     ],
     roles: "AI Transformation Lead · AI Delivery Lead · Data & AI Programme Manager",
     caveat:
-      "Best suited to product, delivery, and transformation leadership—not principal ML engineering or research roles.",
+      "I am strongest in product, delivery, and transformation leadership. I am not applying to be a principal ML engineer or research scientist.",
     cv: "/cv/sarfaraz-wahad-ai-digital.pdf",
   },
   product: {
-    short: "AI Product & Delivery",
-    title: "Translate operational problems into AI products.",
+    short: "AI Products",
+    title: "I turn real operational problems into products.",
     summary:
-      "Sarfaraz works across customer need, product architecture, delivery constraints, governance, and commercial narrative—especially in regulated or operational environments.",
+      "I start with the people doing the work, understand what gets in their way, and then make the product, technical, and commercial choices needed to ship something useful.",
     capabilities: [
-      "Product strategy",
-      "Requirements and roadmap",
-      "Agentic and RAG workflows",
-      "Evaluation framing",
-      "Human-in-the-loop design",
-      "Go-to-market alignment",
+      "Product direction and choices",
+      "Requirements and practical roadmaps",
+      "AI agents and retrieval workflows",
+      "Testing what good looks like",
+      "Keeping people in control",
+      "Connecting product and market",
     ],
     cases: [
       { title: "TrackSense AI", href: "/work/tracksense" },
@@ -49,21 +49,21 @@ const mandates = {
     ],
     roles: "Senior AI Product Manager · AI Product Owner · Industrial AI Product Lead",
     caveat:
-      "Commercial AI-product tenure is recent and concentrated; the differentiator is deep leadership and operating experience.",
+      "My commercial AI-product experience is recent. What I bring alongside it is eight years of operational leadership and the discipline to learn quickly without pretending to know what I do not.",
     cv: "/cv/sarfaraz-wahad-ai-digital.pdf",
   },
   governance: {
     short: "Responsible AI",
-    title: "Governance designed into delivery.",
+    title: "I build guardrails into the work from the start.",
     summary:
-      "AIGP capability is grounded in high-consequence operating experience: define boundaries, evaluate failure, retain human authority, and make accountability executable.",
+      "My AIGP training gives me the formal framework. My years in submarines taught me the deeper habit: know the limits, plan for failure, keep a person accountable, and speak up early.",
     capabilities: [
-      "AI risk assessment",
-      "Human oversight",
-      "EU AI Act literacy",
+      "Understanding AI risk",
+      "Meaningful human oversight",
+      "Working knowledge of the EU AI Act",
       "NIST AI RMF",
-      "Lifecycle controls",
-      "Incident and escalation design",
+      "Controls across the product lifecycle",
+      "Clear incident and escalation paths",
     ],
     cases: [
       { title: "TrackSense AI", href: "/work/tracksense" },
@@ -71,14 +71,14 @@ const mandates = {
     ],
     roles: "Responsible AI Programme Manager · AI Governance Manager · AI Assurance Lead",
     caveat:
-      "Positioned for applied governance inside product and transformation—not as specialist legal counsel.",
+      "I work on governance inside products and programmes. I am not a lawyer and would not present myself as specialist legal counsel.",
     cv: "/cv/sarfaraz-wahad-ai-digital.pdf",
   },
   systems: {
-    short: "Mission-Critical Programmes",
-    title: "Lead complex systems to operational readiness.",
+    short: "Technical Programmes",
+    title: "I lead technical programmes until people can rely on them.",
     summary:
-      "A decade in submarine operations built a rigorous approach to technical programmes, systems integration, risk control, training, and decisions under pressure.",
+      "Eight years in the Submarine Service taught me to prepare properly, check the evidence, train the team, and stay calm when a technical decision carries real consequences.",
     capabilities: [
       "Operational readiness",
       "Technical programme delivery",
@@ -94,21 +94,21 @@ const mandates = {
     roles:
       "Technical Programme Manager · Operational Readiness Lead · Industrial Digitalisation Lead",
     caveat:
-      "Not positioned as a licensed civil, electrical, structural, or nuclear-design authority.",
+      "I am a technical programme and operations leader. I am not a licensed civil, electrical, structural, or nuclear-design authority.",
     cv: "/cv/sarfaraz-wahad-engineering.pdf",
   },
 } as const;
 
-type Mandate = keyof typeof mandates;
+type HiringArea = keyof typeof hiringAreas;
 
 export function RecruiterBrief() {
-  const [active, setActive] = useState<Mandate>("transformation");
-  const item = mandates[active];
+  const [active, setActive] = useState<HiringArea>("transformation");
+  const item = hiringAreas[active];
 
   return (
     <div>
-      <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4" role="tablist" aria-label="Select a hiring mandate">
-        {(Object.keys(mandates) as Mandate[]).map((key) => (
+      <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4" role="tablist" aria-label="Select a hiring area">
+        {(Object.keys(hiringAreas) as HiringArea[]).map((key) => (
           <button
             key={key}
             type="button"
@@ -123,7 +123,7 @@ export function RecruiterBrief() {
             )}
           >
             <span className="block text-sm font-semibold">
-              {mandates[key].short}
+              {hiringAreas[key].short}
             </span>
           </button>
         ))}
@@ -133,7 +133,7 @@ export function RecruiterBrief() {
         <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
           <div className="p-6 sm:p-10 lg:p-14">
             <p className="section-label text-signal">
-              Two-minute brief · {item.short}
+              Quick summary · {item.short}
             </p>
             <h2 className="mt-8 max-w-3xl [font-size:var(--type-h2)] leading-[0.9] tracking-[-0.05em]">
               {item.title}
@@ -148,16 +148,16 @@ export function RecruiterBrief() {
                 download
                 className="inline-flex h-12 items-center gap-3 rounded-full bg-signal px-6 text-sm font-semibold text-ground"
               >
-                Download matched CV <ArrowDownToLine className="size-4" />
+                Download the right CV <ArrowDownToLine className="size-4" />
               </a>
               <ContactTrigger className="interactive-lift inline-flex h-12 items-center gap-3 rounded-full border border-line-strong px-6 text-sm font-semibold hover:border-signal hover:text-signal">
-                Start a conversation <ArrowRight className="size-4" />
+                Get in touch <ArrowRight className="size-4" />
               </ContactTrigger>
             </div>
           </div>
 
           <div className="border-t border-line bg-ground p-6 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
-            <p className="section-label">Capability match</p>
+            <p className="section-label">What I bring</p>
             <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
               {item.capabilities.map((capability) => (
                 <li key={capability} className="flex items-center gap-3 text-sm">
@@ -171,7 +171,7 @@ export function RecruiterBrief() {
 
         <div className="grid border-t border-line lg:grid-cols-3">
           <div className="p-6 sm:p-8">
-            <p className="section-label">Best evidence</p>
+            <p className="section-label">Work behind this</p>
             <div className="mt-4 grid gap-2">
               {item.cases.map((caseItem) => (
                 <Link
@@ -185,11 +185,11 @@ export function RecruiterBrief() {
             </div>
           </div>
           <div className="border-t border-line p-6 sm:p-8 lg:border-l lg:border-t-0">
-            <p className="section-label">Suitable roles</p>
+            <p className="section-label">Roles I am considering</p>
             <p className="mt-4 leading-7 text-copy-muted">{item.roles}</p>
           </div>
           <div className="border-t border-line p-6 sm:p-8 lg:border-l lg:border-t-0">
-            <p className="section-label">Honest boundary</p>
+            <p className="section-label">Where I am not the right fit</p>
             <p className="mt-4 leading-7 text-copy-muted">{item.caveat}</p>
           </div>
         </div>
