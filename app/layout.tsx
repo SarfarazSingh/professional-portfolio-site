@@ -36,7 +36,6 @@ const revealScript = `document.documentElement.classList.add("js");`;
 const interactionScript = `
   (() => {
     const root = document.documentElement;
-    const pointerFine = matchMedia("(pointer: fine)");
     const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
     let frame = 0;
     let nextX = 0;
@@ -58,8 +57,9 @@ const interactionScript = `
       if (!frame) frame = requestAnimationFrame(renderPointerDepth);
     };
 
-    if (pointerFine.matches && !reducedMotion.matches) {
+    if (!reducedMotion.matches) {
       addEventListener("pointermove", (event) => {
+        if (event.pointerType && event.pointerType !== "mouse") return;
         nextX = (event.clientX / innerWidth - 0.5) * 2;
         nextY = (event.clientY / innerHeight - 0.5) * 2;
         if (!frame) frame = requestAnimationFrame(renderPointerDepth);
