@@ -54,7 +54,7 @@ export const voiceAgentScript = `
       };
 
       const failConversation = (error) => {
-        console.error("Unable to use ElevenLabs voice conversation", error);
+        console.warn("ElevenLabs voice conversation unavailable", error);
         failed = true;
         conversation = null;
         active = false;
@@ -103,7 +103,7 @@ export const voiceAgentScript = `
           const { Conversation } = await loadSdk(runtimeSource);
           conversation = await Conversation.startSession({
             agentId,
-            connectionType: "webrtc",
+            connectionType: "websocket",
             onConnect: () => {
               failed = false;
               active = true;
