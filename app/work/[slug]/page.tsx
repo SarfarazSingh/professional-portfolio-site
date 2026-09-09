@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, CheckCircle2, ShieldCheck } from "lucide-react";
+import { TrackSenseSection } from "@/components/tracksense/tracksense-section";
 import { getProject, projects } from "@/content/projects";
 
 export function generateStaticParams() {
@@ -30,11 +31,16 @@ export default async function CaseStudyPage({
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) notFound();
+  const isTrackSense = project.slug === "tracksense";
 
   return (
     <article>
       <header className="relative border-b border-line bg-ground/96">
-        <div className="relative mx-auto max-w-[1600px] px-5 py-14 sm:px-8 lg:px-12 lg:py-24">
+        <div
+          className={`relative mx-auto max-w-[1600px] px-5 py-14 sm:px-8 lg:px-12 ${
+            isTrackSense ? "lg:py-12" : "lg:py-24"
+          }`}
+        >
           <Link
             href="/work"
             className="group inline-flex min-h-11 items-center gap-3 text-sm font-semibold text-copy-muted hover:text-signal"
@@ -42,10 +48,20 @@ export default async function CaseStudyPage({
             <ArrowLeft className="size-3.5" />
             All cases
           </Link>
-          <div className="mt-20 grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
+          <div
+            className={`grid gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-end ${
+              isTrackSense ? "mt-10" : "mt-20"
+            }`}
+          >
             <div>
               <p className="section-label text-signal">{project.kicker}</p>
-              <h1 className="mt-7 max-w-5xl text-[clamp(4rem,10vw,11rem)] leading-[0.82] tracking-[-0.055em]">
+              <h1
+                className={`mt-7 max-w-5xl leading-[0.82] tracking-[-0.055em] ${
+                  isTrackSense
+                    ? "text-[clamp(4rem,7vw,8rem)]"
+                    : "text-[clamp(4rem,10vw,11rem)]"
+                }`}
+              >
                 {project.title}
               </h1>
             </div>
@@ -65,6 +81,8 @@ export default async function CaseStudyPage({
           </div>
         </div>
       </header>
+
+      {isTrackSense && <TrackSenseSection />}
 
       <section className="mx-auto grid max-w-[1600px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-28">
         <div>

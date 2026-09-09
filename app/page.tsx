@@ -4,6 +4,7 @@ import { CareerTopology } from "@/components/portfolio/career-topology";
 import { CurrentChapter } from "@/components/portfolio/current-chapter";
 import { HomeHero } from "@/components/portfolio/home-hero";
 import { ProjectCard } from "@/components/portfolio/project-card";
+import { TrackSenseSection } from "@/components/tracksense/tracksense-section";
 import { publication } from "@/content/insights";
 import { artefacts, projects } from "@/content/projects";
 
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <HomeHero />
+      <TrackSenseSection />
       <CurrentChapter />
       <CareerTopology />
 

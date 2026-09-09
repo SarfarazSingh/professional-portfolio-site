@@ -130,6 +130,10 @@ Only these four primitives are allowed.
 
 `prefers-reduced-motion: reduce` disables Reveal, Magnetic, and Scrub and renders every element at its final, fully opaque position on first paint. JavaScript-disabled output must remain complete and readable.
 
+### Product simulation runtime
+
+The TrackSense canvas is an operational data visualisation, not a fifth UI-motion primitive. It uses a fixed-timestep `requestAnimationFrame` loop only to advance synthetic telemetry. It never animates page layout, text opacity, or navigation; pauses off-screen and when the tab is hidden; and is replaced by a complete static SVG poster under reduced motion or without JavaScript.
+
 ## Interaction and accessibility
 
 - Body text targets AAA contrast
