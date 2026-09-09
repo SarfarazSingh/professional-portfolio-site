@@ -3,6 +3,7 @@ import { gzipSync } from "node:zlib";
 
 const initialLimit = 180 * 1024;
 const canvasLimit = 40 * 1024;
+const voiceLimit = 200 * 1024;
 const html = readFileSync("out/index.html", "utf8");
 const sources = [
   ...new Set(
@@ -56,3 +57,12 @@ for (const chunk of canvasChunks) {
   );
   if (!passes) process.exitCode = 1;
 }
+
+const voiceBytes = gzipSync(
+  readFileSync("out/voice-agent-client.js"),
+).length;
+const voicePasses = voiceBytes <= voiceLimit;
+console.log(
+  `${voicePasses ? "PASS" : "FAIL"} lazy voice-agent SDK: ${(voiceBytes / 1024).toFixed(1)} KB gzipped (limit 200 KB)`,
+);
+if (!voicePasses) process.exitCode = 1;

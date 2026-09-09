@@ -143,7 +143,7 @@ Only these six primitives are allowed.
 - Two thin, segmented SVG rings rotate around one circular voice control
 - Sodium amber remains the only signal colour; there is no glow or gradient
 - Wave bars animate only while connecting or in an active conversation
-- The ElevenLabs widget runtime loads on intent and remains outside the critical bundle
+- The ElevenLabs browser SDK loads on intent and remains outside the critical bundle
 - Conversation state is announced in a polite live region
 - The control returns to a complete static form under reduced motion
 
@@ -171,6 +171,7 @@ The TrackSense canvas is an operational data visualisation, not a fifth UI-motio
 - CLS: `0`
 - INP: ≤ 150ms
 - Interactive canvas chunk: ≤ 40KB gzipped
+- Lazy voice-agent SDK: ≤ 200KB gzipped
 - No Spline or React Three Fiber in the critical path
 - No animation library above 15KB in the approved rebuild
 - Canvas modules use dynamic import, `ssr: false`, IntersectionObserver lazy mounting, and a static poster before hydration

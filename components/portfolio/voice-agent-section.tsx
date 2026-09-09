@@ -1,5 +1,5 @@
-import { createElement } from "react";
 import { Mic, Radio, ShieldCheck } from "lucide-react";
+import { assetPath } from "@/lib/asset-path";
 
 const agentId = "agent_8501m23hs5dje34bkks58kcar615";
 
@@ -9,6 +9,8 @@ export function VoiceAgentSection() {
       aria-labelledby="voice-agent-title"
       className="station bg-surface"
       data-voice-agent
+      data-voice-agent-id={agentId}
+      data-voice-runtime-src={assetPath("/voice-agent-client.js")}
       data-voice-state="idle"
     >
       <div className="mx-auto max-w-[1600px] px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
@@ -87,22 +89,6 @@ export function VoiceAgentSection() {
           </div>
         </div>
       </div>
-
-      {createElement("elevenlabs-convai", {
-        id: "portfolio-voice-widget",
-        "agent-id": agentId,
-        variant: "compact",
-        placement: "bottom-left",
-        transcript: "false",
-        "text-input": "false",
-        "mic-muting": "true",
-        "action-text": "Talk to Sarfaraz AI",
-        "start-call-text": "Start conversation",
-        "end-call-text": "End conversation",
-        "listening-text": "Listening",
-        "speaking-text": "Sarfaraz AI is speaking",
-        style: { display: "none" },
-      })}
     </section>
   );
 }

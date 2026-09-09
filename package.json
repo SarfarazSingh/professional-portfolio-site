@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 43127",
+    "prebuild": "npm run build:voice-agent",
     "build": "next build --webpack",
+    "build:voice-agent": "esbuild scripts/voice-agent-entry.ts --bundle --format=esm --platform=browser --target=es2022 --minify --outfile=public/voice-agent-client.js",
     "start": "next start",
     "lint": "eslint",
     "check:contrast": "node scripts/check-contrast.mjs",
@@ -12,6 +14,7 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
+    "@elevenlabs/client": "^1.25.0",
     "@fontsource-variable/archivo": "^5.3.0",
     "@fontsource-variable/bricolage-grotesque": "^5.3.0",
     "@fontsource-variable/martian-mono": "^5.3.0",
@@ -34,6 +37,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "esbuild": "^0.28.2",
     "eslint": "^9",
     "eslint-config-next": "16.3.4",
     "tailwindcss": "^4",
