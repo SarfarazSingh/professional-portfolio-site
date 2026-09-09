@@ -12,6 +12,7 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     ".vercel/**",
+    "public/voice-agent-client.js",
     "next-env.d.ts",
   ]),
 ]);
