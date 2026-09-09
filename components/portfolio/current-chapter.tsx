@@ -31,7 +31,7 @@ export function CurrentChapter() {
           <div className="flex flex-col">
             <div>
               <p className="section-label">Now in Madrid</p>
-              <h2 className="mt-5 max-w-4xl text-[var(--type-h2)] leading-[0.86] tracking-[-0.045em]">
+              <h2 className="mt-5 max-w-4xl [font-size:var(--type-h2)] leading-[0.86] tracking-[-0.045em]">
                 {chapter.title}
               </h2>
               <p className="mt-7 max-w-[68ch] text-lg leading-8 text-copy-muted">
@@ -81,7 +81,7 @@ export function CurrentChapter() {
                 <p className="instrument-readout text-signal">
                   40.4168 N · 3.7038 W
                 </p>
-                <p className="mt-4 font-serif text-[var(--type-h3)] leading-none">
+                <p className="mt-4 font-serif [font-size:var(--type-h3)] leading-none">
                   Madrid
                 </p>
                 <p className="mx-auto mt-4 max-w-sm leading-7 text-copy-muted">

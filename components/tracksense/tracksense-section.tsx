@@ -13,7 +13,7 @@ export function TrackSenseSection() {
             </p>
           </div>
           <div>
-            <h2 className="max-w-5xl text-[var(--type-h2)] leading-[0.86] tracking-[-0.045em]">
+            <h2 className="max-w-5xl [font-size:var(--type-h2)] leading-[0.86] tracking-[-0.045em]">
               See the anomaly before the alert.
             </h2>
             <p className="mt-6 max-w-[68ch] text-lg leading-8 text-copy-muted">
@@ -30,7 +30,7 @@ export function TrackSenseSection() {
         </div>
 
         <div className="mt-8 grid gap-6 border-l-2 border-signal pl-6 lg:grid-cols-[1.2fr_.8fr]">
-          <blockquote className="font-serif text-[var(--type-h3)] leading-[1.05] tracking-[-0.035em]">
+          <blockquote className="font-serif [font-size:var(--type-h3)] leading-[1.05] tracking-[-0.035em]">
             “I do not assume systems are infallible. I design for the moment
             technology is wrong.”
           </blockquote>

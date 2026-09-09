@@ -76,14 +76,14 @@ export function HomeHero() {
             >
               Sarfaraz Singh Wahad
             </p>
-            <h1 className="mt-5 max-w-[10ch] text-[var(--type-h1)] leading-[0.8] tracking-[-0.052em]">
+            <h1 className="mt-5 max-w-[10ch] [font-size:var(--type-h1)] leading-[0.8] tracking-[-0.052em]">
               <span className="hero-title-line">Operator.</span>
               <span className="hero-title-line">Transformer.</span>
               <span className="hero-title-line">Builder.</span>
             </h1>
 
             <p
-              className="hero-entry mt-8 max-w-[52ch] text-[var(--type-lede)] leading-[1.35] text-copy-muted"
+              className="hero-entry mt-8 max-w-[52ch] [font-size:var(--type-lede)] leading-[1.35] text-copy-muted"
               data-hero-entry="3"
             >
               {profile.summary}

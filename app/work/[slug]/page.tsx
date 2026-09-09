@@ -88,7 +88,7 @@ export default async function CaseStudyPage({
         <div>
           <p className="section-label">Challenge</p>
         </div>
-        <p className="max-w-4xl font-serif text-[var(--type-h3)] leading-[1.08] tracking-[-0.035em]">
+        <p className="max-w-4xl font-serif [font-size:var(--type-h3)] leading-[1.08] tracking-[-0.035em]">
           {project.challenge}
         </p>
       </section>
@@ -148,7 +148,7 @@ export default async function CaseStudyPage({
       <section className="mx-auto grid max-w-[1600px] gap-10 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:px-12 lg:py-28">
         <div>
           <p className="section-label">Why it matters</p>
-          <p className="mt-6 max-w-xl font-serif text-[var(--type-h3)] leading-[1.05] tracking-[-0.04em]">
+          <p className="mt-6 max-w-xl font-serif [font-size:var(--type-h3)] leading-[1.05] tracking-[-0.04em]">
             {project.relevance}
           </p>
           {project.href && (

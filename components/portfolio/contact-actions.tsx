@@ -71,7 +71,7 @@ export function ContactActionsDialog() {
           <div>
             <p className="section-label">Direct contact</p>
             <h2
-              className="mt-3 text-[var(--type-h3)] leading-none tracking-[-0.035em]"
+              className="mt-3 [font-size:var(--type-h3)] leading-none tracking-[-0.035em]"
               id="contact-actions-title"
             >
               Choose a channel.

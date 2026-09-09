@@ -7,7 +7,7 @@ export function SiteFooter() {
     <footer className="border-t border-line bg-ground">
       <div className="mx-auto grid max-w-[1600px] gap-10 px-5 py-12 sm:px-8 md:grid-cols-[1fr_auto] lg:px-12">
         <div>
-          <p className="font-serif text-[var(--type-h3)] leading-none tracking-[-0.035em]">
+          <p className="font-serif [font-size:var(--type-h3)] leading-none tracking-[-0.035em]">
             Complex technology.
             <br />
             Made operational.

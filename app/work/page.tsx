@@ -28,7 +28,7 @@ export default function WorkPage() {
           <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
             <div>
               <p className="section-label">Product artefacts</p>
-              <h2 className="mt-4 text-[var(--type-h3)] tracking-[-0.04em]">
+              <h2 className="mt-4 [font-size:var(--type-h3)] tracking-[-0.04em]">
                 Working range.
               </h2>
             </div>

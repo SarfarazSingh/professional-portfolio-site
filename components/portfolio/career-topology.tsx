@@ -51,7 +51,7 @@ export function CareerTopology() {
             <p className="section-label">Career trajectory</p>
             <h2
               id="trajectory-title"
-              className="mt-4 text-balance text-[var(--type-h2)] leading-[0.88] tracking-[-0.045em]"
+              className="mt-4 text-balance [font-size:var(--type-h2)] leading-[0.88] tracking-[-0.045em]"
             >
               One operating system.
             </h2>
@@ -107,7 +107,7 @@ export function CareerTopology() {
                   <span className="instrument-readout block">
                     {chapter.years}
                   </span>
-                  <span className="mt-3 block text-[var(--type-h3)] leading-none tracking-[-0.035em]">
+                  <span className="mt-3 block [font-size:var(--type-h3)] leading-none tracking-[-0.035em]">
                     {chapter.title}
                   </span>
                   <span className="mt-3 block font-semibold">

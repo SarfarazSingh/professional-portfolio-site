@@ -45,7 +45,7 @@ export default function AboutPage() {
           <p className="section-label">The through-line</p>
         </div>
         <div className="max-w-3xl">
-          <p className="font-serif text-[var(--type-h3)] leading-[1.08] tracking-[-0.035em]">
+          <p className="font-serif [font-size:var(--type-h3)] leading-[1.08] tracking-[-0.035em]">
             I learned technology leadership in an environment where the system,
             the operator, and the consequence could never be separated.
           </p>
@@ -78,7 +78,7 @@ export default function AboutPage() {
                 <div className="flex justify-end">
                   <Icon className="size-5 text-signal" />
                 </div>
-                <h2 className="mt-20 text-[var(--type-h3)] tracking-[-0.04em]">
+                <h2 className="mt-20 [font-size:var(--type-h3)] tracking-[-0.04em]">
                   {principle.title}
                 </h2>
                 <p className="mt-5 leading-7 text-copy-muted">
@@ -106,7 +106,7 @@ export default function AboutPage() {
             <p className="section-label">
               Education · From engineering to enterprise leadership
             </p>
-            <h2 className="mt-6 text-[var(--type-h2)] leading-[0.9] tracking-[-0.045em]">
+            <h2 className="mt-6 [font-size:var(--type-h2)] leading-[0.9] tracking-[-0.045em]">
               Experience built the questions.
               <br />
               IE sharpened the answers.
@@ -150,7 +150,7 @@ export default function AboutPage() {
           <p className="section-label">Beyond the role</p>
         </div>
         <div>
-          <h2 className="max-w-3xl text-[var(--type-h2)] leading-[0.9] tracking-[-0.045em]">
+          <h2 className="max-w-3xl [font-size:var(--type-h2)] leading-[0.9] tracking-[-0.045em]">
             Endurance, rhythm,
             <br />
             and public service.

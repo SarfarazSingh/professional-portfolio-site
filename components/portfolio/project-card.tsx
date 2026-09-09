@@ -36,7 +36,7 @@ export function ProjectCard({
         <div className="my-auto py-10">
           <h3
             className={cn(
-              "max-w-xl text-[var(--type-h3)] leading-none tracking-[-0.04em]",
+              "max-w-xl [font-size:var(--type-h3)] leading-none tracking-[-0.04em]",
               large && "lg:text-6xl",
             )}
           >

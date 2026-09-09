@@ -135,7 +135,7 @@ export function RecruiterBrief() {
             <p className="section-label text-signal">
               Two-minute brief · {item.short}
             </p>
-            <h2 className="mt-8 max-w-3xl text-[var(--type-h2)] leading-[0.9] tracking-[-0.05em]">
+            <h2 className="mt-8 max-w-3xl [font-size:var(--type-h2)] leading-[0.9] tracking-[-0.05em]">
               {item.title}
             </h2>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-copy-muted">

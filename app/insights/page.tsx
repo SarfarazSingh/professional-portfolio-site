@@ -35,7 +35,7 @@ export default function InsightsPage() {
               </div>
               <div className="my-auto py-8">
                 <p className="instrument-readout">{insight.date}</p>
-                <h2 className="mt-4 max-w-xl text-[var(--type-h3)] leading-[0.98] tracking-[-0.04em]">
+                <h2 className="mt-4 max-w-xl [font-size:var(--type-h3)] leading-[0.98] tracking-[-0.04em]">
                   {insight.title}
                 </h2>
                 <p className="mt-5 max-w-xl leading-7 text-copy-muted">
@@ -54,7 +54,7 @@ export default function InsightsPage() {
         <div className="mx-auto grid max-w-[1600px] gap-8 px-5 py-20 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:px-12 lg:py-24">
           <p className="section-label">The publication</p>
           <div>
-            <h2 className="text-[var(--type-h2)] tracking-[-0.045em]">
+            <h2 className="[font-size:var(--type-h2)] tracking-[-0.045em]">
               {publication.title}
             </h2>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-copy-muted">
