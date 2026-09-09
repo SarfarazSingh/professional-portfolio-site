@@ -1,3 +1,4 @@
+import { TrackSensePoster } from "./tracksense-poster";
 import { TrackSenseSimulationShell } from "./tracksense-simulation-shell";
 
 export function TrackSenseSection() {
@@ -23,7 +24,10 @@ export function TrackSenseSection() {
           </div>
         </div>
 
-        <TrackSenseSimulationShell />
+        <div data-tracksense-host>
+          <TrackSensePoster />
+          <TrackSenseSimulationShell />
+        </div>
 
         <div className="mt-8 grid gap-6 border-l-2 border-signal pl-6 lg:grid-cols-[1.2fr_.8fr]">
           <blockquote className="font-serif text-[var(--type-h3)] leading-[1.05] tracking-[-0.035em]">

@@ -2,13 +2,12 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
-import { TrackSensePoster } from "./tracksense-poster";
 
 const TrackSenseSimulation = dynamic(
   () => import("./tracksense-simulation"),
   {
     ssr: false,
-    loading: () => <TrackSensePoster />,
+    loading: () => null,
   },
 );
 
@@ -54,12 +53,12 @@ export function TrackSenseSimulationShell() {
   }, [reducedMotion, shouldMount]);
 
   return (
-    <div ref={shellRef} data-tracksense-shell>
-      {shouldMount && !reducedMotion ? (
-        <TrackSenseSimulation />
-      ) : (
-        <TrackSensePoster />
-      )}
+    <div
+      ref={shellRef}
+      className={shouldMount && !reducedMotion ? undefined : "h-px"}
+      data-tracksense-shell
+    >
+      {shouldMount && !reducedMotion && <TrackSenseSimulation />}
     </div>
   );
 }
