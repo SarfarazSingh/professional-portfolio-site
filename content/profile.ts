@@ -12,7 +12,7 @@ export const profile = {
   trackSense: "https://tracksense.in/",
   headline: "I take on difficult work and stay with it until it works.",
   summary:
-    "I spent eight years in the Indian Navy’s Submarine Service. It taught me to stay calm, take responsibility, and never cut corners. I now bring that discipline to enterprise AI, governance, products, and teams.",
+    "Eight years in submarine technical operations taught me how to work when reliability and accountability matter. At PwC, I helped deliver enterprise AI. Now I am building rail-infrastructure monitoring with TrackSense.",
   currentChapter: {
     eyebrow: "Now · Madrid / IE Business School",
     title: "Learning, leading, and building in Madrid.",
@@ -28,7 +28,7 @@ export const profile = {
     ],
   },
   availability:
-    "I am based in Madrid and open to the right senior role in Europe, the Middle East, or India, depending on the role and visa requirements.",
+    "I am based in Madrid and open to full-time senior roles in AI governance, AI transformation, and product leadership for regulated or safety-critical systems across Europe, the Middle East, or India, depending on visa requirements.",
   lenses: {
     ai: {
       eyebrow: "AI & enterprise delivery",

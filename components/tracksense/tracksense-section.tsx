@@ -1,3 +1,4 @@
+import { SystemArchitecture } from "@/components/portfolio/system-architecture";
 import { TrackSensePoster } from "./tracksense-poster";
 import { TrackSenseSimulationShell } from "./tracksense-simulation-shell";
 
@@ -9,7 +10,7 @@ export function TrackSenseSection() {
           <div>
             <p className="section-label">TrackSense · Try the demo</p>
             <p className="instrument-readout mt-3 text-signal">
-              Processed locally · operator decides
+              Human-in-the-loop by design · operator decides
             </p>
           </div>
           <div>
@@ -23,6 +24,28 @@ export function TrackSenseSection() {
               to decide what happens next.
             </p>
           </div>
+        </div>
+
+        <div className="mb-8">
+          <SystemArchitecture
+            eyebrow="TrackSense · System path"
+            title="From trackside signals to an accountable decision"
+            steps={[
+              {
+                label: "Edge sensor nodes",
+                detail: "Vibration, acoustic, and thermal signals are gathered close to the track.",
+              },
+              {
+                label: "Local anomaly filter",
+                detail: "A local model ranks unusual changes and carries uncertainty forward.",
+              },
+              {
+                label: "Operator command view",
+                detail: "Evidence is presented for review; the responsible person makes the call.",
+              },
+            ]}
+            note="Designed to keep operational decisions with the human responsible—not to turn a model score into an automatic shutdown."
+          />
         </div>
 
         <div data-tracksense-host>

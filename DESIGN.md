@@ -144,6 +144,8 @@ Only these six primitives are allowed.
 - Sodium amber remains the only signal colour; there is no glow or gradient
 - Wave bars animate only while connecting or in an active conversation
 - The ElevenLabs browser SDK loads on intent and remains outside the critical bundle
+- The same agent offers a text-only path for quiet environments; text mode never requests microphone access
+- Voice and text sessions are mutually exclusive and disclose that responses come from an AI guide
 - Conversation state is announced in a polite live region
 - The control returns to a complete static form under reduced motion
 
@@ -160,6 +162,7 @@ The TrackSense canvas is an operational data visualisation, not a fifth UI-motio
 - Focus uses a 2px `--signal` outline with 3px offset
 - Hover never carries information without an equivalent focus state
 - Canvas experiences expose a semantic control surface and static SVG fallback
+- Architecture flows use ordered text nodes and directional connectors, with complete screen-reader labels
 - Minimum target size: 44 × 44px
 - No scroll-jacking
 - Screen-reader order follows reading order even when the visual grid changes

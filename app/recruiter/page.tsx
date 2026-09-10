@@ -15,8 +15,8 @@ export default function RecruiterPage() {
       <PageIntro
         eyebrow="For recruiters · A quick, honest read"
         title="Where my experience may be useful."
-        description="I have grouped my work into four areas so you can get to the relevant part quickly. Each one shows what I have done, the CV that fits, and where I may not be the right person."
-        aside="Four hiring areas · One career, told as it happened"
+        description="I am looking for a full-time senior role—not pitching my ventures for funding. I have grouped my work into four areas so you can quickly see what I have done, which CV fits, and where I may not be the right person."
+        aside="AI governance · Transformation · Product leadership · Critical systems"
       />
       <section className="mx-auto max-w-[1600px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
         <RecruiterBrief />
@@ -28,10 +28,9 @@ export default function RecruiterPage() {
             <p className="mt-3">{profile.location}</p>
           </div>
           <div>
-            <p className="section-label">Mobility</p>
+            <p className="section-label">Availability</p>
             <p className="mt-3 leading-7 text-copy-muted">
-              I am open to roles in Europe, the Middle East, and India,
-              depending on the role and visa requirements.
+              {profile.availability}
             </p>
           </div>
           <div>

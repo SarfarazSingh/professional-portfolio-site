@@ -1,9 +1,9 @@
 import Image from "next/image";
 import {
+  ArrowDownToLine,
   ArrowDown,
   ArrowRight,
   MessageCircle,
-  MoveUpRight,
 } from "lucide-react";
 import { ContactTrigger } from "@/components/portfolio/contact-actions";
 import { governanceSignals } from "@/content/governance";
@@ -16,40 +16,32 @@ const identities = [
     statement: "I am proud to have served for eight years in the Submarine Service.",
   },
   {
-    label: "AI transformation leader",
+    label: "Enterprise AI at PwC",
     statement: "At PwC, I helped large teams put GenAI and automation into daily operations.",
   },
   {
-    label: "Founder",
-    statement: "I build products from scratch and learn from the people who use them.",
-  },
-  {
-    label: "IE MBA",
-    statement: "I am a Technology Impact Scholar, club president, and Blue Torch recipient in Madrid.",
-  },
-  {
-    label: "Musician & cyclist",
-    statement: "Music and endurance sport keep me humble, patient, and part of a team.",
+    label: "TrackSense co-founder",
+    statement: "I am building a rail-monitoring venture around edge sensing and accountable human decisions.",
   },
 ] as const;
 
 const careerSignals = [
   {
-    period: "2015–23",
-    organisation: "Indian Navy",
-    role: "Submarine Service",
+    period: "8 years",
+    organisation: "Indian Navy submariner",
+    role: "Operations & radiation safety",
     href: "/work/submarine-systems",
   },
   {
-    period: "2023–25",
-    organisation: "PwC",
-    role: "AI & automation",
+    period: "2M+",
+    organisation: "Enterprise AI at PwC",
+    role: "Users in a GenAI environment",
     href: "/work/enterprise-ai-transformation",
   },
   {
-    period: "2026–now",
+    period: "Now",
     organisation: "TrackSense",
-    role: "Co-founder",
+    role: "Rail-monitoring venture co-founder",
     href: "/work/tracksense",
   },
 ] as const;
@@ -65,16 +57,16 @@ export function HomeHero() {
           <span>Madrid · 40.4168 N / 3.7038 W</span>
           <span className="flex items-center gap-2">
             <span className="size-1.5 bg-signal" aria-hidden="true" />
-            Based in Madrid · open to the right senior role
+            Open to full-time senior roles · Europe, Middle East & India
           </span>
         </div>
 
         <div className="grid gap-x-12 gap-y-10 py-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,.85fr)] lg:items-center lg:py-14 xl:gap-x-20">
           <div className="min-w-0">
-            <p
-              className="hero-entry section-label"
-              data-hero-entry="1"
-            >
+            <p className="hero-entry section-label text-signal" data-hero-entry="1">
+              AI governance & product leader for critical systems
+            </p>
+            <p className="hero-entry instrument-readout mt-3" data-hero-entry="2">
               Sarfaraz Singh Wahad
             </p>
             <h1 className="mt-5 max-w-[10ch] [font-size:var(--type-h1)] leading-[0.8] tracking-[-0.052em]">
@@ -141,18 +133,19 @@ export function HomeHero() {
                 href={assetPath("/work")}
                 className="interactive-lift inline-flex min-h-12 items-center gap-3 rounded-full bg-signal px-6 text-sm font-semibold text-ground"
               >
-                See my work
+                View case studies
                 <ArrowRight className="size-4" />
               </a>
               <a
-                href={assetPath("/recruiter")}
+                href={assetPath("/cv/sarfaraz-wahad-ai-digital.pdf")}
+                download
                 className="interactive-lift inline-flex min-h-12 items-center gap-3 rounded-full border border-line-strong px-6 text-sm font-semibold text-copy hover:border-signal hover:text-signal"
               >
-                For recruiters
-                <MoveUpRight className="size-4" />
+                Download CV
+                <ArrowDownToLine className="size-4" />
               </a>
               <ContactTrigger className="interactive-lift inline-flex min-h-12 items-center gap-3 rounded-full border border-line-strong px-6 text-sm font-semibold text-copy hover:border-signal hover:text-signal">
-                Get in touch
+                Contact me
                 <MessageCircle className="size-4" />
               </ContactTrigger>
             </div>

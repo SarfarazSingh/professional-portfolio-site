@@ -410,6 +410,33 @@
   color: var(--text-muted);
 }
 
+.voice-agent-transcript {
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+.voice-agent-message {
+  max-width: min(90%, 720px);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 14px 16px;
+}
+
+.voice-agent-message[data-role="user"] {
+  margin-left: auto;
+  border-color: var(--line-strong);
+  background: var(--ground);
+}
+
+.voice-agent-message .instrument-readout {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--signal);
+}
+
+.voice-agent-message p {
+  line-height: 1.6;
+}
+
 @keyframes voice-agent-orbit {
   to {
     transform: rotate(360deg);

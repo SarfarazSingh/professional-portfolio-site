@@ -5,11 +5,20 @@ import { GovernanceSpotlight } from "@/components/portfolio/governance-spotlight
 import { HomeHero } from "@/components/portfolio/home-hero";
 import { LinkedInHighlights } from "@/components/portfolio/linkedin-highlights";
 import { ProjectCard } from "@/components/portfolio/project-card";
+import { SystemArchitecture } from "@/components/portfolio/system-architecture";
 import { VoiceAgentSection } from "@/components/portfolio/voice-agent-section";
 import { TrackSenseSection } from "@/components/tracksense/tracksense-section";
 import { publication } from "@/content/insights";
 import { artefacts, projects } from "@/content/projects";
 import { assetPath } from "@/lib/asset-path";
+
+const homepageCaseStudies = projects.filter((project) =>
+  [
+    "enterprise-ai-transformation",
+    "submarine-systems",
+    "up-on-ai",
+  ].includes(project.slug),
+);
 
 export default function Home() {
   return (
@@ -48,7 +57,7 @@ export default function Home() {
           </a>
         </div>
         <div className="grid gap-5 lg:grid-cols-3">
-          {projects.slice(0, 3).map((project) => (
+          {homepageCaseStudies.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
@@ -59,33 +68,68 @@ export default function Home() {
           <div className="border-b border-line px-5 py-16 sm:px-8 lg:border-b-0 lg:border-r lg:px-12 lg:py-24">
             <p className="section-label">Other things I have built</p>
             <h2 className="mt-5 max-w-md [font-size:var(--type-h2)] leading-[0.9] tracking-[-0.04em]">
-              Different ideas. The same work ethic.
+              Another view of infrastructure.
             </h2>
             <p className="mt-6 max-w-md text-lg leading-8 text-copy-muted">
-              Some became ventures, some are prototypes, and some helped me
-              explain a difficult idea. I have labelled each one honestly.
+              AnterVid explores continuous structural monitoring. The other
+              prototypes below show how I communicate, test, and ship ideas.
             </p>
           </div>
-          <div className="divide-y divide-line">
-            {artefacts.slice(0, 4).map((artefact) => (
+          <div>
+            <div className="border-b border-line p-5 sm:p-8 lg:p-10">
+              <SystemArchitecture
+                eyebrow="AnterVid · Structural monitoring concept"
+                title="From continuous observation to prioritised inspection"
+                steps={[
+                  {
+                    label: "Structure-side sensing",
+                    detail: "Visual and sensor observations are gathered around the asset.",
+                  },
+                  {
+                    label: "Change detection",
+                    detail: "The system organises possible deterioration for comparison over time.",
+                  },
+                  {
+                    label: "Engineer review",
+                    detail: "Evidence supports inspection planning; it does not replace engineering judgement.",
+                  },
+                ]}
+                note="A product concept for making inspection evidence easier to compare and act on—not a deployed structural-safety system."
+              />
               <a
-                key={artefact.title}
-                href={artefact.href}
+                href="https://antervid-india.vercel.app"
                 target="_blank"
                 rel="noreferrer"
-                className="group grid min-h-28 gap-3 px-5 py-6 hover:bg-surface sm:grid-cols-[1fr_auto] sm:items-center sm:px-8 lg:px-10"
+                className="group mt-5 inline-flex min-h-11 items-center gap-3 text-sm font-semibold"
               >
-                <span>
-                  <span className="block text-lg font-semibold tracking-[-0.02em]">
-                    {artefact.title}
-                  </span>
-                  <span className="mt-1 block text-sm text-copy-muted">
-                    {artefact.type} · {artefact.description}
-                  </span>
-                </span>
-                <ArrowUpRight className="size-4 text-copy-muted group-hover:text-signal" />
+                Explore the AnterVid concept
+                <ArrowUpRight className="size-4" />
               </a>
-            ))}
+            </div>
+            <div className="divide-y divide-line">
+              {artefacts
+                .filter((artefact) => artefact.title !== "AnterVid")
+                .slice(0, 4)
+                .map((artefact) => (
+                  <a
+                    key={artefact.title}
+                    href={artefact.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group grid min-h-28 gap-3 px-5 py-6 hover:bg-surface sm:grid-cols-[1fr_auto] sm:items-center sm:px-8 lg:px-10"
+                  >
+                    <span>
+                      <span className="block text-lg font-semibold tracking-[-0.02em]">
+                        {artefact.title}
+                      </span>
+                      <span className="mt-1 block text-sm text-copy-muted">
+                        {artefact.type} · {artefact.description}
+                      </span>
+                    </span>
+                    <ArrowUpRight className="size-4 text-copy-muted group-hover:text-signal" />
+                  </a>
+                ))}
+            </div>
           </div>
         </div>
       </section>
