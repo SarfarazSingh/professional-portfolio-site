@@ -148,7 +148,7 @@ export const metadata: Metadata = {
     "AI transformation",
     "AI governance",
     "AIGP",
-    "AI product leadership",
+    "AI Product Leadership",
     "EU AI Act",
     "disinformation platform",
     "radiation safety officer",

@@ -72,7 +72,7 @@ export function VoiceAgentSection() {
               className="mt-5 max-w-3xl [font-size:var(--type-h3)] leading-[0.98] tracking-[-0.04em]"
               id="voice-agent-title"
             >
-              Ask about my AI transformation work, governance record, or years
+              Ask about my AI Transformation work, Governance record, or years
               in submarines.
             </h2>
             <p
@@ -117,7 +117,7 @@ export function VoiceAgentSection() {
               data-text-agent-log
             >
               <p className="text-sm leading-6 text-copy-muted" data-text-agent-empty>
-                Ask about role fit, enterprise AI, governance, TrackSense, or my
+                Ask about role fit, Enterprise AI, Governance, TrackSense, or my
                 years in the Submarine Service.
               </p>
             </div>
@@ -134,7 +134,7 @@ export function VoiceAgentSection() {
                 id="sarfaraz-text-question"
                 maxLength={400}
                 name="question"
-                placeholder="Would Sarfaraz fit an AI governance leadership role?"
+                placeholder="Would Sarfaraz fit an AI Governance leadership role?"
                 required
                 type="text"
               />

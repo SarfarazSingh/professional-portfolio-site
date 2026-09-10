@@ -63,16 +63,16 @@ export function HomeHero() {
 
         <div className="grid gap-x-12 gap-y-10 py-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,.85fr)] lg:items-center lg:py-14 xl:gap-x-20">
           <div className="min-w-0">
-            <p className="hero-entry section-label text-signal" data-hero-entry="1">
-              AI governance & product leader for critical systems
+            <p className="hero-entry text-signal" data-hero-entry="1" style={{ fontSize: 'clamp(1.25rem, 2vw, 1.5rem)', fontWeight: 600, letterSpacing: '-0.02em' }}>
+              AI Governance & Product Leader for Critical Systems
             </p>
             <p className="hero-entry instrument-readout mt-3" data-hero-entry="2">
               Sarfaraz Singh Wahad
             </p>
-            <h1 className="mt-5 max-w-[10ch] [font-size:var(--type-h1)] leading-[0.8] tracking-[-0.052em]">
-              <span className="hero-title-line">I served.</span>
-              <span className="hero-title-line">I learned.</span>
-              <span className="hero-title-line">I build.</span>
+            <h1 className="mt-5 max-w-[10ch] leading-[0.8] tracking-[-0.052em]">
+              <span className="hero-title-line [font-size:var(--type-h1)]">I served.</span>
+              <span className="hero-title-line [font-size:var(--type-h2)]">I learned.</span>
+              <span className="hero-title-line [font-size:var(--type-h2)]">I build.</span>
             </h1>
 
             <p
@@ -100,7 +100,7 @@ export function HomeHero() {
             <div
               className="hero-entry mt-6 grid border-l border-t border-line sm:grid-cols-2"
               data-hero-entry="5"
-              aria-label="AI governance and regulated-systems credentials"
+              aria-label="AI Governance and Regulated-Systems Credentials"
             >
               {governanceSignals.map((signal) => (
                 <a

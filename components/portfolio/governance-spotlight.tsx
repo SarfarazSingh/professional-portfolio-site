@@ -13,7 +13,7 @@ export function GovernanceSpotlight() {
       <div className="mx-auto max-w-[1600px] px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
         <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
-            <p className="section-label">AI governance & regulated systems</p>
+            <p className="section-label">AI Governance & Regulated Systems</p>
             <p className="instrument-readout mt-3 text-signal">
               AIGP · AERB RSO · Berlin · Warsaw
             </p>
@@ -69,7 +69,7 @@ export function GovernanceSpotlight() {
           <article className="flex min-h-full flex-col border border-signal bg-ground p-6 sm:p-8 lg:p-10">
             <div className="flex items-center justify-between gap-6">
               <p className="section-label text-signal">
-                A governance product I built
+                A Governance Product I Built
               </p>
               <ShieldCheck className="size-5 text-signal" />
             </div>

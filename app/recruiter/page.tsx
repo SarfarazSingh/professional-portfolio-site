@@ -16,7 +16,7 @@ export default function RecruiterPage() {
         eyebrow="For recruiters · A quick, honest read"
         title="Where my experience may be useful."
         description="I am looking for a full-time senior role—not pitching my ventures for funding. I have grouped my work into four areas so you can quickly see what I have done, which CV fits, and where I may not be the right person."
-        aside="AI governance · Transformation · Product leadership · Critical systems"
+        aside="AI Governance · Transformation · Product Leadership · Critical Systems"
       />
       <section className="mx-auto max-w-[1600px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
         <RecruiterBrief />

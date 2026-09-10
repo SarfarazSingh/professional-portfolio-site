@@ -28,7 +28,7 @@ export const profile = {
     ],
   },
   availability:
-    "I am based in Madrid and open to full-time senior roles in AI governance, AI transformation, and product leadership for regulated or safety-critical systems across Europe, the Middle East, or India, depending on visa requirements.",
+    "I am based in Madrid and open to full-time senior roles in AI Governance, AI Transformation, and Product Leadership for regulated or safety-critical systems across Europe, the Middle East, or India, depending on visa requirements.",
   lenses: {
     ai: {
       eyebrow: "AI & enterprise delivery",
